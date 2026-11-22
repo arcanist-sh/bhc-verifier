@@ -99,6 +99,14 @@ jobs:
         with:
           name: hx
           path: tools
+      # hx resolves dependencies against the GHC on PATH. The runner's own
+      # GHC is whatever the image ships (9.14, base-4.22, on 2026-11-22),
+      # whose base many Hackage releases do not allow yet; packages then
+      # showed as "unresolved" for reasons that have nothing to do with bhc.
+      # Resolve against a GHC whose base the ecosystem's bounds accept.
+      - uses: haskell-actions/setup@v2
+        with:
+          ghc-version: "9.10.3"
       - name: Install bhc ${{ needs.setup.outputs.bhc_version }}
         env:
           GH_TOKEN: ${{ github.token }}
