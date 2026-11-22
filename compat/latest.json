@@ -1,82 +1,62 @@
 {
-  "generated_at": "2026-11-22T11:05:59Z",
-  "bhc_version": "0.2.30",
-  "hx_revision": "2107277",
-  "run_url": "https://github.com/arcanist-sh/bhc-verifier/actions/runs/45015285357",
+  "generated_at": "2026-11-22T17:51:47Z",
+  "bhc_version": "0.2.31",
+  "hx_revision": "1337d38",
+  "run_url": "https://github.com/arcanist-sh/bhc-verifier/actions/runs/45051404493",
   "tested": 238,
   "passing": 0,
   "counts": {
     "builtin": 12,
-    "dependency": 207,
+    "dependency": 211,
     "error": 1,
     "fail": 3,
-    "unresolved": 27
+    "unresolved": 23
   },
   "blockers": [
     {
       "package": "pretty",
-      "blocks": 130,
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors"
-    },
-    {
-      "package": "syb",
-      "blocks": 20,
-      "error": "Data.Generics.Instances: lowering failed: 2 lowering error(s): 1: unbound variable: mkNoRepType 2: unbound variable: gcast2"
-    },
-    {
-      "package": "stm",
-      "blocks": 19,
-      "error": "Control.Concurrent.STM.TChan: lowering failed: 21 lowering error(s): 1: unbound variable: newTVar 2: unbound variable: newTVar 3: unbound variable: newTVar 4: unbound variable: newTVarIO 5: unbound variable: newTVarIO 6: unbound variable: newTVarIO 7: unbound variable: readTVar 8: unbound variable: newTVar 9: unbound variable: writeTVar 10: unbound variable: writeTVar 11: unbound variable: readTVa"
+      "blocks": 154,
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!"
     },
     {
       "package": "template-haskell-lift",
-      "blocks": 7,
-      "error": "Language.Haskell.TH.Lift: lowering failed: 10 lowering error(s): 1: unbound variable: unsafeCodeCoerce 2: unbound variable: lift 3: unbound constructor: LitE 4: unbound constructor: BytesPrimL 5: unbound constructor: Bytes 6: unbound constructor: AppE 7: unbound constructor: ConE 8: unbound constructor: I# 9: unbound constructor: LitE 10: unbound constructor: IntPrimL"
+      "blocks": 14,
+      "error": "Language.Haskell.TH.Lift: cannot find `unsafeCodeCoerce` in this scope"
+    },
+    {
+      "package": "stm",
+      "blocks": 13,
+      "error": "Control.Concurrent.STM.TBQueue: cannot find `newTVar` in this scope"
     },
     {
       "package": "tagged",
-      "blocks": 5,
-      "error": "Data.Tagged: parse error: 2 errors"
+      "blocks": 6,
+      "error": "Data.Tagged: unexpected `*`, expected operator"
     },
     {
-      "package": "call-stack",
+      "package": "base-orphans",
       "blocks": 4,
-      "error": "Data.CallStack: code generation failed: `getCallStack` is not implemented by bhc"
+      "error": "Data.Orphans.Prelude: cannot find constructor `:+` in this scope"
     },
     {
-      "package": "assoc",
-      "blocks": 2,
-      "error": "Data.Bifunctor.Assoc: lowering failed: 5 lowering error(s): 1: unbound constructor: Const 2: unbound constructor: Const 3: unbound constructor: Const 4: unbound constructor: Const 5: unbound constructor: Const"
+      "package": "splitmix",
+      "blocks": 3,
+      "error": "System.Random.SplitMix: cannot find `readsPrec` in this scope"
     },
     {
-      "package": "colour",
+      "package": "basement",
       "blocks": 2,
-      "error": "Data.Colour.Chan: lowering failed: 1 lowering error(s): 1: unbound variable: Data.List.sum"
+      "error": "Basement.Compat.NumLiteral: `fromInteger` in `instance Integral Natural` does not have the type the class gives it: type mismatch: expected `Integer`, found `Int`"
     },
     {
-      "package": "indexed-traversable",
+      "package": "template-haskell-quasiquoter",
       "blocks": 2,
-      "error": "WithIndex: parse error: 7 errors"
-    },
-    {
-      "package": "old-locale",
-      "blocks": 2,
-      "error": "System.Locale: parse error: 2 errors"
+      "error": "Language.Haskell.TH.QuasiQuoter: cannot find constructor `QuasiQuoter` in this scope"
     },
     {
       "package": "vector-stream",
       "blocks": 2,
-      "error": "Data.Stream.Monadic: lowering failed: 60 lowering error(s): 1: unbound constructor: SPEC 2: unbound constructor: SPEC 3: unbound constructor: SPEC 4: unbound constructor: SPEC 5: unbound constructor: SPEC 6: unbound constructor: SPEC 7: unbound constructor: SPEC 8: unbound constructor: SPEC 9: unbound constructor: SPEC 10: unbound constructor: SPEC 11: unbound constructor: SPEC 12: unbound constru"
-    },
-    {
-      "package": "NumInstances",
-      "blocks": 1,
-      "error": "Data.NumInstances.Tuple: parse error: 84 errors"
-    },
-    {
-      "package": "OneTuple",
-      "blocks": 1,
-      "error": "Data.Tuple.OneTuple: parse error: 1 errors"
+      "error": "Data.Stream.Monadic: cannot find constructor `SPEC` in this scope"
     },
     {
       "package": "Win32",
@@ -84,24 +64,19 @@
       "error": "error: failed to read source file: Main.hs"
     },
     {
-      "package": "base-orphans",
+      "package": "assoc",
       "blocks": 1,
-      "error": "Data.Orphans.Prelude: lowering failed: 2 lowering error(s): 1: unbound constructor: :+ 2: unbound constructor: :+"
+      "error": "Data.Bifunctor.Assoc: cannot find constructor `Const` in this scope"
     },
     {
-      "package": "basement",
+      "package": "call-stack",
       "blocks": 1,
-      "error": "Basement.Compat.NumLiteral: type checking failed: 41 errors"
+      "error": "Data.CallStack: code generation failed: `getCallStack` is not implemented by bhc"
     },
     {
-      "package": "data-default",
+      "package": "colour",
       "blocks": 1,
-      "error": "Data.Default.Internal: lowering failed: 5 lowering error(s): 1: unbound constructor: :+ 2: unbound variable: ptrToIntPtr 3: unbound variable: ptrToWordPtr 4: unbound constructor: ConstPtr 5: unbound constructor: Const"
-    },
-    {
-      "package": "dlist",
-      "blocks": 1,
-      "error": "Data.DList.Internal: parse error: 3 errors"
+      "error": "Data.Colour.Matrix: unexpected `default`, expected declaration"
     },
     {
       "package": "fail",
@@ -109,9 +84,34 @@
       "error": "error: failed to read source file: Main.hs"
     },
     {
+      "package": "haskell-lexer",
+      "blocks": 1,
+      "error": "Language.Haskell.Lexer.Position: unexpected `,`, expected `::`"
+    },
+    {
+      "package": "indexed-profunctors",
+      "blocks": 1,
+      "error": "Data.Profunctor.Indexed: unexpected layout `}`, expected identifier"
+    },
+    {
       "package": "integer-logarithms",
       "blocks": 1,
-      "error": "Math.NumberTheory.Logarithms: lowering failed: 17 lowering error(s): 1: unbound variable: isTrue# 2: unbound variable: int2Word# 3: unbound variable: isTrue# 4: unbound variable: isTrue# 5: unbound variable: eqWord# 6: unbound variable: isTrue# 7: unbound variable: eqWord# 8: unbound variable: int2Word# 9: unbound variable: unsafeAt 10: unbound variable: unsafeAt 11: unbound variable: unsafeAt 12:"
+      "error": "Math.NumberTheory.Logarithms: cannot find `isTrue#` in this scope"
+    },
+    {
+      "package": "newtype-generics",
+      "blocks": 1,
+      "error": "Control.Newtype.Generics: unexpected `=>`, expected declaration"
+    },
+    {
+      "package": "old-locale",
+      "blocks": 1,
+      "error": "System.Locale: unexpected `,`, expected `::`"
+    },
+    {
+      "package": "tasty-discover",
+      "blocks": 1,
+      "error": "error: failed to read source file: Main.hs"
     }
   ],
   "packages": [
@@ -119,7 +119,7 @@
       "package": "base",
       "version": "4.22.0.0",
       "result": "builtin",
-      "seconds": 0,
+      "seconds": 1,
       "rank": 1
     },
     {
@@ -140,7 +140,7 @@
       "package": "containers",
       "version": "0.8.1",
       "result": "builtin",
-      "seconds": 1,
+      "seconds": 0,
       "rank": 4
     },
     {
@@ -154,7 +154,7 @@
       "package": "transformers",
       "version": "0.6.3.0",
       "result": "builtin",
-      "seconds": 0,
+      "seconds": 1,
       "rank": 6
     },
     {
@@ -163,48 +163,48 @@
       "result": "dependency",
       "seconds": 19,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 7
     },
     {
       "package": "QuickCheck",
       "version": "2.19.0.0",
       "result": "dependency",
-      "seconds": 21,
-      "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "seconds": 23,
+      "blocked_by": "template-haskell-lift",
+      "error": "Language.Haskell.TH.Lift: cannot find `unsafeCodeCoerce` in this scope",
       "rank": 8
     },
     {
       "package": "aeson",
       "version": "2.3.2.0",
       "result": "dependency",
-      "seconds": 21,
-      "blocked_by": "dlist",
-      "error": "Data.DList.Internal: parse error: 3 errors",
+      "seconds": 15,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 9
     },
     {
       "package": "directory",
       "version": "1.3.11.0",
       "result": "builtin",
-      "seconds": 0,
+      "seconds": 1,
       "rank": 10
     },
     {
       "package": "tasty",
       "version": "1.5.5",
       "result": "dependency",
-      "seconds": 20,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TChan: lowering failed: 21 lowering error(s): 1: unbound variable: newTVar 2: unbound variable: newTVar 3: unbound variable: newTVar 4: unbound variable: newTVarIO 5: unbound variable: newTVarIO 6: unbound variable: newTVarIO 7: unbound variable: readTVar 8: unbound variable: newTVar 9: unbound variable: writeTVar 10: unbound variable: writeTVar 11: unbound variable: readTVa",
+      "seconds": 24,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 11
     },
     {
       "package": "hspec",
       "version": "2.11.18",
       "result": "unresolved",
-      "seconds": 21,
+      "seconds": 23,
       "error": "warning: Could not plan the dependency build: cycle detected in dependencies: hspec-discover -> hspec-discover",
       "rank": 12
     },
@@ -219,16 +219,16 @@
       "package": "vector",
       "version": "0.13.2.0",
       "result": "dependency",
-      "seconds": 18,
+      "seconds": 19,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 14
     },
     {
       "package": "unordered-containers",
       "version": "0.2.21",
       "result": "unresolved",
-      "seconds": 18,
+      "seconds": 19,
       "error": "Error: Failed to resolve dependencies",
       "rank": 15
     },
@@ -236,52 +236,52 @@
       "package": "tasty-hunit",
       "version": "0.10.2",
       "result": "dependency",
-      "seconds": 18,
-      "blocked_by": "template-haskell-lift",
-      "error": "Language.Haskell.TH.Lift: lowering failed: 10 lowering error(s): 1: unbound variable: unsafeCodeCoerce 2: unbound variable: lift 3: unbound constructor: LitE 4: unbound constructor: BytesPrimL 5: unbound constructor: Bytes 6: unbound constructor: AppE 7: unbound constructor: ConE 8: unbound constructor: I# 9: unbound constructor: LitE 10: unbound constructor: IntPrimL",
+      "seconds": 20,
+      "blocked_by": "tagged",
+      "error": "Data.Tagged: unexpected `*`, expected operator",
       "rank": 16
     },
     {
       "package": "deepseq",
       "version": "1.5.2.0",
       "result": "builtin",
-      "seconds": 0,
+      "seconds": 1,
       "rank": 17
     },
     {
       "package": "template-haskell",
       "version": "2.24.0.0",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 18
     },
     {
       "package": "process",
       "version": "1.6.30.0",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 4,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 19
     },
     {
       "package": "lens",
       "version": "5.3.6",
       "result": "dependency",
-      "seconds": 18,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: lowering failed: 20 lowering error(s): 1: unbound variable: newTVar 2: unbound variable: newTVarIO 3: unbound variable: newTVar 4: unbound variable: newTVarIO 5: unbound variable: readTVar 6: unbound variable: retry 7: unbound variable: writeTVar 8: unbound variable: readTVar 9: unbound variable: writeTVar 10: unbound variable: readTVar 11: unbound variable: writeTVar",
+      "seconds": 22,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 20
     },
     {
       "package": "random",
       "version": "1.3.1",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 21
     },
     {
@@ -289,33 +289,33 @@
       "version": "1.6.2.0",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "call-stack",
-      "error": "Data.CallStack: code generation failed: `getCallStack` is not implemented by bhc",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 22
     },
     {
       "package": "hashable",
       "version": "1.5.1.0",
       "result": "dependency",
-      "seconds": 19,
-      "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "seconds": 28,
+      "blocked_by": "template-haskell-lift",
+      "error": "Language.Haskell.TH.Lift: cannot find `unsafeCodeCoerce` in this scope",
       "rank": 23
     },
     {
       "package": "array",
       "version": "0.5.8.0",
       "result": "builtin",
-      "seconds": 1,
+      "seconds": 0,
       "rank": 24
     },
     {
       "package": "binary",
       "version": "0.8.9.3",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "template-haskell-lift",
-      "error": "Language.Haskell.TH.Lift: lowering failed: 10 lowering error(s): 1: unbound variable: unsafeCodeCoerce 2: unbound variable: lift 3: unbound constructor: LitE 4: unbound constructor: BytesPrimL 5: unbound constructor: Bytes 6: unbound constructor: AppE 7: unbound constructor: ConE 8: unbound constructor: I# 9: unbound constructor: LitE 10: unbound constructor: IntPrimL",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 25
     },
     {
@@ -323,24 +323,24 @@
       "version": "3.2.15.0",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "blocked_by": "stm",
+      "error": "Control.Concurrent.STM.TBQueue: cannot find `newTVar` in this scope",
       "rank": 26
     },
     {
       "package": "tasty-quickcheck",
       "version": "0.11.1",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "template-haskell-lift",
-      "error": "Language.Haskell.TH.Lift: lowering failed: 10 lowering error(s): 1: unbound variable: unsafeCodeCoerce 2: unbound variable: lift 3: unbound constructor: LitE 4: unbound constructor: BytesPrimL 5: unbound constructor: Bytes 6: unbound constructor: AppE 7: unbound constructor: ConE 8: unbound constructor: I# 9: unbound constructor: LitE 10: unbound constructor: IntPrimL",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 27
     },
     {
       "package": "stm",
       "version": "2.5.3.1",
       "result": "unresolved",
-      "seconds": 2,
+      "seconds": 1,
       "error": "Error: Failed to resolve dependencies",
       "rank": 28
     },
@@ -349,33 +349,33 @@
       "version": "0.12.6",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "syb",
-      "error": "Data.Generics.Instances: lowering failed: 2 lowering error(s): 1: unbound variable: mkNoRepType 2: unbound variable: gcast2",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 29
     },
     {
       "package": "optparse-applicative",
       "version": "0.19.0.0",
       "result": "dependency",
-      "seconds": 2,
+      "seconds": 4,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 30
     },
     {
       "package": "exceptions",
       "version": "0.10.12",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 31
     },
     {
       "package": "attoparsec",
       "version": "0.14.4",
       "result": "unresolved",
-      "seconds": 1,
+      "seconds": 2,
       "error": "Error: Failed to resolve dependencies",
       "rank": 32
     },
@@ -383,18 +383,18 @@
       "package": "parsec",
       "version": "3.1.18.0",
       "result": "dependency",
-      "seconds": 2,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 33
     },
     {
       "package": "case-insensitive",
       "version": "1.2.2.0",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 34
     },
     {
@@ -403,34 +403,34 @@
       "result": "dependency",
       "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 35
     },
     {
       "package": "unix",
       "version": "2.8.8.0",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 36
     },
     {
       "package": "data-default",
       "version": "0.8.0.2",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 37
     },
     {
       "package": "async",
       "version": "2.2.6",
       "result": "dependency",
-      "seconds": 4,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 38
     },
     {
@@ -439,59 +439,59 @@
       "result": "dependency",
       "seconds": 3,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 39
     },
     {
       "package": "http-client",
       "version": "0.7.19",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "syb",
-      "error": "Data.Generics.Aliases: parse error: 2 errors",
+      "seconds": 5,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 40
     },
     {
       "package": "test-framework",
       "version": "0.8.2.3",
       "result": "dependency",
-      "seconds": 4,
-      "blocked_by": "syb",
-      "error": "Data.Generics.Instances: lowering failed: 2 lowering error(s): 1: unbound variable: mkNoRepType 2: unbound variable: gcast2",
+      "seconds": 5,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 41
     },
     {
       "package": "ghc-prim",
       "version": "0.13.0",
       "result": "builtin",
-      "seconds": 1,
+      "seconds": 0,
       "rank": 42
     },
     {
       "package": "primitive",
       "version": "0.9.1.0",
       "result": "dependency",
-      "seconds": 2,
+      "seconds": 4,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 43
     },
     {
       "package": "split",
       "version": "0.2.5.1",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 4,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 44
     },
     {
       "package": "scientific",
       "version": "0.3.10.0",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "syb",
-      "error": "Data.Generics.Aliases: parse error: 2 errors",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 45
     },
     {
@@ -506,45 +506,45 @@
       "package": "wai",
       "version": "3.2.5",
       "result": "dependency",
-      "seconds": 4,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 47
     },
     {
       "package": "conduit",
       "version": "1.3.6.1",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 48
     },
     {
       "package": "amazonka-core",
       "version": "2.0",
       "result": "dependency",
-      "seconds": 5,
-      "blocked_by": "syb",
-      "error": "Data.Generics.Aliases: parse error: 2 errors",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 49
     },
     {
       "package": "temporary",
       "version": "1.3",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 50
     },
     {
       "package": "utf8-string",
       "version": "1.0.2",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 51
     },
     {
@@ -559,9 +559,9 @@
       "package": "pretty",
       "version": "1.1.3.6",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 53
     },
     {
@@ -569,8 +569,8 @@
       "version": "1.3.0",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "blocked_by": "stm",
+      "error": "Control.Concurrent.STM.TChan: cannot find `newTVar` in this scope",
       "rank": 54
     },
     {
@@ -579,25 +579,25 @@
       "result": "dependency",
       "seconds": 4,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 55
     },
     {
       "package": "test-framework-hunit",
       "version": "0.3.0.3",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "colour",
-      "error": "Data.Colour.Chan: lowering failed: 1 lowering error(s): 1: unbound variable: Data.List.sum",
+      "seconds": 5,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 56
     },
     {
       "package": "monad-control",
       "version": "1.0.3.1",
       "result": "dependency",
-      "seconds": 4,
-      "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "seconds": 3,
+      "blocked_by": "stm",
+      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
       "rank": 57
     },
     {
@@ -605,33 +605,33 @@
       "version": "3.4.21",
       "result": "dependency",
       "seconds": 5,
-      "blocked_by": "time-hourglass",
-      "error": "Time.Types: parse error: 8 errors",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 58
     },
     {
       "package": "network-uri",
       "version": "2.6.4.2",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 4,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 59
     },
     {
       "package": "cereal",
       "version": "0.5.8.3",
       "result": "dependency",
-      "seconds": 2,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 60
     },
     {
       "package": "hedgehog",
       "version": "1.7",
       "result": "error",
-      "seconds": 1,
+      "seconds": 0,
       "error": "error: no cabal.project or .cabal file found in this directory",
       "rank": 61
     },
@@ -639,81 +639,81 @@
       "package": "base64-bytestring",
       "version": "1.2.1.0",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 4,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 62
     },
     {
       "package": "safe",
       "version": "0.3.21",
       "result": "dependency",
-      "seconds": 2,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 63
     },
     {
       "package": "tagged",
       "version": "0.9",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 4,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 64
     },
     {
       "package": "Cabal",
       "version": "3.18.2.0",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 65
     },
     {
       "package": "servant",
       "version": "0.20.3.0",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "indexed-traversable",
-      "error": "WithIndex: parse error: 7 errors",
+      "seconds": 6,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 66
     },
     {
       "package": "http-client-tls",
       "version": "0.4.0",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "syb",
-      "error": "Data.Generics.Instances: lowering failed: 2 lowering error(s): 1: unbound variable: mkNoRepType 2: unbound variable: gcast2",
+      "seconds": 5,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 67
     },
     {
       "package": "syb",
       "version": "0.7.4",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 68
     },
     {
       "package": "quickcheck-instances",
       "version": "0.4",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "syb",
-      "error": "Data.Generics.Instances: lowering failed: 2 lowering error(s): 1: unbound variable: mkNoRepType 2: unbound variable: gcast2",
+      "seconds": 2,
+      "blocked_by": "assoc",
+      "error": "Data.Bifunctor.Assoc: cannot find constructor `Const` in this scope",
       "rank": 69
     },
     {
       "package": "transformers-base",
       "version": "0.4.6.1",
       "result": "dependency",
-      "seconds": 2,
-      "blocked_by": "base-orphans",
-      "error": "Data.Orphans.Prelude: lowering failed: 2 lowering error(s): 1: unbound constructor: :+ 2: unbound constructor: :+",
+      "seconds": 5,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 70
     },
     {
@@ -728,7 +728,7 @@
       "package": "ghc",
       "version": "9.14.1",
       "result": "unresolved",
-      "seconds": 4,
+      "seconds": 3,
       "error": "warning: Could not fetch dependencies: package not found: ghc-platform-0.1.0.0",
       "rank": 72
     },
@@ -736,27 +736,27 @@
       "package": "yaml",
       "version": "0.11.11.2",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: lowering failed: 20 lowering error(s): 1: unbound variable: newTVar 2: unbound variable: newTVarIO 3: unbound variable: newTVar 4: unbound variable: newTVarIO 5: unbound variable: readTVar 6: unbound variable: retry 7: unbound variable: writeTVar 8: unbound variable: readTVar 9: unbound variable: writeTVar 10: unbound variable: readTVar 11: unbound variable: writeTVar",
+      "seconds": 5,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 73
     },
     {
       "package": "megaparsec",
       "version": "9.8.3",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "parser-combinators",
-      "error": "Control.Applicative.Permutations: parse error: 1 errors",
+      "seconds": 5,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 74
     },
     {
       "package": "http-conduit",
       "version": "2.3.9.1",
       "result": "dependency",
-      "seconds": 4,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 75
     },
     {
@@ -764,53 +764,53 @@
       "version": "1.8.1",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "template-haskell-lift",
-      "error": "Language.Haskell.TH.Lift: lowering failed: 10 lowering error(s): 1: unbound variable: unsafeCodeCoerce 2: unbound variable: lift 3: unbound constructor: LitE 4: unbound constructor: BytesPrimL 5: unbound constructor: Bytes 6: unbound constructor: AppE 7: unbound constructor: ConE 8: unbound constructor: I# 9: unbound constructor: LitE 10: unbound constructor: IntPrimL",
+      "blocked_by": "stm",
+      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
       "rank": 76
     },
     {
       "package": "ansi-terminal",
       "version": "1.1.5",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "colour",
-      "error": "Data.Colour.Matrix: parse error: 1 errors",
+      "seconds": 5,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 77
     },
     {
       "package": "base16-bytestring",
       "version": "1.0.2.0",
       "result": "dependency",
-      "seconds": 4,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 78
     },
     {
       "package": "microlens",
       "version": "0.5.0.0",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 4,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 79
     },
     {
       "package": "data-default-class",
       "version": "0.2.0.0",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 4,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 80
     },
     {
       "package": "uuid",
       "version": "1.3.16.1",
       "result": "dependency",
-      "seconds": 4,
-      "blocked_by": "syb",
-      "error": "Data.Generics.Instances: lowering failed: 2 lowering error(s): 1: unbound variable: mkNoRepType 2: unbound variable: gcast2",
+      "seconds": 5,
+      "blocked_by": "tagged",
+      "error": "Data.Tagged: unexpected `*`, expected operator",
       "rank": 81
     },
     {
@@ -818,8 +818,8 @@
       "version": "1.7.2",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "blocked_by": "template-haskell-lift",
+      "error": "Language.Haskell.TH.Lift: cannot find `unsafeCodeCoerce` in this scope",
       "rank": 82
     },
     {
@@ -828,7 +828,7 @@
       "result": "dependency",
       "seconds": 3,
       "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TBQueue: parse error: 3 errors",
+      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
       "rank": 83
     },
     {
@@ -837,43 +837,43 @@
       "result": "dependency",
       "seconds": 4,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 84
     },
     {
       "package": "blaze-builder",
       "version": "0.4.4.1",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "syb",
-      "error": "Data.Generics.Instances: lowering failed: 2 lowering error(s): 1: unbound variable: mkNoRepType 2: unbound variable: gcast2",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 85
     },
     {
       "package": "blaze-html",
       "version": "0.9.2.0",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 86
     },
     {
       "package": "memory",
       "version": "0.18.0",
       "result": "dependency",
-      "seconds": 4,
-      "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "seconds": 3,
+      "blocked_by": "basement",
+      "error": "Basement.Compat.NumLiteral: `fromInteger` in `instance Integral Natural` does not have the type the class gives it: type mismatch: expected `Integer`, found `Int`",
       "rank": 87
     },
     {
       "package": "safe-exceptions",
       "version": "0.1.7.4",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 4,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 88
     },
     {
@@ -882,41 +882,41 @@
       "result": "dependency",
       "seconds": 3,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 89
     },
     {
       "package": "cmdargs",
       "version": "0.10.22",
       "result": "dependency",
-      "seconds": 2,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: lowering failed: 20 lowering error(s): 1: unbound variable: newTVar 2: unbound variable: newTVarIO 3: unbound variable: newTVar 4: unbound variable: newTVarIO 5: unbound variable: readTVar 6: unbound variable: retry 7: unbound variable: writeTVar 8: unbound variable: readTVar 9: unbound variable: writeTVar 10: unbound variable: readTVar 11: unbound variable: writeTVar",
+      "seconds": 5,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 90
     },
     {
       "package": "monad-logger",
       "version": "0.3.42",
       "result": "dependency",
-      "seconds": 4,
-      "blocked_by": "integer-logarithms",
-      "error": "Math.NumberTheory.Logarithms: lowering failed: 17 lowering error(s): 1: unbound variable: isTrue# 2: unbound variable: int2Word# 3: unbound variable: isTrue# 4: unbound variable: isTrue# 5: unbound variable: eqWord# 6: unbound variable: isTrue# 7: unbound variable: eqWord# 8: unbound variable: int2Word# 9: unbound variable: unsafeAt 10: unbound variable: unsafeAt 11: unbound variable: unsafeAt 12:",
+      "seconds": 3,
+      "blocked_by": "template-haskell-lift",
+      "error": "Language.Haskell.TH.Lift: cannot find `unsafeCodeCoerce` in this scope",
       "rank": 91
     },
     {
       "package": "unliftio-core",
       "version": "0.2.1.0",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 4,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 92
     },
     {
       "package": "servant-server",
       "version": "0.20.3.0",
       "result": "unresolved",
-      "seconds": 4,
+      "seconds": 5,
       "error": "warning: Could not plan the dependency build: cycle detected in dependencies: wai-app-static -> wai-app-static",
       "rank": 93
     },
@@ -924,27 +924,27 @@
       "package": "semigroupoids",
       "version": "6.0.2",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "tagged",
-      "error": "Data.Tagged: parse error: 2 errors",
+      "seconds": 5,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 94
     },
     {
       "package": "bifunctors",
       "version": "5.6.3",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "tagged",
-      "error": "Data.Tagged: parse error: 2 errors",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 95
     },
     {
       "package": "tasty-bench",
       "version": "0.5.1",
       "result": "dependency",
-      "seconds": 2,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 96
     },
     {
@@ -952,8 +952,8 @@
       "version": "4.3.16",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "blocked_by": "void",
+      "error": "Data.Void.Unsafe: code generation failed: `unsafeCoerce` is not implemented by bhc",
       "rank": 97
     },
     {
@@ -962,7 +962,7 @@
       "result": "dependency",
       "seconds": 4,
       "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: lowering failed: 21 lowering error(s): 1: unbound variable: newTVar 2: unbound variable: newTVarIO 3: unbound variable: newTVar 4: unbound variable: newTVarIO 5: unbound variable: readTVar 6: unbound variable: retry 7: unbound variable: writeTVar 8: unbound variable: readTVar 9: unbound variable: writeTVar 10: unbound variable: readTVar 11: unbound variable: writeTVar",
+      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
       "rank": 98
     },
     {
@@ -971,59 +971,59 @@
       "result": "dependency",
       "seconds": 3,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 99
     },
     {
       "package": "cryptonite",
       "version": "0.30",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 100
     },
     {
       "package": "file-embed",
       "version": "0.0.16.0",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: lowering failed: 20 lowering error(s): 1: unbound variable: newTVar 2: unbound variable: newTVarIO 3: unbound variable: newTVar 4: unbound variable: newTVarIO 5: unbound variable: readTVar 6: unbound variable: retry 7: unbound variable: writeTVar 8: unbound variable: readTVar 9: unbound variable: writeTVar 10: unbound variable: readTVar 11: unbound variable: writeTVar",
+      "seconds": 5,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 101
     },
     {
       "package": "old-time",
       "version": "1.1.1.0",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "old-locale",
-      "error": "System.Locale: parse error: 2 errors",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 102
     },
     {
       "package": "aeson-pretty",
       "version": "0.8.11",
       "result": "dependency",
-      "seconds": 2,
-      "blocked_by": "vector-stream",
-      "error": "Data.Stream.Monadic: lowering failed: 60 lowering error(s): 1: unbound constructor: SPEC 2: unbound constructor: SPEC 3: unbound constructor: SPEC 4: unbound constructor: SPEC 5: unbound constructor: SPEC 6: unbound constructor: SPEC 7: unbound constructor: SPEC 8: unbound constructor: SPEC 9: unbound constructor: SPEC 10: unbound constructor: SPEC 11: unbound constructor: SPEC 12: unbound constru",
+      "seconds": 3,
+      "blocked_by": "base-orphans",
+      "error": "Data.Orphans.Prelude: cannot find constructor `:+` in this scope",
       "rank": 103
     },
     {
       "package": "either",
       "version": "5.0.3",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: lowering failed: 20 lowering error(s): 1: unbound variable: newTVar 2: unbound variable: newTVarIO 3: unbound variable: newTVar 4: unbound variable: newTVarIO 5: unbound variable: readTVar 6: unbound variable: retry 7: unbound variable: writeTVar 8: unbound variable: readTVar 9: unbound variable: writeTVar 10: unbound variable: readTVar 11: unbound variable: writeTVar",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 104
     },
     {
       "package": "dlist",
       "version": "1.0",
       "result": "unresolved",
-      "seconds": 2,
+      "seconds": 1,
       "error": "Error: Failed to resolve dependencies",
       "rank": 105
     },
@@ -1031,9 +1031,9 @@
       "package": "conduit-extra",
       "version": "1.3.8",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "stm",
-      "error": "package stm has no library component",
+      "seconds": 5,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 106
     },
     {
@@ -1048,9 +1048,9 @@
       "package": "http-api-data",
       "version": "0.7",
       "result": "dependency",
-      "seconds": 4,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 108
     },
     {
@@ -1059,7 +1059,7 @@
       "result": "dependency",
       "seconds": 3,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 109
     },
     {
@@ -1074,9 +1074,9 @@
       "package": "tasty-golden",
       "version": "2.3.6",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 111
     },
     {
@@ -1085,7 +1085,7 @@
       "result": "dependency",
       "seconds": 4,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 112
     },
     {
@@ -1093,35 +1093,35 @@
       "version": "3.1.18",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "indexed-traversable",
-      "error": "CoerceCompat: parse error: 1 errors",
+      "blocked_by": "template-haskell-lift",
+      "error": "Language.Haskell.TH.Lift: cannot find `unsafeCodeCoerce` in this scope",
       "rank": 113
     },
     {
       "package": "http-media",
       "version": "0.8.1.1",
       "result": "dependency",
-      "seconds": 4,
-      "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "seconds": 3,
+      "blocked_by": "stm",
+      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
       "rank": 114
     },
     {
       "package": "contravariant",
       "version": "1.5.6",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 4,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 115
     },
     {
       "package": "regex-tdfa",
       "version": "1.3.2.7",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 116
     },
     {
@@ -1129,8 +1129,8 @@
       "version": "4000.5.0",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "syb",
-      "error": "Data.Generics.Aliases: parse error: 2 errors",
+      "blocked_by": "stm",
+      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
       "rank": 117
     },
     {
@@ -1139,14 +1139,14 @@
       "result": "dependency",
       "seconds": 4,
       "blocked_by": "tagged",
-      "error": "Data.Tagged: parse error: 2 errors",
+      "error": "Data.Tagged: unexpected `*`, expected operator",
       "rank": 118
     },
     {
       "package": "Win32",
       "version": "2.14.2.2",
       "result": "fail",
-      "seconds": 3,
+      "seconds": 2,
       "error": "error: failed to read source file: Main.hs",
       "rank": 119
     },
@@ -1154,27 +1154,27 @@
       "package": "MonadRandom",
       "version": "0.6.2.1",
       "result": "dependency",
-      "seconds": 2,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 120
     },
     {
       "package": "utility-ht",
       "version": "0.0.17.2",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 121
     },
     {
       "package": "haskell-src-exts",
       "version": "1.24.0",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "syb",
-      "error": "Data.Generics.Instances: lowering failed: 2 lowering error(s): 1: unbound variable: mkNoRepType 2: unbound variable: gcast2",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 122
     },
     {
@@ -1182,17 +1182,17 @@
       "version": "2.0.0.3",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TChan: lowering failed: 21 lowering error(s): 1: unbound variable: newTVar 2: unbound variable: newTVar 3: unbound variable: newTVar 4: unbound variable: newTVarIO 5: unbound variable: newTVarIO 6: unbound variable: newTVarIO 7: unbound variable: readTVar 8: unbound variable: newTVar 9: unbound variable: writeTVar 10: unbound variable: writeTVar 11: unbound variable: readTVa",
+      "blocked_by": "old-locale",
+      "error": "System.Locale: unexpected `,`, expected `::`",
       "rank": 123
     },
     {
       "package": "constraints",
       "version": "0.14.4",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "tagged",
-      "error": "Data.Tagged: parse error: 2 errors",
+      "seconds": 5,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 124
     },
     {
@@ -1207,27 +1207,27 @@
       "package": "Glob",
       "version": "0.10.2",
       "result": "dependency",
-      "seconds": 2,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: lowering failed: 20 lowering error(s): 1: unbound variable: newTVar 2: unbound variable: newTVarIO 3: unbound variable: newTVar 4: unbound variable: newTVarIO 5: unbound variable: readTVar 6: unbound variable: retry 7: unbound variable: writeTVar 8: unbound variable: readTVar 9: unbound variable: writeTVar 10: unbound variable: readTVar 11: unbound variable: writeTVar",
+      "seconds": 5,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 126
     },
     {
       "package": "comonad",
       "version": "5.0.10",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "seconds": 4,
+      "blocked_by": "tagged",
+      "error": "Data.Tagged: unexpected `*`, expected operator",
       "rank": 127
     },
     {
       "package": "path",
       "version": "0.9.6",
       "result": "dependency",
-      "seconds": 4,
-      "blocked_by": "old-locale",
-      "error": "package old-locale has no library component",
+      "seconds": 3,
+      "blocked_by": "base-orphans",
+      "error": "Data.Orphans.Prelude: cannot find constructor `:+` in this scope",
       "rank": 128
     },
     {
@@ -1235,17 +1235,17 @@
       "version": "2.18.1.0",
       "result": "dependency",
       "seconds": 4,
-      "blocked_by": "transformers-base",
-      "error": "Control.Monad.Base: parse error: 56 errors",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 129
     },
     {
       "package": "JuicyPixels",
       "version": "3.3.10",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 130
     },
     {
@@ -1253,35 +1253,35 @@
       "version": "0.15.3.0",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "vector-stream",
-      "error": "Data.Stream.Monadic: lowering failed: 60 lowering error(s): 1: unbound constructor: SPEC 2: unbound constructor: SPEC 3: unbound constructor: SPEC 4: unbound constructor: SPEC 5: unbound constructor: SPEC 6: unbound constructor: SPEC 7: unbound constructor: SPEC 8: unbound constructor: SPEC 9: unbound constructor: SPEC 10: unbound constructor: SPEC 11: unbound constructor: SPEC 12: unbound constru",
+      "blocked_by": "template-haskell-lift",
+      "error": "Language.Haskell.TH.Lift: cannot find `unsafeCodeCoerce` in this scope",
       "rank": 131
     },
     {
       "package": "servant-client",
       "version": "0.20.3.0",
       "result": "dependency",
-      "seconds": 4,
-      "blocked_by": "data-default",
-      "error": "Data.Default.Internal: lowering failed: 5 lowering error(s): 1: unbound constructor: :+ 2: unbound variable: ptrToIntPtr 3: unbound variable: ptrToWordPtr 4: unbound constructor: ConstPtr 5: unbound constructor: Const",
+      "seconds": 5,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 132
     },
     {
       "package": "gogol-core",
       "version": "1.0.0.0",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "seconds": 4,
+      "blocked_by": "tagged",
+      "error": "Data.Tagged: unexpected `*`, expected operator",
       "rank": 133
     },
     {
       "package": "blaze-markup",
       "version": "0.8.3.0",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "syb",
-      "error": "Data.Generics.Aliases: parse error: 2 errors",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 134
     },
     {
@@ -1289,34 +1289,35 @@
       "version": "0.11.9",
       "result": "dependency",
       "seconds": 4,
-      "blocked_by": "basement",
-      "error": "Basement.Compat.NumLiteral: type checking failed: 41 errors",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 135
     },
     {
       "package": "hspec-core",
       "version": "2.11.18",
-      "result": "unresolved",
-      "seconds": 2,
-      "error": "Error: Failed to resolve dependencies",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "colour",
+      "error": "Data.Colour.Matrix: unexpected `default`, expected declaration",
       "rank": 136
     },
     {
       "package": "colour",
       "version": "2.3.7",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 4,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 137
     },
     {
       "package": "resource-pool",
       "version": "0.5.1.0",
       "result": "dependency",
-      "seconds": 4,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 138
     },
     {
@@ -1324,44 +1325,44 @@
       "version": "0.13.0.0",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "blocked_by": "stm",
+      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
       "rank": 139
     },
     {
       "package": "haskeline",
       "version": "0.8.5.0",
       "result": "dependency",
-      "seconds": 2,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: lowering failed: 20 lowering error(s): 1: unbound variable: newTVar 2: unbound variable: newTVarIO 3: unbound variable: newTVar 4: unbound variable: newTVarIO 5: unbound variable: readTVar 6: unbound variable: retry 7: unbound variable: writeTVar 8: unbound variable: readTVar 9: unbound variable: writeTVar 10: unbound variable: readTVar 11: unbound variable: writeTVar",
+      "seconds": 5,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 140
     },
     {
       "package": "xml-conduit",
       "version": "1.10.1.0",
       "result": "dependency",
-      "seconds": 4,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 141
     },
     {
       "package": "hslogger",
       "version": "1.3.2.0",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 4,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 142
     },
     {
       "package": "transformers-compat",
       "version": "0.8",
       "result": "dependency",
-      "seconds": 2,
+      "seconds": 4,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 143
     },
     {
@@ -1369,44 +1370,44 @@
       "version": "1.6.0.3",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "blocked_by": "template-haskell-quasiquoter",
+      "error": "Language.Haskell.TH.QuasiQuoter: cannot find constructor `QuasiQuoter` in this scope",
       "rank": 144
     },
     {
       "package": "crypton",
       "version": "2.3.0",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "syb",
-      "error": "Data.Generics.Aliases: parse error: 2 errors",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 145
     },
     {
       "package": "gtk",
       "version": "0.15.10",
       "result": "dependency",
-      "seconds": 2,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 146
     },
     {
       "package": "monad-loops",
       "version": "0.4.3",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 147
     },
     {
       "package": "postgresql-simple",
       "version": "0.7.0.1",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 148
     },
     {
@@ -1422,52 +1423,53 @@
       "version": "1.10",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "blocked_by": "haskell-lexer",
+      "error": "Language.Haskell.Lexer.Position: unexpected `,`, expected `::`",
       "rank": 150
     },
     {
       "package": "regex-posix",
       "version": "0.96.0.2",
-      "result": "unresolved",
-      "seconds": 1,
-      "error": "Error: Failed to resolve dependencies",
+      "result": "dependency",
+      "seconds": 4,
+      "blocked_by": "template-haskell-lift",
+      "error": "Language.Haskell.TH.Lift: cannot find `unsafeCodeCoerce` in this scope",
       "rank": 151
     },
     {
       "package": "errors",
       "version": "2.3.0",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "syb",
-      "error": "Data.Generics.Instances: lowering failed: 2 lowering error(s): 1: unbound variable: mkNoRepType 2: unbound variable: gcast2",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 152
     },
     {
       "package": "mmorph",
       "version": "1.2.2",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "transformers-compat",
-      "error": "failed to compute parallel groups for transformers-compat: cycle detected in module dependencies: Data.Functor.Classes",
+      "seconds": 5,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 153
     },
     {
       "package": "ansi-wl-pprint",
       "version": "1.1.1",
       "result": "dependency",
-      "seconds": 4,
-      "blocked_by": "syb",
-      "error": "Data.Generics.Aliases: parse error: 2 errors",
+      "seconds": 5,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 154
     },
     {
       "package": "io-streams",
       "version": "1.5.2.2",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 155
     },
     {
@@ -1475,26 +1477,26 @@
       "version": "0.5.4.1",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "blocked_by": "vector-stream",
+      "error": "Data.Stream.Monadic: cannot find constructor `SPEC` in this scope",
       "rank": 156
     },
     {
       "package": "smallcheck",
       "version": "1.2.2",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TChan: lowering failed: 21 lowering error(s): 1: unbound variable: newTVar 2: unbound variable: newTVar 3: unbound variable: newTVar 4: unbound variable: newTVarIO 5: unbound variable: newTVarIO 6: unbound variable: newTVarIO 7: unbound variable: readTVar 8: unbound variable: newTVar 9: unbound variable: writeTVar 10: unbound variable: writeTVar 11: unbound variable: readTVa",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 157
     },
     {
       "package": "lens-aeson",
       "version": "1.2.3",
       "result": "dependency",
-      "seconds": 4,
-      "blocked_by": "assoc",
-      "error": "Data.Bifunctor.Assoc: lowering failed: 5 lowering error(s): 1: unbound constructor: Const 2: unbound constructor: Const 3: unbound constructor: Const 4: unbound constructor: Const 5: unbound constructor: Const",
+      "seconds": 5,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 158
     },
     {
@@ -1503,16 +1505,16 @@
       "result": "dependency",
       "seconds": 4,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 159
     },
     {
       "package": "tagsoup",
       "version": "0.14.8",
       "result": "dependency",
-      "seconds": 2,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 160
     },
     {
@@ -1529,68 +1531,68 @@
       "result": "dependency",
       "seconds": 4,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 162
     },
     {
       "package": "foldl",
       "version": "1.4.18",
       "result": "dependency",
-      "seconds": 2,
-      "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "seconds": 3,
+      "blocked_by": "base-orphans",
+      "error": "Data.Orphans.Prelude: cannot find constructor `:+` in this scope",
       "rank": 163
     },
     {
       "package": "strict",
       "version": "0.5.1",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 4,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 164
     },
     {
       "package": "tasty-smallcheck",
       "version": "0.8.2",
       "result": "dependency",
-      "seconds": 4,
-      "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "seconds": 3,
+      "blocked_by": "stm",
+      "error": "Control.Concurrent.STM.TBQueue: cannot find `newTVar` in this scope",
       "rank": 165
     },
     {
       "package": "fast-logger",
       "version": "3.2.9",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 166
     },
     {
       "package": "hspec-discover",
       "version": "2.11.18",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 167
     },
     {
       "package": "generic-lens",
       "version": "2.3.0.0",
       "result": "dependency",
-      "seconds": 4,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 168
     },
     {
       "package": "pandoc",
       "version": "3.14",
       "result": "unresolved",
-      "seconds": 2,
+      "seconds": 1,
       "error": "Error: Failed to resolve dependencies",
       "rank": 169
     },
@@ -1598,25 +1600,25 @@
       "package": "OpenGL",
       "version": "3.0.3.0",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 170
     },
     {
       "package": "hmatrix",
       "version": "0.20.2",
       "result": "dependency",
-      "seconds": 4,
-      "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "seconds": 3,
+      "blocked_by": "base-orphans",
+      "error": "Data.Orphans.Prelude: cannot find constructor `:+` in this scope",
       "rank": 171
     },
     {
       "package": "yesod-core",
       "version": "1.7.0.0",
       "result": "unresolved",
-      "seconds": 5,
+      "seconds": 4,
       "error": "warning: Could not plan the dependency build: cycle detected in dependencies: clientsession -> clientsession",
       "rank": 172
     },
@@ -1624,9 +1626,9 @@
       "package": "haskell-src-meta",
       "version": "0.8.16",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 173
     },
     {
@@ -1635,25 +1637,25 @@
       "result": "dependency",
       "seconds": 3,
       "blocked_by": "tagged",
-      "error": "Data.Tagged: parse error: 2 errors",
+      "error": "Data.Tagged: unexpected `*`, expected operator",
       "rank": 174
     },
     {
       "package": "th-abstraction",
       "version": "0.7.2.0",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 4,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 175
     },
     {
       "package": "unix-compat",
       "version": "0.7.4.1",
       "result": "dependency",
-      "seconds": 2,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 176
     },
     {
@@ -1661,8 +1663,8 @@
       "version": "1.3.14",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "syb",
-      "error": "Data.Generics.Aliases: parse error: 2 errors",
+      "blocked_by": "template-haskell-lift",
+      "error": "Language.Haskell.TH.Lift: cannot find `unsafeCodeCoerce` in this scope",
       "rank": 177
     },
     {
@@ -1678,24 +1680,25 @@
       "result": "dependency",
       "seconds": 3,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 179
     },
     {
       "package": "regex-compat",
       "version": "0.95.2.2",
-      "result": "unresolved",
-      "seconds": 1,
-      "error": "Error: Failed to resolve dependencies",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "template-haskell-lift",
+      "error": "Language.Haskell.TH.Lift: cannot find `unsafeCodeCoerce` in this scope",
       "rank": 180
     },
     {
       "package": "void",
       "version": "0.7.4",
       "result": "dependency",
-      "seconds": 2,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 181
     },
     {
@@ -1703,26 +1706,26 @@
       "version": "3.10",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: lowering failed: 20 lowering error(s): 1: unbound variable: newTVar 2: unbound variable: newTVarIO 3: unbound variable: newTVar 4: unbound variable: newTVarIO 5: unbound variable: readTVar 6: unbound variable: retry 7: unbound variable: writeTVar 8: unbound variable: readTVar 9: unbound variable: writeTVar 10: unbound variable: readTVar 11: unbound variable: writeTVar",
+      "blocked_by": "integer-logarithms",
+      "error": "Math.NumberTheory.Logarithms: cannot find `isTrue#` in this scope",
       "rank": 182
     },
     {
       "package": "string-conversions",
       "version": "0.4.0.1",
       "result": "dependency",
-      "seconds": 2,
-      "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "seconds": 3,
+      "blocked_by": "template-haskell-lift",
+      "error": "Language.Haskell.TH.Lift: cannot find `unsafeCodeCoerce` in this scope",
       "rank": 183
     },
     {
       "package": "tasty-th",
       "version": "0.1.7",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 184
     },
     {
@@ -1738,27 +1741,27 @@
       "package": "parser-combinators",
       "version": "1.3.1",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 186
     },
     {
       "package": "relude",
       "version": "1.2.2.2",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 187
     },
     {
       "package": "reflection",
       "version": "2.1.9",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 4,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 188
     },
     {
@@ -1773,9 +1776,9 @@
       "package": "typed-process",
       "version": "0.2.13.0",
       "result": "dependency",
-      "seconds": 2,
-      "blocked_by": "stm",
-      "error": "package stm has no library component",
+      "seconds": 3,
+      "blocked_by": "template-haskell-lift",
+      "error": "Language.Haskell.TH.Lift: cannot find `unsafeCodeCoerce` in this scope",
       "rank": 190
     },
     {
@@ -1790,62 +1793,63 @@
       "package": "hxt",
       "version": "9.3.1.22",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 192
     },
     {
       "package": "uniplate",
       "version": "1.6.13",
       "result": "dependency",
-      "seconds": 2,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 193
     },
     {
       "package": "path-io",
       "version": "1.8.2",
-      "result": "unresolved",
-      "seconds": 4,
-      "error": "warning: Could not plan the dependency build: cycle detected in dependencies: path -> path",
+      "result": "dependency",
+      "seconds": 5,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 194
     },
     {
       "package": "system-filepath",
       "version": "0.4.14.1",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "syb",
-      "error": "Data.Generics.Instances: lowering failed: 2 lowering error(s): 1: unbound variable: mkNoRepType 2: unbound variable: gcast2",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 195
     },
     {
       "package": "cairo",
       "version": "0.13.12.0",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "syb",
-      "error": "Data.Generics.Aliases: parse error: 2 errors",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 196
     },
     {
       "package": "ghc-paths",
       "version": "0.1.0.12",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 4,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 197
     },
     {
       "package": "pandoc-types",
       "version": "1.23.1.2",
       "result": "dependency",
-      "seconds": 4,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 198
     },
     {
@@ -1854,16 +1858,16 @@
       "result": "dependency",
       "seconds": 4,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 199
     },
     {
       "package": "raw-strings-qq",
       "version": "1.1",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 200
     },
     {
@@ -1871,62 +1875,62 @@
       "version": "0.16.5.0",
       "result": "dependency",
       "seconds": 4,
-      "blocked_by": "assoc",
-      "error": "Data.Bifunctor.Assoc: lowering failed: 5 lowering error(s): 1: unbound constructor: Const 2: unbound constructor: Const 3: unbound constructor: Const 4: unbound constructor: Const 5: unbound constructor: Const",
+      "blocked_by": "splitmix",
+      "error": "System.Random.SplitMix: cannot find `readsPrec` in this scope",
       "rank": 201
     },
     {
       "package": "base-orphans",
       "version": "0.9.4",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 4,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 202
     },
     {
       "package": "gauge",
       "version": "0.2.5",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 203
     },
     {
       "package": "snap-core",
       "version": "1.0.5.1",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "call-stack",
-      "error": "Data.CallStack: code generation failed: `getCallStack` is not implemented by bhc",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 204
     },
     {
       "package": "Diff",
       "version": "2.0.1",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 4,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 205
     },
     {
       "package": "SHA",
       "version": "1.6.4.4",
       "result": "dependency",
-      "seconds": 2,
-      "blocked_by": "template-haskell-lift",
-      "error": "Language.Haskell.TH.Lift: lowering failed: 10 lowering error(s): 1: unbound variable: unsafeCodeCoerce 2: unbound variable: lift 3: unbound constructor: LitE 4: unbound constructor: BytesPrimL 5: unbound constructor: Bytes 6: unbound constructor: AppE 7: unbound constructor: ConE 8: unbound constructor: I# 9: unbound constructor: LitE 10: unbound constructor: IntPrimL",
+      "seconds": 5,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 206
     },
     {
       "package": "optics-core",
       "version": "0.4.2",
       "result": "dependency",
-      "seconds": 4,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 207
     },
     {
@@ -1934,44 +1938,44 @@
       "version": "1.42.3",
       "result": "dependency",
       "seconds": 4,
-      "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "blocked_by": "basement",
+      "error": "Basement.Compat.NumLiteral: `fromInteger` in `instance Integral Natural` does not have the type the class gives it: type mismatch: expected `Integer`, found `Int`",
       "rank": 208
     },
     {
       "package": "hasql",
       "version": "2.0.1.0",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "OneTuple",
-      "error": "Data.Tuple.OneTuple: parse error: 1 errors",
+      "seconds": 2,
+      "blocked_by": "template-haskell-lift",
+      "error": "Language.Haskell.TH.Lift: cannot find `unsafeCodeCoerce` in this scope",
       "rank": 209
     },
     {
       "package": "streaming",
       "version": "0.2.4.0",
       "result": "dependency",
-      "seconds": 2,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: lowering failed: 21 lowering error(s): 1: unbound variable: newTVar 2: unbound variable: newTVarIO 3: unbound variable: newTVar 4: unbound variable: newTVarIO 5: unbound variable: readTVar 6: unbound variable: retry 7: unbound variable: writeTVar 8: unbound variable: readTVar 9: unbound variable: writeTVar 10: unbound variable: readTVar 11: unbound variable: writeTVar",
+      "seconds": 3,
+      "blocked_by": "transformers-compat",
+      "error": "failed to compute parallel groups for transformers-compat: cycle detected in module dependencies: Data.Functor.Classes.Generic",
       "rank": 210
     },
     {
       "package": "iproute",
       "version": "1.8.0",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 211
     },
     {
       "package": "vector-space",
       "version": "0.19",
       "result": "dependency",
-      "seconds": 4,
-      "blocked_by": "NumInstances",
-      "error": "Data.NumInstances.Tuple: parse error: 84 errors",
+      "seconds": 3,
+      "blocked_by": "newtype-generics",
+      "error": "Control.Newtype.Generics: unexpected `=>`, expected declaration",
       "rank": 212
     },
     {
@@ -1986,9 +1990,9 @@
       "package": "vty",
       "version": "6.7",
       "result": "dependency",
-      "seconds": 4,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 214
     },
     {
@@ -1996,17 +2000,17 @@
       "version": "2.2.0",
       "result": "dependency",
       "seconds": 4,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: lowering failed: 20 lowering error(s): 1: unbound variable: newTVar 2: unbound variable: newTVarIO 3: unbound variable: newTVar 4: unbound variable: newTVarIO 5: unbound variable: readTVar 6: unbound variable: retry 7: unbound variable: writeTVar 8: unbound variable: readTVar 9: unbound variable: writeTVar 10: unbound variable: readTVar 11: unbound variable: writeTVar",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 215
     },
     {
       "package": "tasty-expected-failure",
       "version": "0.12.3",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 216
     },
     {
@@ -2021,9 +2025,9 @@
       "package": "indexed-traversable",
       "version": "0.1.5",
       "result": "dependency",
-      "seconds": 4,
-      "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "seconds": 3,
+      "blocked_by": "template-haskell-lift",
+      "error": "Language.Haskell.TH.Lift: cannot find `unsafeCodeCoerce` in this scope",
       "rank": 218
     },
     {
@@ -2032,16 +2036,16 @@
       "result": "dependency",
       "seconds": 4,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 219
     },
     {
       "package": "vault",
       "version": "0.3.2.0",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "seconds": 4,
+      "blocked_by": "stm",
+      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
       "rank": 220
     },
     {
@@ -2049,53 +2053,53 @@
       "version": "0.9.1.0",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "blocked_by": "vector-stream",
+      "error": "Data.Stream.Monadic: cannot find constructor `SPEC` in this scope",
       "rank": 221
     },
     {
       "package": "base-unicode-symbols",
       "version": "0.2.4.2",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 4,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 222
     },
     {
       "package": "cryptohash-sha256",
       "version": "0.11.102.1",
       "result": "dependency",
-      "seconds": 2,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 223
     },
     {
       "package": "regex-base",
       "version": "0.94.0.3",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 4,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 224
     },
     {
       "package": "hashtables",
       "version": "1.4.2",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 4,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 225
     },
     {
       "package": "glib",
       "version": "0.13.12.0",
       "result": "dependency",
-      "seconds": 2,
+      "seconds": 4,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 226
     },
     {
@@ -2103,17 +2107,17 @@
       "version": "1.0.6.1",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "blocked_by": "splitmix",
+      "error": "System.Random.SplitMix.Init: code generation failed: `getPOSIXTime` is not implemented by bhc",
       "rank": 227
     },
     {
       "package": "haskell-gi-base",
       "version": "0.26.9",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "template-haskell-lift",
-      "error": "Language.Haskell.TH.Lift: lowering failed: 10 lowering error(s): 1: unbound variable: unsafeCodeCoerce 2: unbound variable: lift 3: unbound constructor: LitE 4: unbound constructor: BytesPrimL 5: unbound constructor: Bytes 6: unbound constructor: AppE 7: unbound constructor: ConE 8: unbound constructor: I# 9: unbound constructor: LitE 10: unbound constructor: IntPrimL",
+      "seconds": 4,
+      "blocked_by": "indexed-profunctors",
+      "error": "Data.Profunctor.Indexed: unexpected layout `}`, expected identifier",
       "rank": 228
     },
     {
@@ -2128,18 +2132,18 @@
       "package": "lucid",
       "version": "2.11.20260427",
       "result": "dependency",
-      "seconds": 2,
-      "blocked_by": "template-haskell-lift",
-      "error": "Language.Haskell.TH.Lift: lowering failed: 10 lowering error(s): 1: unbound variable: unsafeCodeCoerce 2: unbound variable: lift 3: unbound constructor: LitE 4: unbound constructor: BytesPrimL 5: unbound constructor: Bytes 6: unbound constructor: AppE 7: unbound constructor: ConE 8: unbound constructor: I# 9: unbound constructor: LitE 10: unbound constructor: IntPrimL",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 230
     },
     {
       "package": "scotty",
       "version": "0.30",
       "result": "dependency",
-      "seconds": 5,
-      "blocked_by": "call-stack",
-      "error": "Data.CallStack: code generation failed: `getCallStack` is not implemented by bhc",
+      "seconds": 4,
+      "blocked_by": "stm",
+      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
       "rank": 231
     },
     {
@@ -2147,78 +2151,78 @@
       "version": "0.2.3.1",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "blocked_by": "splitmix",
+      "error": "System.Random.SplitMix.Init: code generation failed: `getPOSIXTime` is not implemented by bhc",
       "rank": 232
     },
     {
       "package": "adjunctions",
       "version": "4.4.4",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 4,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 233
     },
     {
       "package": "prettyprinter-ansi-terminal",
       "version": "1.1.4",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 4,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 234
     },
     {
       "package": "retry",
       "version": "0.9.3.1",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TChan: lowering failed: 21 lowering error(s): 1: unbound variable: newTVar 2: unbound variable: newTVar 3: unbound variable: newTVar 4: unbound variable: newTVarIO 5: unbound variable: newTVarIO 6: unbound variable: newTVarIO 7: unbound variable: readTVar 8: unbound variable: newTVar 9: unbound variable: writeTVar 10: unbound variable: writeTVar 11: unbound variable: readTVa",
+      "seconds": 5,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 235
     },
     {
       "package": "vinyl",
       "version": "0.14.3",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 236
     },
     {
       "package": "configurator",
       "version": "0.3.0.0",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "seconds": 4,
+      "blocked_by": "template-haskell-lift",
+      "error": "Language.Haskell.TH.Lift: cannot find `unsafeCodeCoerce` in this scope",
       "rank": 237
     },
     {
       "package": "cookie",
       "version": "0.5.1",
       "result": "dependency",
-      "seconds": 4,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 238
     },
     {
       "package": "text-short",
       "version": "0.1.6.1",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "seconds": 2,
+      "blocked_by": "stm",
+      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
       "rank": 239
     },
     {
       "package": "HsOpenSSL",
       "version": "0.11.7.11",
       "result": "unresolved",
-      "seconds": 1,
+      "seconds": 2,
       "error": "Error: Failed to resolve dependencies",
       "rank": 240
     },
@@ -2226,25 +2230,25 @@
       "package": "fsnotify",
       "version": "0.4.4.0",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: lowering failed: 20 lowering error(s): 1: unbound variable: newTVar 2: unbound variable: newTVarIO 3: unbound variable: newTVar 4: unbound variable: newTVarIO 5: unbound variable: readTVar 6: unbound variable: retry 7: unbound variable: writeTVar 8: unbound variable: readTVar 9: unbound variable: writeTVar 10: unbound variable: readTVar 11: unbound variable: writeTVar",
+      "seconds": 5,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 241
     },
     {
       "package": "parsers",
       "version": "0.12.12",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "syb",
-      "error": "Data.Generics.Aliases: parse error: 2 errors",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 242
     },
     {
       "package": "hspec-hedgehog",
       "version": "0.3.0.0",
       "result": "unresolved",
-      "seconds": 3,
+      "seconds": 4,
       "error": "warning: Could not plan the dependency build: cycle detected in dependencies: hedgehog -> pretty-show -> pretty-show",
       "rank": 243
     },
@@ -2252,16 +2256,16 @@
       "package": "random-shuffle",
       "version": "0.0.4",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 5,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 244
     },
     {
       "package": "tasty-discover",
       "version": "5.2.0",
       "result": "fail",
-      "seconds": 3,
+      "seconds": 2,
       "error": "error: failed to read source file: Main.hs",
       "rank": 245
     },
@@ -2269,27 +2273,27 @@
       "package": "xml-types",
       "version": "0.3.8",
       "result": "dependency",
-      "seconds": 2,
+      "seconds": 4,
       "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 246
     },
     {
       "package": "entropy",
       "version": "0.4.1.11",
       "result": "dependency",
-      "seconds": 4,
-      "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "seconds": 3,
+      "blocked_by": "template-haskell-quasiquoter",
+      "error": "Language.Haskell.TH.QuasiQuoter: cannot find constructor `QuasiQuoter` in this scope",
       "rank": 247
     },
     {
       "package": "servant-client-core",
       "version": "0.20.3.0",
       "result": "dependency",
-      "seconds": 4,
-      "blocked_by": "syb",
-      "error": "Data.Generics.Instances: lowering failed: 2 lowering error(s): 1: unbound variable: mkNoRepType 2: unbound variable: gcast2",
+      "seconds": 5,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 248
     },
     {
@@ -2297,17 +2301,17 @@
       "version": "0.3.6.1",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "pretty",
-      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
+      "blocked_by": "utility-ht",
+      "error": "Control.Monad.HT: cannot find `List.replicate` in this scope",
       "rank": 249
     },
     {
       "package": "mono-traversable",
       "version": "1.0.21.0",
       "result": "dependency",
-      "seconds": 2,
-      "blocked_by": "split",
-      "error": "Data.List.Split.Internals: code generation failed: `genericSplitAt` is not implemented by bhc",
+      "seconds": 5,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJClass: code generation failed: internal codegen error: LLVM verification failed: Both operands to ICmp instruction are not of the same type!",
       "rank": 250
     }
   ]
