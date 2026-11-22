@@ -41,6 +41,9 @@ newest bhc release and publishes the results, shown at
   `pass`, `fail` (the package's own module did not compile), `dependency` (a dependency did not;
   `blocked_by` names it), `unresolved`, `timeout`, `error`, or `builtin` (bhc ships its own
   implementation, so building it from Hackage would test nothing).
+- **Dependency resolution:** against GHC 9.10.3, installed for the run. Version bounds on Hackage
+  are written for GHC's `base`; resolving against the runner's newest GHC made packages
+  "unresolved" only because their bounds did not allow its `base` yet.
 - **Results:** [`compat/latest.json`](compat/latest.json), and one file per bhc release in
   `compat/history/`. Besides the rows, the summary ranks the packages that block the most others.
 - **When:** daily, doing work only when bhc has a release the index does not cover; run it by
