@@ -1,0 +1,159 @@
+# Package compatibility index: builds the Hackage packages listed in
+# compat/packages.txt with the newest bhc release, through hx, and commits the
+# results to compat/latest.json (and compat/history/), which
+# arcanist.sh/bhc/packages/ renders.
+#
+# Runs daily but only does work when bhc has a release the index has not
+# covered yet; run it by hand with "force" to rebuild anyway (for example
+# after changing the package list or hx).
+#
+# Optional secret CF_DEPLOY_HOOK: a Cloudflare Pages deploy hook URL for the
+# arcanist.sh site, called after new results are committed so the page
+# updates at once. Without it the page updates on the site's next deploy.
+name: compat-index
+
+on:
+  schedule:
+    - cron: "30 5 * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Rebuild even if the index already covers the newest bhc"
+        type: boolean
+        default: false
+      hx_ref:
+        description: "hx revision to build packages with"
+        default: main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: compat-index
+  cancel-in-progress: false
+
+env:
+  SHARDS: 10
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    outputs:
+      run: ${{ steps.decide.outputs.run }}
+      bhc_version: ${{ steps.decide.outputs.bhc_version }}
+      shards: ${{ steps.decide.outputs.shards }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: decide
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          tag=$(gh release view -R arcanist-sh/bhc --json tagName --jq .tagName)
+          version="${tag#v}"
+          covered=$(jq -r '.bhc_version // ""' compat/latest.json 2>/dev/null || true)
+          run=false
+          if [ "${{ inputs.force }}" = "true" ] || [ "$covered" != "$version" ]; then run=true; fi
+          echo "bhc $version, index covers '${covered}': run=$run"
+          echo "run=$run" >> "$GITHUB_OUTPUT"
+          echo "bhc_version=$version" >> "$GITHUB_OUTPUT"
+          echo "shards=$(jq -cn --argjson n "$SHARDS" '[range($n)]')" >> "$GITHUB_OUTPUT"
+
+  hx:
+    needs: setup
+    if: needs.setup.outputs.run == 'true'
+    runs-on: ubuntu-latest
+    outputs:
+      revision: ${{ steps.build.outputs.revision }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: arcanist-sh/hx
+          ref: ${{ inputs.hx_ref || 'main' }}
+          path: hx
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: hx
+      - id: build
+        working-directory: hx
+        run: |
+          cargo build --release --locked -p hx-cli
+          echo "revision=$(git rev-parse --short HEAD)" >> "$GITHUB_OUTPUT"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hx
+          path: hx/target/release/hx
+
+  check:
+    needs: [setup, hx]
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: ${{ fromJson(needs.setup.outputs.shards) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: hx
+          path: tools
+      - name: Install bhc ${{ needs.setup.outputs.bhc_version }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ needs.setup.outputs.bhc_version }}
+        run: |
+          set -euo pipefail
+          mkdir -p bhc-dist && cd bhc-dist
+          gh release download "v$VERSION" -R arcanist-sh/bhc -p bhc-x86_64-linux.tar.gz -p SHA256SUMS.txt
+          grep ' bhc-x86_64-linux.tar.gz$' SHA256SUMS.txt | sha256sum -c -
+          mkdir -p bhc && tar -xzf bhc-x86_64-linux.tar.gz -C bhc
+          chmod +x "$GITHUB_WORKSPACE/tools/hx"
+          { echo "$GITHUB_WORKSPACE/tools"; echo "$PWD/bhc"; } >> "$GITHUB_PATH"
+      - name: Check this shard's packages
+        run: |
+          set -uo pipefail
+          bhc --version; hx --version
+          mkdir -p out
+          grep -v '^#' compat/packages.txt | awk -v n="$SHARDS" -v s="${{ matrix.shard }}" '(NR - 1) % n == s' \
+            | while read -r pkg; do
+                compat/check-package.sh "$pkg" "$RUNNER_TEMP/work" | tee -a out/results.jsonl
+                cp "$RUNNER_TEMP/work/$pkg.log" "out/$pkg.log" 2>/dev/null || true
+              done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: results-${{ matrix.shard }}
+          path: out
+
+  publish:
+    needs: [setup, hx, check]
+    if: always() && needs.setup.outputs.run == 'true' && needs.hx.result == 'success'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: results-*
+          path: results
+      - name: Summarize and commit
+        env:
+          BHC_VERSION: ${{ needs.setup.outputs.bhc_version }}
+          HX_REVISION: ${{ needs.hx.outputs.revision }}
+          CF_DEPLOY_HOOK: ${{ secrets.CF_DEPLOY_HOOK }}
+        run: |
+          set -euo pipefail
+          run_url="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+          compat/summarize.sh "$BHC_VERSION" "$HX_REVISION" "$run_url" results/*/results.jsonl > compat/latest.json
+          mkdir -p compat/history
+          cp compat/latest.json "compat/history/bhc-$BHC_VERSION.json"
+          jq '{bhc_version, tested, passing, counts}' compat/latest.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add compat/latest.json compat/history
+          if git diff --cached --quiet; then echo "no change"; exit 0; fi
+          git commit -m "compat: results for bhc $BHC_VERSION"
+          git push
+          if [ -n "${CF_DEPLOY_HOOK:-}" ]; then curl -fsS -X POST "$CF_DEPLOY_HOOK" > /dev/null; fi
