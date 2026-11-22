@@ -1,21 +1,107 @@
 {
-  "generated_at": "2026-11-22T11:00:15Z",
+  "generated_at": "2026-11-22T11:05:59Z",
   "bhc_version": "0.2.30",
-  "hx_revision": "ba5ac69",
-  "run_url": "https://github.com/arcanist-sh/bhc-verifier/actions/runs/45014830080",
+  "hx_revision": "2107277",
+  "run_url": "https://github.com/arcanist-sh/bhc-verifier/actions/runs/45015285357",
   "tested": 238,
   "passing": 0,
   "counts": {
     "builtin": 12,
+    "dependency": 207,
     "error": 1,
     "fail": 3,
-    "unresolved": 234
+    "unresolved": 27
   },
   "blockers": [
+    {
+      "package": "pretty",
+      "blocks": 130,
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors"
+    },
+    {
+      "package": "syb",
+      "blocks": 20,
+      "error": "Data.Generics.Instances: lowering failed: 2 lowering error(s): 1: unbound variable: mkNoRepType 2: unbound variable: gcast2"
+    },
+    {
+      "package": "stm",
+      "blocks": 19,
+      "error": "Control.Concurrent.STM.TChan: lowering failed: 21 lowering error(s): 1: unbound variable: newTVar 2: unbound variable: newTVar 3: unbound variable: newTVar 4: unbound variable: newTVarIO 5: unbound variable: newTVarIO 6: unbound variable: newTVarIO 7: unbound variable: readTVar 8: unbound variable: newTVar 9: unbound variable: writeTVar 10: unbound variable: writeTVar 11: unbound variable: readTVa"
+    },
+    {
+      "package": "template-haskell-lift",
+      "blocks": 7,
+      "error": "Language.Haskell.TH.Lift: lowering failed: 10 lowering error(s): 1: unbound variable: unsafeCodeCoerce 2: unbound variable: lift 3: unbound constructor: LitE 4: unbound constructor: BytesPrimL 5: unbound constructor: Bytes 6: unbound constructor: AppE 7: unbound constructor: ConE 8: unbound constructor: I# 9: unbound constructor: LitE 10: unbound constructor: IntPrimL"
+    },
+    {
+      "package": "tagged",
+      "blocks": 5,
+      "error": "Data.Tagged: parse error: 2 errors"
+    },
+    {
+      "package": "call-stack",
+      "blocks": 4,
+      "error": "Data.CallStack: code generation failed: `getCallStack` is not implemented by bhc"
+    },
+    {
+      "package": "assoc",
+      "blocks": 2,
+      "error": "Data.Bifunctor.Assoc: lowering failed: 5 lowering error(s): 1: unbound constructor: Const 2: unbound constructor: Const 3: unbound constructor: Const 4: unbound constructor: Const 5: unbound constructor: Const"
+    },
+    {
+      "package": "colour",
+      "blocks": 2,
+      "error": "Data.Colour.Chan: lowering failed: 1 lowering error(s): 1: unbound variable: Data.List.sum"
+    },
+    {
+      "package": "indexed-traversable",
+      "blocks": 2,
+      "error": "WithIndex: parse error: 7 errors"
+    },
+    {
+      "package": "old-locale",
+      "blocks": 2,
+      "error": "System.Locale: parse error: 2 errors"
+    },
+    {
+      "package": "vector-stream",
+      "blocks": 2,
+      "error": "Data.Stream.Monadic: lowering failed: 60 lowering error(s): 1: unbound constructor: SPEC 2: unbound constructor: SPEC 3: unbound constructor: SPEC 4: unbound constructor: SPEC 5: unbound constructor: SPEC 6: unbound constructor: SPEC 7: unbound constructor: SPEC 8: unbound constructor: SPEC 9: unbound constructor: SPEC 10: unbound constructor: SPEC 11: unbound constructor: SPEC 12: unbound constru"
+    },
+    {
+      "package": "NumInstances",
+      "blocks": 1,
+      "error": "Data.NumInstances.Tuple: parse error: 84 errors"
+    },
+    {
+      "package": "OneTuple",
+      "blocks": 1,
+      "error": "Data.Tuple.OneTuple: parse error: 1 errors"
+    },
     {
       "package": "Win32",
       "blocks": 1,
       "error": "error: failed to read source file: Main.hs"
+    },
+    {
+      "package": "base-orphans",
+      "blocks": 1,
+      "error": "Data.Orphans.Prelude: lowering failed: 2 lowering error(s): 1: unbound constructor: :+ 2: unbound constructor: :+"
+    },
+    {
+      "package": "basement",
+      "blocks": 1,
+      "error": "Basement.Compat.NumLiteral: type checking failed: 41 errors"
+    },
+    {
+      "package": "data-default",
+      "blocks": 1,
+      "error": "Data.Default.Internal: lowering failed: 5 lowering error(s): 1: unbound constructor: :+ 2: unbound variable: ptrToIntPtr 3: unbound variable: ptrToWordPtr 4: unbound constructor: ConstPtr 5: unbound constructor: Const"
+    },
+    {
+      "package": "dlist",
+      "blocks": 1,
+      "error": "Data.DList.Internal: parse error: 3 errors"
     },
     {
       "package": "fail",
@@ -23,9 +109,9 @@
       "error": "error: failed to read source file: Main.hs"
     },
     {
-      "package": "tasty-discover",
+      "package": "integer-logarithms",
       "blocks": 1,
-      "error": "error: failed to read source file: Main.hs"
+      "error": "Math.NumberTheory.Logarithms: lowering failed: 17 lowering error(s): 1: unbound variable: isTrue# 2: unbound variable: int2Word# 3: unbound variable: isTrue# 4: unbound variable: isTrue# 5: unbound variable: eqWord# 6: unbound variable: isTrue# 7: unbound variable: eqWord# 8: unbound variable: int2Word# 9: unbound variable: unsafeAt 10: unbound variable: unsafeAt 11: unbound variable: unsafeAt 12:"
     }
   ],
   "packages": [
@@ -40,7 +126,7 @@
       "package": "bytestring",
       "version": "0.12.2.0",
       "result": "builtin",
-      "seconds": 1,
+      "seconds": 0,
       "rank": 2
     },
     {
@@ -74,25 +160,28 @@
     {
       "package": "time",
       "version": "1.16.0.1",
-      "result": "unresolved",
-      "seconds": 13,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 19,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 7
     },
     {
       "package": "QuickCheck",
       "version": "2.19.0.0",
-      "result": "unresolved",
-      "seconds": 32,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 21,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 8
     },
     {
       "package": "aeson",
       "version": "2.3.2.0",
-      "result": "unresolved",
-      "seconds": 23,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 21,
+      "blocked_by": "dlist",
+      "error": "Data.DList.Internal: parse error: 3 errors",
       "rank": 9
     },
     {
@@ -105,17 +194,18 @@
     {
       "package": "tasty",
       "version": "1.5.5",
-      "result": "unresolved",
-      "seconds": 17,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 20,
+      "blocked_by": "stm",
+      "error": "Control.Concurrent.STM.TChan: lowering failed: 21 lowering error(s): 1: unbound variable: newTVar 2: unbound variable: newTVar 3: unbound variable: newTVar 4: unbound variable: newTVarIO 5: unbound variable: newTVarIO 6: unbound variable: newTVarIO 7: unbound variable: readTVar 8: unbound variable: newTVar 9: unbound variable: writeTVar 10: unbound variable: writeTVar 11: unbound variable: readTVa",
       "rank": 11
     },
     {
       "package": "hspec",
       "version": "2.11.18",
       "result": "unresolved",
-      "seconds": 24,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "seconds": 21,
+      "error": "warning: Could not plan the dependency build: cycle detected in dependencies: hspec-discover -> hspec-discover",
       "rank": 12
     },
     {
@@ -128,25 +218,27 @@
     {
       "package": "vector",
       "version": "0.13.2.0",
-      "result": "unresolved",
-      "seconds": 17,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 18,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 14
     },
     {
       "package": "unordered-containers",
       "version": "0.2.21",
       "result": "unresolved",
-      "seconds": 22,
+      "seconds": 18,
       "error": "Error: Failed to resolve dependencies",
       "rank": 15
     },
     {
       "package": "tasty-hunit",
       "version": "0.10.2",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 18,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "blocked_by": "template-haskell-lift",
+      "error": "Language.Haskell.TH.Lift: lowering failed: 10 lowering error(s): 1: unbound variable: unsafeCodeCoerce 2: unbound variable: lift 3: unbound constructor: LitE 4: unbound constructor: BytesPrimL 5: unbound constructor: Bytes 6: unbound constructor: AppE 7: unbound constructor: ConE 8: unbound constructor: I# 9: unbound constructor: LitE 10: unbound constructor: IntPrimL",
       "rank": 16
     },
     {
@@ -159,80 +251,89 @@
     {
       "package": "template-haskell",
       "version": "2.24.0.0",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 18
     },
     {
       "package": "process",
       "version": "1.6.30.0",
-      "result": "unresolved",
-      "seconds": 4,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 19
     },
     {
       "package": "lens",
       "version": "5.3.6",
-      "result": "unresolved",
-      "seconds": 24,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 18,
+      "blocked_by": "stm",
+      "error": "Control.Concurrent.STM.TMVar: lowering failed: 20 lowering error(s): 1: unbound variable: newTVar 2: unbound variable: newTVarIO 3: unbound variable: newTVar 4: unbound variable: newTVarIO 5: unbound variable: readTVar 6: unbound variable: retry 7: unbound variable: writeTVar 8: unbound variable: readTVar 9: unbound variable: writeTVar 10: unbound variable: readTVar 11: unbound variable: writeTVar",
       "rank": 20
     },
     {
       "package": "random",
       "version": "1.3.1",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 21
     },
     {
       "package": "HUnit",
       "version": "1.6.2.0",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "blocked_by": "call-stack",
+      "error": "Data.CallStack: code generation failed: `getCallStack` is not implemented by bhc",
       "rank": 22
     },
     {
       "package": "hashable",
       "version": "1.5.1.0",
-      "result": "unresolved",
-      "seconds": 15,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 19,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 23
     },
     {
       "package": "array",
       "version": "0.5.8.0",
       "result": "builtin",
-      "seconds": 0,
+      "seconds": 1,
       "rank": 24
     },
     {
       "package": "binary",
       "version": "0.8.9.3",
-      "result": "unresolved",
-      "seconds": 5,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "template-haskell-lift",
+      "error": "Language.Haskell.TH.Lift: lowering failed: 10 lowering error(s): 1: unbound variable: unsafeCodeCoerce 2: unbound variable: lift 3: unbound constructor: LitE 4: unbound constructor: BytesPrimL 5: unbound constructor: Bytes 6: unbound constructor: AppE 7: unbound constructor: ConE 8: unbound constructor: I# 9: unbound constructor: LitE 10: unbound constructor: IntPrimL",
       "rank": 25
     },
     {
       "package": "network",
       "version": "3.2.15.0",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 26
     },
     {
       "package": "tasty-quickcheck",
       "version": "0.11.1",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "template-haskell-lift",
+      "error": "Language.Haskell.TH.Lift: lowering failed: 10 lowering error(s): 1: unbound variable: unsafeCodeCoerce 2: unbound variable: lift 3: unbound constructor: LitE 4: unbound constructor: BytesPrimL 5: unbound constructor: Bytes 6: unbound constructor: AppE 7: unbound constructor: ConE 8: unbound constructor: I# 9: unbound constructor: LitE 10: unbound constructor: IntPrimL",
       "rank": 27
     },
     {
@@ -246,25 +347,28 @@
     {
       "package": "http-types",
       "version": "0.12.6",
-      "result": "unresolved",
-      "seconds": 4,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "syb",
+      "error": "Data.Generics.Instances: lowering failed: 2 lowering error(s): 1: unbound variable: mkNoRepType 2: unbound variable: gcast2",
       "rank": 29
     },
     {
       "package": "optparse-applicative",
       "version": "0.19.0.0",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 2,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 30
     },
     {
       "package": "exceptions",
       "version": "0.10.12",
-      "result": "unresolved",
-      "seconds": 2,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 31
     },
     {
@@ -278,73 +382,82 @@
     {
       "package": "parsec",
       "version": "3.1.18.0",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 2,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 33
     },
     {
       "package": "case-insensitive",
       "version": "1.2.2.0",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 34
     },
     {
       "package": "criterion",
       "version": "1.6.5.0",
-      "result": "unresolved",
-      "seconds": 7,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 5,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 35
     },
     {
       "package": "unix",
       "version": "2.8.8.0",
-      "result": "unresolved",
-      "seconds": 4,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 36
     },
     {
       "package": "data-default",
       "version": "0.8.0.2",
-      "result": "unresolved",
-      "seconds": 2,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 37
     },
     {
       "package": "async",
       "version": "2.2.6",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 38
     },
     {
       "package": "semigroups",
       "version": "0.20.1",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 39
     },
     {
       "package": "http-client",
       "version": "0.7.19",
-      "result": "unresolved",
-      "seconds": 5,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "syb",
+      "error": "Data.Generics.Aliases: parse error: 2 errors",
       "rank": 40
     },
     {
       "package": "test-framework",
       "version": "0.8.2.3",
-      "result": "unresolved",
-      "seconds": 6,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 4,
+      "blocked_by": "syb",
+      "error": "Data.Generics.Instances: lowering failed: 2 lowering error(s): 1: unbound variable: mkNoRepType 2: unbound variable: gcast2",
       "rank": 41
     },
     {
@@ -357,73 +470,81 @@
     {
       "package": "primitive",
       "version": "0.9.1.0",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 2,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 43
     },
     {
       "package": "split",
       "version": "0.2.5.1",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 44
     },
     {
       "package": "scientific",
       "version": "0.3.10.0",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "blocked_by": "syb",
+      "error": "Data.Generics.Aliases: parse error: 2 errors",
       "rank": 45
     },
     {
       "package": "doctest",
       "version": "0.25.0.2",
       "result": "unresolved",
-      "seconds": 5,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "seconds": 3,
+      "error": "warning: Could not fetch dependencies: package not found: ghc-platform-0.1.0.0",
       "rank": 46
     },
     {
       "package": "wai",
       "version": "3.2.5",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 47
     },
     {
       "package": "conduit",
       "version": "1.3.6.1",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 48
     },
     {
       "package": "amazonka-core",
       "version": "2.0",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 5,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "syb",
+      "error": "Data.Generics.Aliases: parse error: 2 errors",
       "rank": 49
     },
     {
       "package": "temporary",
       "version": "1.3",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 50
     },
     {
       "package": "utf8-string",
       "version": "1.0.2",
-      "result": "unresolved",
-      "seconds": 2,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 51
     },
     {
@@ -431,71 +552,79 @@
       "version": "2.0",
       "result": "unresolved",
       "seconds": 5,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "error": "warning: Could not plan the dependency build: cycle detected in dependencies: groom -> groom",
       "rank": 52
     },
     {
       "package": "pretty",
       "version": "1.1.3.6",
-      "result": "unresolved",
-      "seconds": 4,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 53
     },
     {
       "package": "resourcet",
       "version": "1.3.0",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 54
     },
     {
       "package": "test-framework-quickcheck2",
       "version": "0.3.0.7",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 55
     },
     {
       "package": "test-framework-hunit",
       "version": "0.3.0.3",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "blocked_by": "colour",
+      "error": "Data.Colour.Chan: lowering failed: 1 lowering error(s): 1: unbound variable: Data.List.sum",
       "rank": 56
     },
     {
       "package": "monad-control",
       "version": "1.0.3.1",
-      "result": "unresolved",
-      "seconds": 2,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "result": "dependency",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 57
     },
     {
       "package": "warp",
       "version": "3.4.21",
-      "result": "unresolved",
-      "seconds": 4,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 5,
+      "blocked_by": "time-hourglass",
+      "error": "Time.Types: parse error: 8 errors",
       "rank": 58
     },
     {
       "package": "network-uri",
       "version": "2.6.4.2",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 59
     },
     {
       "package": "cereal",
       "version": "0.5.8.3",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 2,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 60
     },
     {
@@ -509,73 +638,82 @@
     {
       "package": "base64-bytestring",
       "version": "1.2.1.0",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 62
     },
     {
       "package": "safe",
       "version": "0.3.21",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "result": "dependency",
+      "seconds": 2,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 63
     },
     {
       "package": "tagged",
       "version": "0.9",
-      "result": "unresolved",
-      "seconds": 4,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 64
     },
     {
       "package": "Cabal",
       "version": "3.18.2.0",
-      "result": "unresolved",
-      "seconds": 4,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 65
     },
     {
       "package": "servant",
       "version": "0.20.3.0",
-      "result": "unresolved",
-      "seconds": 4,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "indexed-traversable",
+      "error": "WithIndex: parse error: 7 errors",
       "rank": 66
     },
     {
       "package": "http-client-tls",
       "version": "0.4.0",
-      "result": "unresolved",
-      "seconds": 6,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "syb",
+      "error": "Data.Generics.Instances: lowering failed: 2 lowering error(s): 1: unbound variable: mkNoRepType 2: unbound variable: gcast2",
       "rank": 67
     },
     {
       "package": "syb",
       "version": "0.7.4",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 68
     },
     {
       "package": "quickcheck-instances",
       "version": "0.4",
-      "result": "unresolved",
-      "seconds": 4,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "syb",
+      "error": "Data.Generics.Instances: lowering failed: 2 lowering error(s): 1: unbound variable: mkNoRepType 2: unbound variable: gcast2",
       "rank": 69
     },
     {
       "package": "transformers-base",
       "version": "0.4.6.1",
-      "result": "unresolved",
-      "seconds": 4,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "result": "dependency",
+      "seconds": 2,
+      "blocked_by": "base-orphans",
+      "error": "Data.Orphans.Prelude: lowering failed: 2 lowering error(s): 1: unbound constructor: :+ 2: unbound constructor: :+",
       "rank": 70
     },
     {
@@ -591,303 +729,337 @@
       "version": "9.14.1",
       "result": "unresolved",
       "seconds": 4,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "error": "warning: Could not fetch dependencies: package not found: ghc-platform-0.1.0.0",
       "rank": 72
     },
     {
       "package": "yaml",
       "version": "0.11.11.2",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "stm",
+      "error": "Control.Concurrent.STM.TMVar: lowering failed: 20 lowering error(s): 1: unbound variable: newTVar 2: unbound variable: newTVarIO 3: unbound variable: newTVar 4: unbound variable: newTVarIO 5: unbound variable: readTVar 6: unbound variable: retry 7: unbound variable: writeTVar 8: unbound variable: readTVar 9: unbound variable: writeTVar 10: unbound variable: readTVar 11: unbound variable: writeTVar",
       "rank": 73
     },
     {
       "package": "megaparsec",
       "version": "9.8.3",
-      "result": "unresolved",
-      "seconds": 4,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "parser-combinators",
+      "error": "Control.Applicative.Permutations: parse error: 1 errors",
       "rank": 74
     },
     {
       "package": "http-conduit",
       "version": "2.3.9.1",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 4,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 75
     },
     {
       "package": "extra",
       "version": "1.8.1",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "blocked_by": "template-haskell-lift",
+      "error": "Language.Haskell.TH.Lift: lowering failed: 10 lowering error(s): 1: unbound variable: unsafeCodeCoerce 2: unbound variable: lift 3: unbound constructor: LitE 4: unbound constructor: BytesPrimL 5: unbound constructor: Bytes 6: unbound constructor: AppE 7: unbound constructor: ConE 8: unbound constructor: I# 9: unbound constructor: LitE 10: unbound constructor: IntPrimL",
       "rank": 76
     },
     {
       "package": "ansi-terminal",
       "version": "1.1.5",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "blocked_by": "colour",
+      "error": "Data.Colour.Matrix: parse error: 1 errors",
       "rank": 77
     },
     {
       "package": "base16-bytestring",
       "version": "1.0.2.0",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "result": "dependency",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 78
     },
     {
       "package": "microlens",
       "version": "0.5.0.0",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 79
     },
     {
       "package": "data-default-class",
       "version": "0.2.0.0",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 80
     },
     {
       "package": "uuid",
       "version": "1.3.16.1",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 4,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "syb",
+      "error": "Data.Generics.Instances: lowering failed: 2 lowering error(s): 1: unbound variable: mkNoRepType 2: unbound variable: gcast2",
       "rank": 81
     },
     {
       "package": "prettyprinter",
       "version": "1.7.2",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 82
     },
     {
       "package": "profunctors",
       "version": "5.6.3",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "blocked_by": "stm",
+      "error": "Control.Concurrent.STM.TBQueue: parse error: 3 errors",
       "rank": 83
     },
     {
       "package": "unliftio",
       "version": "0.2.25.1",
-      "result": "unresolved",
-      "seconds": 2,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 84
     },
     {
       "package": "blaze-builder",
       "version": "0.4.4.1",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "syb",
+      "error": "Data.Generics.Instances: lowering failed: 2 lowering error(s): 1: unbound variable: mkNoRepType 2: unbound variable: gcast2",
       "rank": 85
     },
     {
       "package": "blaze-html",
       "version": "0.9.2.0",
-      "result": "unresolved",
-      "seconds": 4,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 86
     },
     {
       "package": "memory",
       "version": "0.18.0",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 87
     },
     {
       "package": "safe-exceptions",
       "version": "0.1.7.4",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 88
     },
     {
       "package": "zlib",
       "version": "0.7.1.1",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 89
     },
     {
       "package": "cmdargs",
       "version": "0.10.22",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 2,
+      "blocked_by": "stm",
+      "error": "Control.Concurrent.STM.TMVar: lowering failed: 20 lowering error(s): 1: unbound variable: newTVar 2: unbound variable: newTVarIO 3: unbound variable: newTVar 4: unbound variable: newTVarIO 5: unbound variable: readTVar 6: unbound variable: retry 7: unbound variable: writeTVar 8: unbound variable: readTVar 9: unbound variable: writeTVar 10: unbound variable: readTVar 11: unbound variable: writeTVar",
       "rank": 90
     },
     {
       "package": "monad-logger",
       "version": "0.3.42",
-      "result": "unresolved",
-      "seconds": 2,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 4,
+      "blocked_by": "integer-logarithms",
+      "error": "Math.NumberTheory.Logarithms: lowering failed: 17 lowering error(s): 1: unbound variable: isTrue# 2: unbound variable: int2Word# 3: unbound variable: isTrue# 4: unbound variable: isTrue# 5: unbound variable: eqWord# 6: unbound variable: isTrue# 7: unbound variable: eqWord# 8: unbound variable: int2Word# 9: unbound variable: unsafeAt 10: unbound variable: unsafeAt 11: unbound variable: unsafeAt 12:",
       "rank": 91
     },
     {
       "package": "unliftio-core",
       "version": "0.2.1.0",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 92
     },
     {
       "package": "servant-server",
       "version": "0.20.3.0",
       "result": "unresolved",
-      "seconds": 5,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "seconds": 4,
+      "error": "warning: Could not plan the dependency build: cycle detected in dependencies: wai-app-static -> wai-app-static",
       "rank": 93
     },
     {
       "package": "semigroupoids",
       "version": "6.0.2",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "blocked_by": "tagged",
+      "error": "Data.Tagged: parse error: 2 errors",
       "rank": 94
     },
     {
       "package": "bifunctors",
       "version": "5.6.3",
-      "result": "unresolved",
-      "seconds": 4,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "tagged",
+      "error": "Data.Tagged: parse error: 2 errors",
       "rank": 95
     },
     {
       "package": "tasty-bench",
       "version": "0.5.1",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "result": "dependency",
+      "seconds": 2,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 96
     },
     {
       "package": "pipes",
       "version": "4.3.16",
-      "result": "unresolved",
-      "seconds": 2,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 97
     },
     {
       "package": "lifted-base",
       "version": "0.2.3.12",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 4,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "blocked_by": "stm",
+      "error": "Control.Concurrent.STM.TMVar: lowering failed: 21 lowering error(s): 1: unbound variable: newTVar 2: unbound variable: newTVarIO 3: unbound variable: newTVar 4: unbound variable: newTVarIO 5: unbound variable: readTVar 6: unbound variable: retry 7: unbound variable: writeTVar 8: unbound variable: readTVar 9: unbound variable: writeTVar 10: unbound variable: readTVar 11: unbound variable: writeTVar",
       "rank": 98
     },
     {
       "package": "base-compat",
       "version": "0.15.0",
-      "result": "unresolved",
-      "seconds": 4,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 99
     },
     {
       "package": "cryptonite",
       "version": "0.30",
-      "result": "unresolved",
-      "seconds": 4,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 100
     },
     {
       "package": "file-embed",
       "version": "0.0.16.0",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "blocked_by": "stm",
+      "error": "Control.Concurrent.STM.TMVar: lowering failed: 20 lowering error(s): 1: unbound variable: newTVar 2: unbound variable: newTVarIO 3: unbound variable: newTVar 4: unbound variable: newTVarIO 5: unbound variable: readTVar 6: unbound variable: retry 7: unbound variable: writeTVar 8: unbound variable: readTVar 9: unbound variable: writeTVar 10: unbound variable: readTVar 11: unbound variable: writeTVar",
       "rank": 101
     },
     {
       "package": "old-time",
       "version": "1.1.1.0",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "old-locale",
+      "error": "System.Locale: parse error: 2 errors",
       "rank": 102
     },
     {
       "package": "aeson-pretty",
       "version": "0.8.11",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 2,
+      "blocked_by": "vector-stream",
+      "error": "Data.Stream.Monadic: lowering failed: 60 lowering error(s): 1: unbound constructor: SPEC 2: unbound constructor: SPEC 3: unbound constructor: SPEC 4: unbound constructor: SPEC 5: unbound constructor: SPEC 6: unbound constructor: SPEC 7: unbound constructor: SPEC 8: unbound constructor: SPEC 9: unbound constructor: SPEC 10: unbound constructor: SPEC 11: unbound constructor: SPEC 12: unbound constru",
       "rank": 103
     },
     {
       "package": "either",
       "version": "5.0.3",
-      "result": "unresolved",
-      "seconds": 2,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "stm",
+      "error": "Control.Concurrent.STM.TMVar: lowering failed: 20 lowering error(s): 1: unbound variable: newTVar 2: unbound variable: newTVarIO 3: unbound variable: newTVar 4: unbound variable: newTVarIO 5: unbound variable: readTVar 6: unbound variable: retry 7: unbound variable: writeTVar 8: unbound variable: readTVar 9: unbound variable: writeTVar 10: unbound variable: readTVar 11: unbound variable: writeTVar",
       "rank": 104
     },
     {
       "package": "dlist",
       "version": "1.0",
       "result": "unresolved",
-      "seconds": 1,
+      "seconds": 2,
       "error": "Error: Failed to resolve dependencies",
       "rank": 105
     },
     {
       "package": "conduit-extra",
       "version": "1.3.8",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "blocked_by": "stm",
+      "error": "package stm has no library component",
       "rank": 106
     },
     {
       "package": "stratosphere",
       "version": "1.0.1",
       "result": "unresolved",
-      "seconds": 5,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "seconds": 4,
+      "error": "warning: Could not plan the dependency build: cycle detected in dependencies: aeson-pretty -> aeson-pretty",
       "rank": 107
     },
     {
       "package": "http-api-data",
       "version": "0.7",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 108
     },
     {
       "package": "clock",
       "version": "0.8.4",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 109
     },
     {
@@ -901,65 +1073,73 @@
     {
       "package": "tasty-golden",
       "version": "2.3.6",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 111
     },
     {
       "package": "parallel",
       "version": "3.3.0.0",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 112
     },
     {
       "package": "wai-extra",
       "version": "3.1.18",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "blocked_by": "indexed-traversable",
+      "error": "CoerceCompat: parse error: 1 errors",
       "rank": 113
     },
     {
       "package": "http-media",
       "version": "0.8.1.1",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "result": "dependency",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 114
     },
     {
       "package": "contravariant",
       "version": "1.5.6",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 115
     },
     {
       "package": "regex-tdfa",
       "version": "1.3.2.7",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 116
     },
     {
       "package": "HTTP",
       "version": "4000.5.0",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "blocked_by": "syb",
+      "error": "Data.Generics.Aliases: parse error: 2 errors",
       "rank": 117
     },
     {
       "package": "linear",
       "version": "1.23.3",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 4,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "tagged",
+      "error": "Data.Tagged: parse error: 2 errors",
       "rank": 118
     },
     {
@@ -973,233 +1153,260 @@
     {
       "package": "MonadRandom",
       "version": "0.6.2.1",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 2,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 120
     },
     {
       "package": "utility-ht",
       "version": "0.0.17.2",
-      "result": "unresolved",
-      "seconds": 2,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 121
     },
     {
       "package": "haskell-src-exts",
       "version": "1.24.0",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "blocked_by": "syb",
+      "error": "Data.Generics.Instances: lowering failed: 2 lowering error(s): 1: unbound variable: mkNoRepType 2: unbound variable: gcast2",
       "rank": 122
     },
     {
       "package": "haskell98",
       "version": "2.0.0.3",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "stm",
+      "error": "Control.Concurrent.STM.TChan: lowering failed: 21 lowering error(s): 1: unbound variable: newTVar 2: unbound variable: newTVar 3: unbound variable: newTVar 4: unbound variable: newTVarIO 5: unbound variable: newTVarIO 6: unbound variable: newTVarIO 7: unbound variable: readTVar 8: unbound variable: newTVar 9: unbound variable: writeTVar 10: unbound variable: writeTVar 11: unbound variable: readTVa",
       "rank": 123
     },
     {
       "package": "constraints",
       "version": "0.14.4",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "tagged",
+      "error": "Data.Tagged: parse error: 2 errors",
       "rank": 124
     },
     {
       "package": "tasty-hedgehog",
       "version": "1.4.0.2",
       "result": "unresolved",
-      "seconds": 4,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "seconds": 3,
+      "error": "warning: Could not plan the dependency build: cycle detected in dependencies: pretty-show -> pretty-show",
       "rank": 125
     },
     {
       "package": "Glob",
       "version": "0.10.2",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 2,
+      "blocked_by": "stm",
+      "error": "Control.Concurrent.STM.TMVar: lowering failed: 20 lowering error(s): 1: unbound variable: newTVar 2: unbound variable: newTVarIO 3: unbound variable: newTVar 4: unbound variable: newTVarIO 5: unbound variable: readTVar 6: unbound variable: retry 7: unbound variable: writeTVar 8: unbound variable: readTVar 9: unbound variable: writeTVar 10: unbound variable: readTVar 11: unbound variable: writeTVar",
       "rank": 126
     },
     {
       "package": "comonad",
       "version": "5.0.10",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 127
     },
     {
       "package": "path",
       "version": "0.9.6",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 4,
+      "blocked_by": "old-locale",
+      "error": "package old-locale has no library component",
       "rank": 128
     },
     {
       "package": "persistent",
       "version": "2.18.1.0",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 4,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "transformers-base",
+      "error": "Control.Monad.Base: parse error: 56 errors",
       "rank": 129
     },
     {
       "package": "JuicyPixels",
       "version": "3.3.10",
-      "result": "unresolved",
-      "seconds": 4,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 130
     },
     {
       "package": "mwc-random",
       "version": "0.15.3.0",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "blocked_by": "vector-stream",
+      "error": "Data.Stream.Monadic: lowering failed: 60 lowering error(s): 1: unbound constructor: SPEC 2: unbound constructor: SPEC 3: unbound constructor: SPEC 4: unbound constructor: SPEC 5: unbound constructor: SPEC 6: unbound constructor: SPEC 7: unbound constructor: SPEC 8: unbound constructor: SPEC 9: unbound constructor: SPEC 10: unbound constructor: SPEC 11: unbound constructor: SPEC 12: unbound constru",
       "rank": 131
     },
     {
       "package": "servant-client",
       "version": "0.20.3.0",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 4,
+      "blocked_by": "data-default",
+      "error": "Data.Default.Internal: lowering failed: 5 lowering error(s): 1: unbound constructor: :+ 2: unbound variable: ptrToIntPtr 3: unbound variable: ptrToWordPtr 4: unbound constructor: ConstPtr 5: unbound constructor: Const",
       "rank": 132
     },
     {
       "package": "gogol-core",
       "version": "1.0.0.0",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 133
     },
     {
       "package": "blaze-markup",
       "version": "0.8.3.0",
-      "result": "unresolved",
-      "seconds": 2,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "syb",
+      "error": "Data.Generics.Aliases: parse error: 2 errors",
       "rank": 134
     },
     {
       "package": "cryptohash",
       "version": "0.11.9",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "result": "dependency",
+      "seconds": 4,
+      "blocked_by": "basement",
+      "error": "Basement.Compat.NumLiteral: type checking failed: 41 errors",
       "rank": 135
     },
     {
       "package": "hspec-core",
       "version": "2.11.18",
       "result": "unresolved",
-      "seconds": 1,
+      "seconds": 2,
       "error": "Error: Failed to resolve dependencies",
       "rank": 136
     },
     {
       "package": "colour",
       "version": "2.3.7",
-      "result": "unresolved",
-      "seconds": 2,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 137
     },
     {
       "package": "resource-pool",
       "version": "0.5.1.0",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 138
     },
     {
       "package": "websockets",
       "version": "0.13.0.0",
-      "result": "unresolved",
-      "seconds": 4,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 139
     },
     {
       "package": "haskeline",
       "version": "0.8.5.0",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 2,
+      "blocked_by": "stm",
+      "error": "Control.Concurrent.STM.TMVar: lowering failed: 20 lowering error(s): 1: unbound variable: newTVar 2: unbound variable: newTVarIO 3: unbound variable: newTVar 4: unbound variable: newTVarIO 5: unbound variable: readTVar 6: unbound variable: retry 7: unbound variable: writeTVar 8: unbound variable: readTVar 9: unbound variable: writeTVar 10: unbound variable: readTVar 11: unbound variable: writeTVar",
       "rank": 140
     },
     {
       "package": "xml-conduit",
       "version": "1.10.1.0",
-      "result": "unresolved",
-      "seconds": 2,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 141
     },
     {
       "package": "hslogger",
       "version": "1.3.2.0",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 142
     },
     {
       "package": "transformers-compat",
       "version": "0.8",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "result": "dependency",
+      "seconds": 2,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 143
     },
     {
       "package": "MissingH",
       "version": "1.6.0.3",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 144
     },
     {
       "package": "crypton",
       "version": "2.3.0",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "blocked_by": "syb",
+      "error": "Data.Generics.Aliases: parse error: 2 errors",
       "rank": 145
     },
     {
       "package": "gtk",
       "version": "0.15.10",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "result": "dependency",
+      "seconds": 2,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 146
     },
     {
       "package": "monad-loops",
       "version": "0.4.3",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 147
     },
     {
       "package": "postgresql-simple",
       "version": "0.7.0.1",
-      "result": "unresolved",
-      "seconds": 4,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 148
     },
     {
@@ -1213,9 +1420,10 @@
     {
       "package": "pretty-show",
       "version": "1.10",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 150
     },
     {
@@ -1229,73 +1437,82 @@
     {
       "package": "errors",
       "version": "2.3.0",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "syb",
+      "error": "Data.Generics.Instances: lowering failed: 2 lowering error(s): 1: unbound variable: mkNoRepType 2: unbound variable: gcast2",
       "rank": 152
     },
     {
       "package": "mmorph",
       "version": "1.2.2",
-      "result": "unresolved",
-      "seconds": 2,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "transformers-compat",
+      "error": "failed to compute parallel groups for transformers-compat: cycle detected in module dependencies: Data.Functor.Classes",
       "rank": 153
     },
     {
       "package": "ansi-wl-pprint",
       "version": "1.1.1",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 4,
+      "blocked_by": "syb",
+      "error": "Data.Generics.Aliases: parse error: 2 errors",
       "rank": 154
     },
     {
       "package": "io-streams",
       "version": "1.5.2.2",
-      "result": "unresolved",
-      "seconds": 4,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 155
     },
     {
       "package": "cassava",
       "version": "0.5.4.1",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 156
     },
     {
       "package": "smallcheck",
       "version": "1.2.2",
-      "result": "unresolved",
-      "seconds": 2,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "stm",
+      "error": "Control.Concurrent.STM.TChan: lowering failed: 21 lowering error(s): 1: unbound variable: newTVar 2: unbound variable: newTVar 3: unbound variable: newTVar 4: unbound variable: newTVarIO 5: unbound variable: newTVarIO 6: unbound variable: newTVarIO 7: unbound variable: readTVar 8: unbound variable: newTVar 9: unbound variable: writeTVar 10: unbound variable: writeTVar 11: unbound variable: readTVa",
       "rank": 157
     },
     {
       "package": "lens-aeson",
       "version": "1.2.3",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 4,
+      "blocked_by": "assoc",
+      "error": "Data.Bifunctor.Assoc: lowering failed: 5 lowering error(s): 1: unbound constructor: Const 2: unbound constructor: Const 3: unbound constructor: Const 4: unbound constructor: Const 5: unbound constructor: Const",
       "rank": 158
     },
     {
       "package": "wreq",
       "version": "0.5.4.5",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 4,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 159
     },
     {
       "package": "tagsoup",
       "version": "0.14.8",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 2,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 160
     },
     {
@@ -1303,87 +1520,96 @@
       "version": "1.2.0.4",
       "result": "unresolved",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "error": "warning: Could not plan the dependency build: cycle detected in dependencies: hspec -> hspec-discover -> hspec-discover",
       "rank": 161
     },
     {
       "package": "tls",
       "version": "2.6.2",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 4,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 162
     },
     {
       "package": "foldl",
       "version": "1.4.18",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 2,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 163
     },
     {
       "package": "strict",
       "version": "0.5.1",
-      "result": "unresolved",
-      "seconds": 2,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 164
     },
     {
       "package": "tasty-smallcheck",
       "version": "0.8.2",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 165
     },
     {
       "package": "fast-logger",
       "version": "3.2.9",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 166
     },
     {
       "package": "hspec-discover",
       "version": "2.11.18",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 167
     },
     {
       "package": "generic-lens",
       "version": "2.3.0.0",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 4,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 168
     },
     {
       "package": "pandoc",
       "version": "3.14",
       "result": "unresolved",
-      "seconds": 1,
+      "seconds": 2,
       "error": "Error: Failed to resolve dependencies",
       "rank": 169
     },
     {
       "package": "OpenGL",
       "version": "3.0.3.0",
-      "result": "unresolved",
-      "seconds": 4,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 170
     },
     {
       "package": "hmatrix",
       "version": "0.20.2",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "result": "dependency",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 171
     },
     {
@@ -1391,47 +1617,52 @@
       "version": "1.7.0.0",
       "result": "unresolved",
       "seconds": 5,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "error": "warning: Could not plan the dependency build: cycle detected in dependencies: clientsession -> clientsession",
       "rank": 172
     },
     {
       "package": "haskell-src-meta",
       "version": "0.8.16",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 173
     },
     {
       "package": "distributive",
       "version": "0.6.3",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "tagged",
+      "error": "Data.Tagged: parse error: 2 errors",
       "rank": 174
     },
     {
       "package": "th-abstraction",
       "version": "0.7.2.0",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 175
     },
     {
       "package": "unix-compat",
       "version": "0.7.4.1",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 2,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 176
     },
     {
       "package": "xml",
       "version": "1.3.14",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "syb",
+      "error": "Data.Generics.Aliases: parse error: 2 errors",
       "rank": 177
     },
     {
@@ -1444,9 +1675,10 @@
     {
       "package": "fgl",
       "version": "5.8.3.1",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 179
     },
     {
@@ -1460,257 +1692,286 @@
     {
       "package": "void",
       "version": "0.7.4",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 2,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 181
     },
     {
       "package": "hlint",
       "version": "3.10",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "blocked_by": "stm",
+      "error": "Control.Concurrent.STM.TMVar: lowering failed: 20 lowering error(s): 1: unbound variable: newTVar 2: unbound variable: newTVarIO 3: unbound variable: newTVar 4: unbound variable: newTVarIO 5: unbound variable: readTVar 6: unbound variable: retry 7: unbound variable: writeTVar 8: unbound variable: readTVar 9: unbound variable: writeTVar 10: unbound variable: readTVar 11: unbound variable: writeTVar",
       "rank": 182
     },
     {
       "package": "string-conversions",
       "version": "0.4.0.1",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 2,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 183
     },
     {
       "package": "tasty-th",
       "version": "0.1.7",
-      "result": "unresolved",
-      "seconds": 2,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 184
     },
     {
       "package": "hspec-expectations",
       "version": "0.8.4",
-      "result": "unresolved",
-      "seconds": 4,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "call-stack",
+      "error": "Data.CallStack: code generation failed: `getCallStack` is not implemented by bhc",
       "rank": 185
     },
     {
       "package": "parser-combinators",
       "version": "1.3.1",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 186
     },
     {
       "package": "relude",
       "version": "1.2.2.2",
-      "result": "unresolved",
-      "seconds": 2,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 187
     },
     {
       "package": "reflection",
       "version": "2.1.9",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 188
     },
     {
       "package": "singletons",
       "version": "3.0.4",
       "result": "unresolved",
-      "seconds": 2,
+      "seconds": 1,
       "error": "Error: Failed to resolve dependencies",
       "rank": 189
     },
     {
       "package": "typed-process",
       "version": "0.2.13.0",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 2,
+      "blocked_by": "stm",
+      "error": "package stm has no library component",
       "rank": 190
     },
     {
       "package": "diagrams-lib",
       "version": "1.6",
       "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "seconds": 4,
+      "error": "warning: Could not plan the dependency build: cycle detected in dependencies: JuicyPixels -> JuicyPixels",
       "rank": 191
     },
     {
       "package": "hxt",
       "version": "9.3.1.22",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 192
     },
     {
       "package": "uniplate",
       "version": "1.6.13",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "result": "dependency",
+      "seconds": 2,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 193
     },
     {
       "package": "path-io",
       "version": "1.8.2",
       "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "seconds": 4,
+      "error": "warning: Could not plan the dependency build: cycle detected in dependencies: path -> path",
       "rank": 194
     },
     {
       "package": "system-filepath",
       "version": "0.4.14.1",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "syb",
+      "error": "Data.Generics.Instances: lowering failed: 2 lowering error(s): 1: unbound variable: mkNoRepType 2: unbound variable: gcast2",
       "rank": 195
     },
     {
       "package": "cairo",
       "version": "0.13.12.0",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "blocked_by": "syb",
+      "error": "Data.Generics.Aliases: parse error: 2 errors",
       "rank": 196
     },
     {
       "package": "ghc-paths",
       "version": "0.1.0.12",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 197
     },
     {
       "package": "pandoc-types",
       "version": "1.23.1.2",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 198
     },
     {
       "package": "protolude",
       "version": "0.3.5",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 199
     },
     {
       "package": "raw-strings-qq",
       "version": "1.1",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 200
     },
     {
       "package": "statistics",
       "version": "0.16.5.0",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 4,
+      "blocked_by": "assoc",
+      "error": "Data.Bifunctor.Assoc: lowering failed: 5 lowering error(s): 1: unbound constructor: Const 2: unbound constructor: Const 3: unbound constructor: Const 4: unbound constructor: Const 5: unbound constructor: Const",
       "rank": 201
     },
     {
       "package": "base-orphans",
       "version": "0.9.4",
-      "result": "unresolved",
-      "seconds": 2,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 202
     },
     {
       "package": "gauge",
       "version": "0.2.5",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 203
     },
     {
       "package": "snap-core",
       "version": "1.0.5.1",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "call-stack",
+      "error": "Data.CallStack: code generation failed: `getCallStack` is not implemented by bhc",
       "rank": 204
     },
     {
       "package": "Diff",
       "version": "2.0.1",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 205
     },
     {
       "package": "SHA",
       "version": "1.6.4.4",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "result": "dependency",
+      "seconds": 2,
+      "blocked_by": "template-haskell-lift",
+      "error": "Language.Haskell.TH.Lift: lowering failed: 10 lowering error(s): 1: unbound variable: unsafeCodeCoerce 2: unbound variable: lift 3: unbound constructor: LitE 4: unbound constructor: BytesPrimL 5: unbound constructor: Bytes 6: unbound constructor: AppE 7: unbound constructor: ConE 8: unbound constructor: I# 9: unbound constructor: LitE 10: unbound constructor: IntPrimL",
       "rank": 206
     },
     {
       "package": "optics-core",
       "version": "0.4.2",
-      "result": "unresolved",
-      "seconds": 2,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 207
     },
     {
       "package": "dhall",
       "version": "1.42.3",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 4,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 208
     },
     {
       "package": "hasql",
       "version": "2.0.1.0",
-      "result": "unresolved",
-      "seconds": 4,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "OneTuple",
+      "error": "Data.Tuple.OneTuple: parse error: 1 errors",
       "rank": 209
     },
     {
       "package": "streaming",
       "version": "0.2.4.0",
-      "result": "unresolved",
-      "seconds": 4,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "result": "dependency",
+      "seconds": 2,
+      "blocked_by": "stm",
+      "error": "Control.Concurrent.STM.TMVar: lowering failed: 21 lowering error(s): 1: unbound variable: newTVar 2: unbound variable: newTVarIO 3: unbound variable: newTVar 4: unbound variable: newTVarIO 5: unbound variable: readTVar 6: unbound variable: retry 7: unbound variable: writeTVar 8: unbound variable: readTVar 9: unbound variable: writeTVar 10: unbound variable: readTVar 11: unbound variable: writeTVar",
       "rank": 210
     },
     {
       "package": "iproute",
       "version": "1.8.0",
-      "result": "unresolved",
-      "seconds": 2,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 211
     },
     {
       "package": "vector-space",
       "version": "0.19",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 4,
+      "blocked_by": "NumInstances",
+      "error": "Data.NumInstances.Tuple: parse error: 84 errors",
       "rank": 212
     },
     {
@@ -1724,25 +1985,28 @@
     {
       "package": "vty",
       "version": "6.7",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "result": "dependency",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 214
     },
     {
       "package": "shakespeare",
       "version": "2.2.0",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 4,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "stm",
+      "error": "Control.Concurrent.STM.TMVar: lowering failed: 20 lowering error(s): 1: unbound variable: newTVar 2: unbound variable: newTVarIO 3: unbound variable: newTVar 4: unbound variable: newTVarIO 5: unbound variable: readTVar 6: unbound variable: retry 7: unbound variable: writeTVar 8: unbound variable: readTVar 9: unbound variable: writeTVar 10: unbound variable: readTVar 11: unbound variable: writeTVar",
       "rank": 215
     },
     {
       "package": "tasty-expected-failure",
       "version": "0.12.3",
-      "result": "unresolved",
-      "seconds": 2,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 216
     },
     {
@@ -1756,89 +2020,100 @@
     {
       "package": "indexed-traversable",
       "version": "0.1.5",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 218
     },
     {
       "package": "microlens-th",
       "version": "0.4.3.18",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 219
     },
     {
       "package": "vault",
       "version": "0.3.2.0",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 220
     },
     {
       "package": "vector-algorithms",
       "version": "0.9.1.0",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 221
     },
     {
       "package": "base-unicode-symbols",
       "version": "0.2.4.2",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 222
     },
     {
       "package": "cryptohash-sha256",
       "version": "0.11.102.1",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 2,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 223
     },
     {
       "package": "regex-base",
       "version": "0.94.0.3",
-      "result": "unresolved",
-      "seconds": 2,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 224
     },
     {
       "package": "hashtables",
       "version": "1.4.2",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 225
     },
     {
       "package": "glib",
       "version": "0.13.12.0",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "result": "dependency",
+      "seconds": 2,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 226
     },
     {
       "package": "uuid-types",
       "version": "1.0.6.1",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 227
     },
     {
       "package": "haskell-gi-base",
       "version": "0.26.9",
-      "result": "unresolved",
-      "seconds": 4,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "template-haskell-lift",
+      "error": "Language.Haskell.TH.Lift: lowering failed: 10 lowering error(s): 1: unbound variable: unsafeCodeCoerce 2: unbound variable: lift 3: unbound constructor: LitE 4: unbound constructor: BytesPrimL 5: unbound constructor: Bytes 6: unbound constructor: AppE 7: unbound constructor: ConE 8: unbound constructor: I# 9: unbound constructor: LitE 10: unbound constructor: IntPrimL",
       "rank": 228
     },
     {
@@ -1852,81 +2127,91 @@
     {
       "package": "lucid",
       "version": "2.11.20260427",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 2,
+      "blocked_by": "template-haskell-lift",
+      "error": "Language.Haskell.TH.Lift: lowering failed: 10 lowering error(s): 1: unbound variable: unsafeCodeCoerce 2: unbound variable: lift 3: unbound constructor: LitE 4: unbound constructor: BytesPrimL 5: unbound constructor: Bytes 6: unbound constructor: AppE 7: unbound constructor: ConE 8: unbound constructor: I# 9: unbound constructor: LitE 10: unbound constructor: IntPrimL",
       "rank": 230
     },
     {
       "package": "scotty",
       "version": "0.30",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 5,
+      "blocked_by": "call-stack",
+      "error": "Data.CallStack: code generation failed: `getCallStack` is not implemented by bhc",
       "rank": 231
     },
     {
       "package": "streaming-commons",
       "version": "0.2.3.1",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 232
     },
     {
       "package": "adjunctions",
       "version": "4.4.4",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 233
     },
     {
       "package": "prettyprinter-ansi-terminal",
       "version": "1.1.4",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 234
     },
     {
       "package": "retry",
       "version": "0.9.3.1",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "stm",
+      "error": "Control.Concurrent.STM.TChan: lowering failed: 21 lowering error(s): 1: unbound variable: newTVar 2: unbound variable: newTVar 3: unbound variable: newTVar 4: unbound variable: newTVarIO 5: unbound variable: newTVarIO 6: unbound variable: newTVarIO 7: unbound variable: readTVar 8: unbound variable: newTVar 9: unbound variable: writeTVar 10: unbound variable: writeTVar 11: unbound variable: readTVa",
       "rank": 235
     },
     {
       "package": "vinyl",
       "version": "0.14.3",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 236
     },
     {
       "package": "configurator",
       "version": "0.3.0.0",
-      "result": "unresolved",
-      "seconds": 2,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 237
     },
     {
       "package": "cookie",
       "version": "0.5.1",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 238
     },
     {
       "package": "text-short",
       "version": "0.1.6.1",
-      "result": "unresolved",
-      "seconds": 4,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 239
     },
     {
@@ -1940,17 +2225,19 @@
     {
       "package": "fsnotify",
       "version": "0.4.4.0",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "blocked_by": "stm",
+      "error": "Control.Concurrent.STM.TMVar: lowering failed: 20 lowering error(s): 1: unbound variable: newTVar 2: unbound variable: newTVarIO 3: unbound variable: newTVar 4: unbound variable: newTVarIO 5: unbound variable: readTVar 6: unbound variable: retry 7: unbound variable: writeTVar 8: unbound variable: readTVar 9: unbound variable: writeTVar 10: unbound variable: readTVar 11: unbound variable: writeTVar",
       "rank": 241
     },
     {
       "package": "parsers",
       "version": "0.12.12",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "blocked_by": "syb",
+      "error": "Data.Generics.Aliases: parse error: 2 errors",
       "rank": 242
     },
     {
@@ -1958,15 +2245,16 @@
       "version": "0.3.0.0",
       "result": "unresolved",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "error": "warning: Could not plan the dependency build: cycle detected in dependencies: hedgehog -> pretty-show -> pretty-show",
       "rank": 243
     },
     {
       "package": "random-shuffle",
       "version": "0.0.4",
-      "result": "unresolved",
-      "seconds": 2,
-      "error": "warning: Could not fetch dependencies: package not found: rts-1.0.3",
+      "result": "dependency",
+      "seconds": 3,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 244
     },
     {
@@ -1980,41 +2268,46 @@
     {
       "package": "xml-types",
       "version": "0.3.8",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 2,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 246
     },
     {
       "package": "entropy",
       "version": "0.4.1.11",
-      "result": "unresolved",
-      "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: system-cxx-std-lib-1.0",
+      "result": "dependency",
+      "seconds": 4,
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 247
     },
     {
       "package": "servant-client-core",
       "version": "0.20.3.0",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 4,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "blocked_by": "syb",
+      "error": "Data.Generics.Instances: lowering failed: 2 lowering error(s): 1: unbound variable: mkNoRepType 2: unbound variable: gcast2",
       "rank": 248
     },
     {
       "package": "non-empty",
       "version": "0.3.6.1",
-      "result": "unresolved",
+      "result": "dependency",
       "seconds": 3,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "blocked_by": "pretty",
+      "error": "Text.PrettyPrint.Annotated.HughesPJ: parse error: 32 errors",
       "rank": 249
     },
     {
       "package": "mono-traversable",
       "version": "1.0.21.0",
-      "result": "unresolved",
-      "seconds": 4,
-      "error": "warning: Could not fetch dependencies: package not found: ghc-bignum-1.4",
+      "result": "dependency",
+      "seconds": 2,
+      "blocked_by": "split",
+      "error": "Data.List.Split.Internals: code generation failed: `genericSplitAt` is not implemented by bhc",
       "rank": 250
     }
   ]
