@@ -1,0 +1,2021 @@
+{
+  "generated_at": "2026-11-22T10:52:11Z",
+  "bhc_version": "0.2.30",
+  "hx_revision": "2610f12",
+  "run_url": "https://github.com/arcanist-sh/bhc-verifier/actions/runs/45013996243",
+  "tested": 238,
+  "passing": 0,
+  "counts": {
+    "builtin": 12,
+    "error": 1,
+    "fail": 3,
+    "unresolved": 234
+  },
+  "blockers": [
+    {
+      "package": "Win32",
+      "blocks": 1,
+      "error": "error: failed to read source file: Main.hs"
+    },
+    {
+      "package": "fail",
+      "blocks": 1,
+      "error": "error: failed to read source file: Main.hs"
+    },
+    {
+      "package": "tasty-discover",
+      "blocks": 1,
+      "error": "error: failed to read source file: Main.hs"
+    }
+  ],
+  "packages": [
+    {
+      "package": "base",
+      "version": "4.22.0.0",
+      "result": "builtin",
+      "seconds": 0,
+      "rank": 1
+    },
+    {
+      "package": "bytestring",
+      "version": "0.12.2.0",
+      "result": "builtin",
+      "seconds": 0,
+      "rank": 2
+    },
+    {
+      "package": "text",
+      "version": "2.1.4",
+      "result": "builtin",
+      "seconds": 0,
+      "rank": 3
+    },
+    {
+      "package": "containers",
+      "version": "0.8.1",
+      "result": "builtin",
+      "seconds": 0,
+      "rank": 4
+    },
+    {
+      "package": "mtl",
+      "version": "2.3.2",
+      "result": "builtin",
+      "seconds": 1,
+      "rank": 5
+    },
+    {
+      "package": "transformers",
+      "version": "0.6.3.0",
+      "result": "builtin",
+      "seconds": 0,
+      "rank": 6
+    },
+    {
+      "package": "time",
+      "version": "1.16.0.1",
+      "result": "unresolved",
+      "seconds": 16,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 7
+    },
+    {
+      "package": "QuickCheck",
+      "version": "2.19.0.0",
+      "result": "unresolved",
+      "seconds": 13,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 8
+    },
+    {
+      "package": "aeson",
+      "version": "2.3.2.0",
+      "result": "unresolved",
+      "seconds": 16,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 9
+    },
+    {
+      "package": "directory",
+      "version": "1.3.11.0",
+      "result": "builtin",
+      "seconds": 1,
+      "rank": 10
+    },
+    {
+      "package": "tasty",
+      "version": "1.5.5",
+      "result": "unresolved",
+      "seconds": 18,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 11
+    },
+    {
+      "package": "hspec",
+      "version": "2.11.18",
+      "result": "unresolved",
+      "seconds": 17,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 12
+    },
+    {
+      "package": "filepath",
+      "version": "1.5.5.0",
+      "result": "builtin",
+      "seconds": 0,
+      "rank": 13
+    },
+    {
+      "package": "vector",
+      "version": "0.13.2.0",
+      "result": "unresolved",
+      "seconds": 22,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 14
+    },
+    {
+      "package": "unordered-containers",
+      "version": "0.2.21",
+      "result": "unresolved",
+      "seconds": 18,
+      "error": "Error: Failed to resolve dependencies",
+      "rank": 15
+    },
+    {
+      "package": "tasty-hunit",
+      "version": "0.10.2",
+      "result": "unresolved",
+      "seconds": 19,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 16
+    },
+    {
+      "package": "deepseq",
+      "version": "1.5.2.0",
+      "result": "builtin",
+      "seconds": 0,
+      "rank": 17
+    },
+    {
+      "package": "template-haskell",
+      "version": "2.24.0.0",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 18
+    },
+    {
+      "package": "process",
+      "version": "1.6.30.0",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 19
+    },
+    {
+      "package": "lens",
+      "version": "5.3.6",
+      "result": "unresolved",
+      "seconds": 21,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 20
+    },
+    {
+      "package": "random",
+      "version": "1.3.1",
+      "result": "unresolved",
+      "seconds": 4,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 21
+    },
+    {
+      "package": "HUnit",
+      "version": "1.6.2.0",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 22
+    },
+    {
+      "package": "hashable",
+      "version": "1.5.1.0",
+      "result": "unresolved",
+      "seconds": 18,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 23
+    },
+    {
+      "package": "array",
+      "version": "0.5.8.0",
+      "result": "builtin",
+      "seconds": 0,
+      "rank": 24
+    },
+    {
+      "package": "binary",
+      "version": "0.8.9.3",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 25
+    },
+    {
+      "package": "network",
+      "version": "3.2.15.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 26
+    },
+    {
+      "package": "tasty-quickcheck",
+      "version": "0.11.1",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 27
+    },
+    {
+      "package": "stm",
+      "version": "2.5.3.1",
+      "result": "unresolved",
+      "seconds": 1,
+      "error": "Error: Failed to resolve dependencies",
+      "rank": 28
+    },
+    {
+      "package": "http-types",
+      "version": "0.12.6",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 29
+    },
+    {
+      "package": "optparse-applicative",
+      "version": "0.19.0.0",
+      "result": "unresolved",
+      "seconds": 4,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 30
+    },
+    {
+      "package": "exceptions",
+      "version": "0.10.12",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 31
+    },
+    {
+      "package": "attoparsec",
+      "version": "0.14.4",
+      "result": "unresolved",
+      "seconds": 1,
+      "error": "Error: Failed to resolve dependencies",
+      "rank": 32
+    },
+    {
+      "package": "parsec",
+      "version": "3.1.18.0",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 33
+    },
+    {
+      "package": "case-insensitive",
+      "version": "1.2.2.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 34
+    },
+    {
+      "package": "criterion",
+      "version": "1.6.5.0",
+      "result": "unresolved",
+      "seconds": 4,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 35
+    },
+    {
+      "package": "unix",
+      "version": "2.8.8.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 36
+    },
+    {
+      "package": "data-default",
+      "version": "0.8.0.2",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 37
+    },
+    {
+      "package": "async",
+      "version": "2.2.6",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 38
+    },
+    {
+      "package": "semigroups",
+      "version": "0.20.1",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 39
+    },
+    {
+      "package": "http-client",
+      "version": "0.7.19",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 40
+    },
+    {
+      "package": "test-framework",
+      "version": "0.8.2.3",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 41
+    },
+    {
+      "package": "ghc-prim",
+      "version": "0.13.0",
+      "result": "builtin",
+      "seconds": 1,
+      "rank": 42
+    },
+    {
+      "package": "primitive",
+      "version": "0.9.1.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 43
+    },
+    {
+      "package": "split",
+      "version": "0.2.5.1",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 44
+    },
+    {
+      "package": "scientific",
+      "version": "0.3.10.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 45
+    },
+    {
+      "package": "doctest",
+      "version": "0.25.0.2",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 46
+    },
+    {
+      "package": "wai",
+      "version": "3.2.5",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 47
+    },
+    {
+      "package": "conduit",
+      "version": "1.3.6.1",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 48
+    },
+    {
+      "package": "amazonka-core",
+      "version": "2.0",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 49
+    },
+    {
+      "package": "temporary",
+      "version": "1.3",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 50
+    },
+    {
+      "package": "utf8-string",
+      "version": "1.0.2",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 51
+    },
+    {
+      "package": "amazonka-test",
+      "version": "2.0",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 52
+    },
+    {
+      "package": "pretty",
+      "version": "1.1.3.6",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 53
+    },
+    {
+      "package": "resourcet",
+      "version": "1.3.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 54
+    },
+    {
+      "package": "test-framework-quickcheck2",
+      "version": "0.3.0.7",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 55
+    },
+    {
+      "package": "test-framework-hunit",
+      "version": "0.3.0.3",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 56
+    },
+    {
+      "package": "monad-control",
+      "version": "1.0.3.1",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 57
+    },
+    {
+      "package": "warp",
+      "version": "3.4.21",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 58
+    },
+    {
+      "package": "network-uri",
+      "version": "2.6.4.2",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 59
+    },
+    {
+      "package": "cereal",
+      "version": "0.5.8.3",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 60
+    },
+    {
+      "package": "hedgehog",
+      "version": "1.7",
+      "result": "error",
+      "seconds": 0,
+      "error": "error: no cabal.project or .cabal file found in this directory",
+      "rank": 61
+    },
+    {
+      "package": "base64-bytestring",
+      "version": "1.2.1.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 62
+    },
+    {
+      "package": "safe",
+      "version": "0.3.21",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 63
+    },
+    {
+      "package": "tagged",
+      "version": "0.9",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 64
+    },
+    {
+      "package": "Cabal",
+      "version": "3.18.2.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 65
+    },
+    {
+      "package": "servant",
+      "version": "0.20.3.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 66
+    },
+    {
+      "package": "http-client-tls",
+      "version": "0.4.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 67
+    },
+    {
+      "package": "syb",
+      "version": "0.7.4",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 68
+    },
+    {
+      "package": "quickcheck-instances",
+      "version": "0.4",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 69
+    },
+    {
+      "package": "transformers-base",
+      "version": "0.4.6.1",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 70
+    },
+    {
+      "package": "old-locale",
+      "version": "1.0.0.7",
+      "result": "unresolved",
+      "seconds": 1,
+      "error": "Error: Failed to resolve dependencies",
+      "rank": 71
+    },
+    {
+      "package": "ghc",
+      "version": "9.14.1",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 72
+    },
+    {
+      "package": "yaml",
+      "version": "0.11.11.2",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 73
+    },
+    {
+      "package": "megaparsec",
+      "version": "9.8.3",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 74
+    },
+    {
+      "package": "http-conduit",
+      "version": "2.3.9.1",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 75
+    },
+    {
+      "package": "extra",
+      "version": "1.8.1",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 76
+    },
+    {
+      "package": "ansi-terminal",
+      "version": "1.1.5",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 77
+    },
+    {
+      "package": "base16-bytestring",
+      "version": "1.0.2.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 78
+    },
+    {
+      "package": "microlens",
+      "version": "0.5.0.0",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 79
+    },
+    {
+      "package": "data-default-class",
+      "version": "0.2.0.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 80
+    },
+    {
+      "package": "uuid",
+      "version": "1.3.16.1",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 81
+    },
+    {
+      "package": "prettyprinter",
+      "version": "1.7.2",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 82
+    },
+    {
+      "package": "profunctors",
+      "version": "5.6.3",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 83
+    },
+    {
+      "package": "unliftio",
+      "version": "0.2.25.1",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 84
+    },
+    {
+      "package": "blaze-builder",
+      "version": "0.4.4.1",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 85
+    },
+    {
+      "package": "blaze-html",
+      "version": "0.9.2.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 86
+    },
+    {
+      "package": "memory",
+      "version": "0.18.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 87
+    },
+    {
+      "package": "safe-exceptions",
+      "version": "0.1.7.4",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 88
+    },
+    {
+      "package": "zlib",
+      "version": "0.7.1.1",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 89
+    },
+    {
+      "package": "cmdargs",
+      "version": "0.10.22",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 90
+    },
+    {
+      "package": "monad-logger",
+      "version": "0.3.42",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 91
+    },
+    {
+      "package": "unliftio-core",
+      "version": "0.2.1.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 92
+    },
+    {
+      "package": "servant-server",
+      "version": "0.20.3.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 93
+    },
+    {
+      "package": "semigroupoids",
+      "version": "6.0.2",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 94
+    },
+    {
+      "package": "bifunctors",
+      "version": "5.6.3",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 95
+    },
+    {
+      "package": "tasty-bench",
+      "version": "0.5.1",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 96
+    },
+    {
+      "package": "pipes",
+      "version": "4.3.16",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 97
+    },
+    {
+      "package": "lifted-base",
+      "version": "0.2.3.12",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 98
+    },
+    {
+      "package": "base-compat",
+      "version": "0.15.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 99
+    },
+    {
+      "package": "cryptonite",
+      "version": "0.30",
+      "result": "unresolved",
+      "seconds": 4,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 100
+    },
+    {
+      "package": "file-embed",
+      "version": "0.0.16.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 101
+    },
+    {
+      "package": "old-time",
+      "version": "1.1.1.0",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 102
+    },
+    {
+      "package": "aeson-pretty",
+      "version": "0.8.11",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 103
+    },
+    {
+      "package": "either",
+      "version": "5.0.3",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 104
+    },
+    {
+      "package": "dlist",
+      "version": "1.0",
+      "result": "unresolved",
+      "seconds": 1,
+      "error": "Error: Failed to resolve dependencies",
+      "rank": 105
+    },
+    {
+      "package": "conduit-extra",
+      "version": "1.3.8",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 106
+    },
+    {
+      "package": "stratosphere",
+      "version": "1.0.1",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 107
+    },
+    {
+      "package": "http-api-data",
+      "version": "0.7",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 108
+    },
+    {
+      "package": "clock",
+      "version": "0.8.4",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 109
+    },
+    {
+      "package": "free",
+      "version": "5.2",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "Error: Failed to resolve dependencies",
+      "rank": 110
+    },
+    {
+      "package": "tasty-golden",
+      "version": "2.3.6",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 111
+    },
+    {
+      "package": "parallel",
+      "version": "3.3.0.0",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 112
+    },
+    {
+      "package": "wai-extra",
+      "version": "3.1.18",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 113
+    },
+    {
+      "package": "http-media",
+      "version": "0.8.1.1",
+      "result": "unresolved",
+      "seconds": 4,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 114
+    },
+    {
+      "package": "contravariant",
+      "version": "1.5.6",
+      "result": "unresolved",
+      "seconds": 4,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 115
+    },
+    {
+      "package": "regex-tdfa",
+      "version": "1.3.2.7",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 116
+    },
+    {
+      "package": "HTTP",
+      "version": "4000.5.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 117
+    },
+    {
+      "package": "linear",
+      "version": "1.23.3",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 118
+    },
+    {
+      "package": "Win32",
+      "version": "2.14.2.2",
+      "result": "fail",
+      "seconds": 2,
+      "error": "error: failed to read source file: Main.hs",
+      "rank": 119
+    },
+    {
+      "package": "MonadRandom",
+      "version": "0.6.2.1",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 120
+    },
+    {
+      "package": "utility-ht",
+      "version": "0.0.17.2",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 121
+    },
+    {
+      "package": "haskell-src-exts",
+      "version": "1.24.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 122
+    },
+    {
+      "package": "haskell98",
+      "version": "2.0.0.3",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 123
+    },
+    {
+      "package": "constraints",
+      "version": "0.14.4",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 124
+    },
+    {
+      "package": "tasty-hedgehog",
+      "version": "1.4.0.2",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 125
+    },
+    {
+      "package": "Glob",
+      "version": "0.10.2",
+      "result": "unresolved",
+      "seconds": 4,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 126
+    },
+    {
+      "package": "comonad",
+      "version": "5.0.10",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 127
+    },
+    {
+      "package": "path",
+      "version": "0.9.6",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 128
+    },
+    {
+      "package": "persistent",
+      "version": "2.18.1.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 129
+    },
+    {
+      "package": "JuicyPixels",
+      "version": "3.3.10",
+      "result": "unresolved",
+      "seconds": 4,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 130
+    },
+    {
+      "package": "mwc-random",
+      "version": "0.15.3.0",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 131
+    },
+    {
+      "package": "servant-client",
+      "version": "0.20.3.0",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 132
+    },
+    {
+      "package": "gogol-core",
+      "version": "1.0.0.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 133
+    },
+    {
+      "package": "blaze-markup",
+      "version": "0.8.3.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 134
+    },
+    {
+      "package": "cryptohash",
+      "version": "0.11.9",
+      "result": "unresolved",
+      "seconds": 4,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 135
+    },
+    {
+      "package": "hspec-core",
+      "version": "2.11.18",
+      "result": "unresolved",
+      "seconds": 1,
+      "error": "Error: Failed to resolve dependencies",
+      "rank": 136
+    },
+    {
+      "package": "colour",
+      "version": "2.3.7",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 137
+    },
+    {
+      "package": "resource-pool",
+      "version": "0.5.1.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 138
+    },
+    {
+      "package": "websockets",
+      "version": "0.13.0.0",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 139
+    },
+    {
+      "package": "haskeline",
+      "version": "0.8.5.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 140
+    },
+    {
+      "package": "xml-conduit",
+      "version": "1.10.1.0",
+      "result": "unresolved",
+      "seconds": 4,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 141
+    },
+    {
+      "package": "hslogger",
+      "version": "1.3.2.0",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 142
+    },
+    {
+      "package": "transformers-compat",
+      "version": "0.8",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 143
+    },
+    {
+      "package": "MissingH",
+      "version": "1.6.0.3",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 144
+    },
+    {
+      "package": "crypton",
+      "version": "2.3.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 145
+    },
+    {
+      "package": "gtk",
+      "version": "0.15.10",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 146
+    },
+    {
+      "package": "monad-loops",
+      "version": "0.4.3",
+      "result": "unresolved",
+      "seconds": 4,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 147
+    },
+    {
+      "package": "postgresql-simple",
+      "version": "0.7.0.1",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 148
+    },
+    {
+      "package": "fail",
+      "version": "4.9.0.0",
+      "result": "fail",
+      "seconds": 2,
+      "error": "error: failed to read source file: Main.hs",
+      "rank": 149
+    },
+    {
+      "package": "pretty-show",
+      "version": "1.10",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 150
+    },
+    {
+      "package": "regex-posix",
+      "version": "0.96.0.2",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "Error: Failed to resolve dependencies",
+      "rank": 151
+    },
+    {
+      "package": "errors",
+      "version": "2.3.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 152
+    },
+    {
+      "package": "mmorph",
+      "version": "1.2.2",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 153
+    },
+    {
+      "package": "ansi-wl-pprint",
+      "version": "1.1.1",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 154
+    },
+    {
+      "package": "io-streams",
+      "version": "1.5.2.2",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 155
+    },
+    {
+      "package": "cassava",
+      "version": "0.5.4.1",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 156
+    },
+    {
+      "package": "smallcheck",
+      "version": "1.2.2",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 157
+    },
+    {
+      "package": "lens-aeson",
+      "version": "1.2.3",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 158
+    },
+    {
+      "package": "wreq",
+      "version": "0.5.4.5",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 159
+    },
+    {
+      "package": "tagsoup",
+      "version": "0.14.8",
+      "result": "unresolved",
+      "seconds": 4,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 160
+    },
+    {
+      "package": "tasty-hspec",
+      "version": "1.2.0.4",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 161
+    },
+    {
+      "package": "tls",
+      "version": "2.6.2",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 162
+    },
+    {
+      "package": "foldl",
+      "version": "1.4.18",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 163
+    },
+    {
+      "package": "strict",
+      "version": "0.5.1",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 164
+    },
+    {
+      "package": "tasty-smallcheck",
+      "version": "0.8.2",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 165
+    },
+    {
+      "package": "fast-logger",
+      "version": "3.2.9",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 166
+    },
+    {
+      "package": "hspec-discover",
+      "version": "2.11.18",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 167
+    },
+    {
+      "package": "generic-lens",
+      "version": "2.3.0.0",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 168
+    },
+    {
+      "package": "pandoc",
+      "version": "3.14",
+      "result": "unresolved",
+      "seconds": 1,
+      "error": "Error: Failed to resolve dependencies",
+      "rank": 169
+    },
+    {
+      "package": "OpenGL",
+      "version": "3.0.3.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 170
+    },
+    {
+      "package": "hmatrix",
+      "version": "0.20.2",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 171
+    },
+    {
+      "package": "yesod-core",
+      "version": "1.7.0.0",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 172
+    },
+    {
+      "package": "haskell-src-meta",
+      "version": "0.8.16",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 173
+    },
+    {
+      "package": "distributive",
+      "version": "0.6.3",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 174
+    },
+    {
+      "package": "th-abstraction",
+      "version": "0.7.2.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 175
+    },
+    {
+      "package": "unix-compat",
+      "version": "0.7.4.1",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 176
+    },
+    {
+      "package": "xml",
+      "version": "1.3.14",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 177
+    },
+    {
+      "package": "integer-gmp",
+      "version": "1.1",
+      "result": "builtin",
+      "seconds": 0,
+      "rank": 178
+    },
+    {
+      "package": "fgl",
+      "version": "5.8.3.1",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 179
+    },
+    {
+      "package": "regex-compat",
+      "version": "0.95.2.2",
+      "result": "unresolved",
+      "seconds": 1,
+      "error": "Error: Failed to resolve dependencies",
+      "rank": 180
+    },
+    {
+      "package": "void",
+      "version": "0.7.4",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 181
+    },
+    {
+      "package": "hlint",
+      "version": "3.10",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 182
+    },
+    {
+      "package": "string-conversions",
+      "version": "0.4.0.1",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 183
+    },
+    {
+      "package": "tasty-th",
+      "version": "0.1.7",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 184
+    },
+    {
+      "package": "hspec-expectations",
+      "version": "0.8.4",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 185
+    },
+    {
+      "package": "parser-combinators",
+      "version": "1.3.1",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 186
+    },
+    {
+      "package": "relude",
+      "version": "1.2.2.2",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 187
+    },
+    {
+      "package": "reflection",
+      "version": "2.1.9",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 188
+    },
+    {
+      "package": "singletons",
+      "version": "3.0.4",
+      "result": "unresolved",
+      "seconds": 1,
+      "error": "Error: Failed to resolve dependencies",
+      "rank": 189
+    },
+    {
+      "package": "typed-process",
+      "version": "0.2.13.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 190
+    },
+    {
+      "package": "diagrams-lib",
+      "version": "1.6",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 191
+    },
+    {
+      "package": "hxt",
+      "version": "9.3.1.22",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 192
+    },
+    {
+      "package": "uniplate",
+      "version": "1.6.13",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 193
+    },
+    {
+      "package": "path-io",
+      "version": "1.8.2",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 194
+    },
+    {
+      "package": "system-filepath",
+      "version": "0.4.14.1",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 195
+    },
+    {
+      "package": "cairo",
+      "version": "0.13.12.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 196
+    },
+    {
+      "package": "ghc-paths",
+      "version": "0.1.0.12",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 197
+    },
+    {
+      "package": "pandoc-types",
+      "version": "1.23.1.2",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 198
+    },
+    {
+      "package": "protolude",
+      "version": "0.3.5",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 199
+    },
+    {
+      "package": "raw-strings-qq",
+      "version": "1.1",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 200
+    },
+    {
+      "package": "statistics",
+      "version": "0.16.5.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 201
+    },
+    {
+      "package": "base-orphans",
+      "version": "0.9.4",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 202
+    },
+    {
+      "package": "gauge",
+      "version": "0.2.5",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 203
+    },
+    {
+      "package": "snap-core",
+      "version": "1.0.5.1",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 204
+    },
+    {
+      "package": "Diff",
+      "version": "2.0.1",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 205
+    },
+    {
+      "package": "SHA",
+      "version": "1.6.4.4",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 206
+    },
+    {
+      "package": "optics-core",
+      "version": "0.4.2",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 207
+    },
+    {
+      "package": "dhall",
+      "version": "1.42.3",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 208
+    },
+    {
+      "package": "hasql",
+      "version": "2.0.1.0",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 209
+    },
+    {
+      "package": "streaming",
+      "version": "0.2.4.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 210
+    },
+    {
+      "package": "iproute",
+      "version": "1.8.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 211
+    },
+    {
+      "package": "vector-space",
+      "version": "0.19",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 212
+    },
+    {
+      "package": "these",
+      "version": "1.2.1",
+      "result": "unresolved",
+      "seconds": 1,
+      "error": "Error: Failed to resolve dependencies",
+      "rank": 213
+    },
+    {
+      "package": "vty",
+      "version": "6.7",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 214
+    },
+    {
+      "package": "shakespeare",
+      "version": "2.2.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 215
+    },
+    {
+      "package": "tasty-expected-failure",
+      "version": "0.12.3",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 216
+    },
+    {
+      "package": "generics-sop",
+      "version": "0.5.1.4",
+      "result": "unresolved",
+      "seconds": 1,
+      "error": "Error: Failed to resolve dependencies",
+      "rank": 217
+    },
+    {
+      "package": "indexed-traversable",
+      "version": "0.1.5",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 218
+    },
+    {
+      "package": "microlens-th",
+      "version": "0.4.3.18",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 219
+    },
+    {
+      "package": "vault",
+      "version": "0.3.2.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 220
+    },
+    {
+      "package": "vector-algorithms",
+      "version": "0.9.1.0",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 221
+    },
+    {
+      "package": "base-unicode-symbols",
+      "version": "0.2.4.2",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 222
+    },
+    {
+      "package": "cryptohash-sha256",
+      "version": "0.11.102.1",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 223
+    },
+    {
+      "package": "regex-base",
+      "version": "0.94.0.3",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 224
+    },
+    {
+      "package": "hashtables",
+      "version": "1.4.2",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 225
+    },
+    {
+      "package": "glib",
+      "version": "0.13.12.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 226
+    },
+    {
+      "package": "uuid-types",
+      "version": "1.0.6.1",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 227
+    },
+    {
+      "package": "haskell-gi-base",
+      "version": "0.26.9",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 228
+    },
+    {
+      "package": "tar",
+      "version": "0.7.2.0",
+      "result": "unresolved",
+      "seconds": 1,
+      "error": "Error: Failed to resolve dependencies",
+      "rank": 229
+    },
+    {
+      "package": "lucid",
+      "version": "2.11.20260427",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 230
+    },
+    {
+      "package": "scotty",
+      "version": "0.30",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 231
+    },
+    {
+      "package": "streaming-commons",
+      "version": "0.2.3.1",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 232
+    },
+    {
+      "package": "adjunctions",
+      "version": "4.4.4",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 233
+    },
+    {
+      "package": "prettyprinter-ansi-terminal",
+      "version": "1.1.4",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 234
+    },
+    {
+      "package": "retry",
+      "version": "0.9.3.1",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 235
+    },
+    {
+      "package": "vinyl",
+      "version": "0.14.3",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 236
+    },
+    {
+      "package": "configurator",
+      "version": "0.3.0.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 237
+    },
+    {
+      "package": "cookie",
+      "version": "0.5.1",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 238
+    },
+    {
+      "package": "text-short",
+      "version": "0.1.6.1",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 239
+    },
+    {
+      "package": "HsOpenSSL",
+      "version": "0.11.7.11",
+      "result": "unresolved",
+      "seconds": 1,
+      "error": "Error: Failed to resolve dependencies",
+      "rank": 240
+    },
+    {
+      "package": "fsnotify",
+      "version": "0.4.4.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 241
+    },
+    {
+      "package": "parsers",
+      "version": "0.12.12",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 242
+    },
+    {
+      "package": "hspec-hedgehog",
+      "version": "0.3.0.0",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 243
+    },
+    {
+      "package": "random-shuffle",
+      "version": "0.0.4",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 244
+    },
+    {
+      "package": "tasty-discover",
+      "version": "5.2.0",
+      "result": "fail",
+      "seconds": 3,
+      "error": "error: failed to read source file: Main.hs",
+      "rank": 245
+    },
+    {
+      "package": "xml-types",
+      "version": "0.3.8",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 246
+    },
+    {
+      "package": "entropy",
+      "version": "0.4.1.11",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 247
+    },
+    {
+      "package": "servant-client-core",
+      "version": "0.20.3.0",
+      "result": "unresolved",
+      "seconds": 2,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 248
+    },
+    {
+      "package": "non-empty",
+      "version": "0.3.6.1",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 249
+    },
+    {
+      "package": "mono-traversable",
+      "version": "1.0.21.0",
+      "result": "unresolved",
+      "seconds": 3,
+      "error": "BHC native build: no cached resolution — run `hx lock` first",
+      "rank": 250
+    }
+  ]
+}
