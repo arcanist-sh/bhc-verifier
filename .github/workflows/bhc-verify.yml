@@ -48,12 +48,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Install hx and bhc
-        run: |
-          curl -fsSL https://arcanist.sh/hx/install.sh | HX_INSTALL_DIR="$HOME/.local/bin" sh
-          "$HOME/.local/bin/hx" toolchain install --bhc "$BHC_VERSION" --set
-          # hx keeps the active bhc at ~/.bhc/bin/bhc
-          { echo "$HOME/.local/bin"; echo "$HOME/.bhc/bin"; } >> "$GITHUB_PATH"
+      - name: Install hx
+        uses: arcanist-sh/setup-hx@33ff5cc4164c0d91444ef31494423932cbf173f3 # main, switch to v1 once tagged
+      - name: Install bhc
+        uses: arcanist-sh/setup-bhc@5b37d2a144564a152c256660f22cf38bc63bd5d1 # main, switch to v1 once tagged
+        with:
+          version: ${{ env.BHC_VERSION }}
       - name: Verify unverified versions
         env:
           BHC_VERIFIER_KEY: ${{ secrets.BHC_VERIFIER_KEY }}
