@@ -49,9 +49,9 @@ jobs:
         with:
           node-version: 22
       - name: Install hx
-        uses: arcanist-sh/setup-hx@33ff5cc4164c0d91444ef31494423932cbf173f3 # main, switch to v1 once tagged
+        uses: arcanist-sh/setup-hx@v1
       - name: Install bhc
-        uses: arcanist-sh/setup-bhc@5b37d2a144564a152c256660f22cf38bc63bd5d1 # main, switch to v1 once tagged
+        uses: arcanist-sh/setup-bhc@v1
         with:
           version: ${{ env.BHC_VERSION }}
       - name: Verify unverified versions
