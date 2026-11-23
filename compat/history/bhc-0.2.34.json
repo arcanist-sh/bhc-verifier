@@ -1,63 +1,68 @@
 {
-  "generated_at": "2026-11-23T16:29:22Z",
+  "generated_at": "2026-11-23T19:12:17Z",
   "bhc_version": "0.2.34",
-  "hx_revision": "4676b23",
-  "run_url": "https://github.com/arcanist-sh/bhc-verifier/actions/runs/45215605099",
-  "tested": 238,
-  "passing": 2,
+  "hx_revision": "67279cf",
+  "run_url": "https://github.com/arcanist-sh/bhc-verifier/actions/runs/45245168492",
+  "tested": 237,
+  "passing": 3,
   "counts": {
-    "builtin": 12,
-    "dependency": 172,
+    "builtin": 13,
+    "dependency": 168,
     "error": 1,
-    "fail": 42,
-    "pass": 2,
+    "fail": 44,
+    "pass": 3,
     "unresolved": 21
   },
   "blockers": [
     {
-      "package": "stm",
-      "blocks": 58,
-      "error": "Control.Concurrent.STM.TBQueue: cannot find `newTVar` in this scope"
-    },
-    {
       "package": "binary",
-      "blocks": 44,
-      "error": "Data.Binary.FloatCast: cannot find `castFloatToWord32` in this scope"
+      "blocks": 52,
+      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope"
     },
     {
-      "package": "splitmix",
-      "blocks": 10,
-      "error": "System.Random.SplitMix.Init: code generation failed: `getPOSIXTime` is not implemented by bhc"
+      "package": "os-string",
+      "blocks": 22,
+      "error": "System.OsString.Data.ByteString.Short.Internal: cannot find constructor `SBS` in this scope"
+    },
+    {
+      "package": "primitive",
+      "blocks": 15,
+      "error": "Data.Primitive.MachDeps: cannot find constructor `SIZEOF_HSCHAR` in this scope"
     },
     {
       "package": "transformers-compat",
-      "blocks": 8,
+      "blocks": 10,
       "error": "hx exited with status 5"
+    },
+    {
+      "package": "splitmix",
+      "blocks": 9,
+      "error": "System.Random.SplitMix.Init: code generation failed: `getPOSIXTime` is not implemented by bhc"
+    },
+    {
+      "package": "file-io",
+      "blocks": 8,
+      "error": "System.File.Platform: unexpected `_`, expected type"
+    },
+    {
+      "package": "assoc",
+      "blocks": 7,
+      "error": "Data.Bifunctor.Assoc: cannot find constructor `Const` in this scope"
     },
     {
       "package": "colour",
       "blocks": 7,
-      "error": "Data.Colour.Chan: cannot find `Data.List.sum` in this scope"
-    },
-    {
-      "package": "primitive",
-      "blocks": 6,
-      "error": "Data.Primitive.MachDeps: cannot find constructor `SIZEOF_HSCHAR` in this scope"
-    },
-    {
-      "package": "tagged",
-      "blocks": 6,
-      "error": "Data.Tagged: unexpected `*`, expected operator"
+      "error": "Data.Colour.CIE.Chromaticity: cannot find `showsPrec` in this scope"
     },
     {
       "package": "base-orphans",
-      "blocks": 5,
+      "blocks": 6,
       "error": "Data.Orphans.Prelude: cannot find constructor `:+` in this scope"
     },
     {
-      "package": "th-abstraction",
+      "package": "tagged",
       "blocks": 5,
-      "error": "Language.Haskell.TH.Datatype.TyVarBndr: unexpected `\\`, expected pattern"
+      "error": "Data.Tagged: unexpected `*`, expected operator"
     },
     {
       "package": "data-default",
@@ -65,9 +70,19 @@
       "error": "Data.Default.Internal: cannot find constructor `:+` in this scope"
     },
     {
-      "package": "indexed-traversable",
+      "package": "th-abstraction",
       "blocks": 4,
-      "error": "CoerceCompat: unexpected layout `}`, expected declaration"
+      "error": "Language.Haskell.TH.Datatype.TyVarBndr: unexpected `\\`, expected pattern"
+    },
+    {
+      "package": "HUnit",
+      "blocks": 3,
+      "error": "Test.HUnit.Lang: cannot find `E.catches` in this scope"
+    },
+    {
+      "package": "StateVar",
+      "blocks": 3,
+      "error": "Data.StateVar: code generation failed: `poke` is not implemented by bhc"
     },
     {
       "package": "basement",
@@ -80,24 +95,9 @@
       "error": "Data.Stream.Monadic: cannot find constructor `SPEC` in this scope"
     },
     {
-      "package": "HUnit",
-      "blocks": 2,
-      "error": "Test.HUnit.Lang: cannot find `E.catches` in this scope"
-    },
-    {
-      "package": "base16-bytestring",
-      "blocks": 2,
-      "error": "Data.ByteString.Base16.Internal: unexpected layout `;`, expected expression"
-    },
-    {
       "package": "clock",
       "blocks": 2,
       "error": "System.Clock.Seconds: cannot find constructor `TimeSpec` in this scope"
-    },
-    {
-      "package": "haskell-src-exts",
-      "blocks": 2,
-      "error": "Language.Haskell.Exts.SrcLoc: unexpected operator, expected `=`"
     },
     {
       "package": "indexed-profunctors",
@@ -105,9 +105,9 @@
       "error": "Data.Profunctor.Indexed: unexpected layout `}`, expected identifier"
     },
     {
-      "package": "integer-logarithms",
+      "package": "indexed-traversable",
       "blocks": 2,
-      "error": "Math.NumberTheory.Logarithms: cannot find `isTrue#` in this scope"
+      "error": "CoerceCompat: unexpected layout `}`, expected declaration"
     },
     {
       "package": "old-locale",
@@ -141,7 +141,7 @@
       "package": "containers",
       "version": "0.8.1",
       "result": "builtin",
-      "seconds": 0,
+      "seconds": 1,
       "rank": 4
     },
     {
@@ -162,7 +162,7 @@
       "package": "time",
       "version": "1.16.0.1",
       "result": "fail",
-      "seconds": 14,
+      "seconds": 19,
       "error": "Data.Time.Calendar.Private: cannot find `showFixed` in this scope",
       "rank": 7
     },
@@ -170,7 +170,7 @@
       "package": "QuickCheck",
       "version": "2.19.0.0",
       "result": "dependency",
-      "seconds": 14,
+      "seconds": 15,
       "blocked_by": "splitmix",
       "error": "System.Random.SplitMix.Init: code generation failed: `getPOSIXTime` is not implemented by bhc",
       "rank": 8
@@ -179,32 +179,32 @@
       "package": "aeson",
       "version": "2.3.2.0",
       "result": "dependency",
-      "seconds": 20,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
+      "seconds": 19,
+      "blocked_by": "binary",
+      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
       "rank": 9
     },
     {
       "package": "directory",
       "version": "1.3.11.0",
       "result": "builtin",
-      "seconds": 0,
+      "seconds": 1,
       "rank": 10
     },
     {
       "package": "tasty",
       "version": "1.5.5",
       "result": "dependency",
-      "seconds": 19,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
+      "seconds": 18,
+      "blocked_by": "binary",
+      "error": "Data.Binary.FloatCast: cannot find `castFloatToWord32` in this scope",
       "rank": 11
     },
     {
       "package": "hspec",
       "version": "2.11.18",
       "result": "unresolved",
-      "seconds": 14,
+      "seconds": 12,
       "error": "warning: Could not plan the dependency build: cycle detected in dependencies: hspec-discover -> hspec-discover",
       "rank": 12
     },
@@ -212,14 +212,14 @@
       "package": "filepath",
       "version": "1.5.5.0",
       "result": "builtin",
-      "seconds": 0,
+      "seconds": 1,
       "rank": 13
     },
     {
       "package": "vector",
       "version": "0.13.2.0",
       "result": "dependency",
-      "seconds": 13,
+      "seconds": 12,
       "blocked_by": "vector-stream",
       "error": "Data.Stream.Monadic: cannot find constructor `SPEC` in this scope",
       "rank": 14
@@ -228,18 +228,18 @@
       "package": "unordered-containers",
       "version": "0.2.21",
       "result": "dependency",
-      "seconds": 14,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
+      "seconds": 22,
+      "blocked_by": "os-string",
+      "error": "System.OsString.Data.ByteString.Short.Internal: cannot find constructor `SBS` in this scope",
       "rank": 15
     },
     {
       "package": "tasty-hunit",
       "version": "0.10.2",
       "result": "dependency",
-      "seconds": 21,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TBQueue: cannot find `newTVar` in this scope",
+      "seconds": 19,
+      "blocked_by": "binary",
+      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
       "rank": 16
     },
     {
@@ -261,16 +261,16 @@
       "package": "process",
       "version": "1.6.30.0",
       "result": "dependency",
-      "seconds": 5,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
+      "seconds": 6,
+      "blocked_by": "os-string",
+      "error": "System.OsString.Data.ByteString.Short.Internal: cannot find constructor `SBS` in this scope",
       "rank": 19
     },
     {
       "package": "lens",
       "version": "5.3.6",
       "result": "dependency",
-      "seconds": 16,
+      "seconds": 19,
       "blocked_by": "binary",
       "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
       "rank": 20
@@ -288,7 +288,7 @@
       "package": "HUnit",
       "version": "1.6.2.0",
       "result": "fail",
-      "seconds": 10,
+      "seconds": 8,
       "error": "Test.HUnit.Lang: cannot find `E.catches` in this scope",
       "rank": 22
     },
@@ -296,84 +296,81 @@
       "package": "hashable",
       "version": "1.5.1.0",
       "result": "dependency",
-      "seconds": 15,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
+      "seconds": 14,
+      "blocked_by": "os-string",
+      "error": "System.OsString.Data.ByteString.Short.Internal: cannot find constructor `SBS` in this scope",
       "rank": 23
     },
     {
       "package": "array",
       "version": "0.5.8.0",
       "result": "builtin",
-      "seconds": 1,
+      "seconds": 0,
       "rank": 24
     },
     {
       "package": "binary",
       "version": "0.8.9.3",
       "result": "fail",
-      "seconds": 2,
-      "error": "Data.Binary.FloatCast: cannot find `castFloatToWord32` in this scope",
+      "seconds": 3,
+      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
       "rank": 25
     },
     {
       "package": "network",
       "version": "3.2.16.0",
       "result": "dependency",
-      "seconds": 4,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
+      "seconds": 8,
+      "blocked_by": "os-string",
+      "error": "System.OsString.Data.ByteString.Short.Internal: cannot find constructor `SBS` in this scope",
       "rank": 26
     },
     {
       "package": "tasty-quickcheck",
       "version": "0.11.1",
       "result": "dependency",
-      "seconds": 2,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
+      "seconds": 7,
+      "blocked_by": "file-io",
+      "error": "System.File.Platform: unexpected `_`, expected type",
       "rank": 27
     },
     {
       "package": "stm",
       "version": "2.5.3.1",
-      "result": "fail",
+      "result": "builtin",
       "seconds": 2,
-      "error": "Control.Concurrent.STM.TBQueue: cannot find `newTVar` in this scope",
       "rank": 28
     },
     {
       "package": "http-types",
       "version": "0.12.6",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TQueue: cannot find `newTVar` in this scope",
+      "seconds": 4,
+      "blocked_by": "binary",
+      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
       "rank": 29
     },
     {
       "package": "optparse-applicative",
       "version": "0.19.0.0",
       "result": "dependency",
-      "seconds": 2,
-      "blocked_by": "colour",
-      "error": "Data.Colour.Chan: cannot find `Data.List.sum` in this scope",
+      "seconds": 3,
+      "blocked_by": "binary",
+      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
       "rank": 30
     },
     {
       "package": "exceptions",
       "version": "0.10.12",
-      "result": "dependency",
+      "result": "pass",
       "seconds": 4,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TQueue: cannot find `newTVar` in this scope",
       "rank": 31
     },
     {
       "package": "attoparsec",
       "version": "0.14.4",
       "result": "unresolved",
-      "seconds": 2,
+      "seconds": 1,
       "error": "Error: Failed to resolve dependencies",
       "rank": 32
     },
@@ -391,8 +388,8 @@
       "version": "1.2.2.0",
       "result": "dependency",
       "seconds": 4,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
+      "blocked_by": "binary",
+      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
       "rank": 34
     },
     {
@@ -400,17 +397,16 @@
       "version": "1.6.5.0",
       "result": "dependency",
       "seconds": 4,
-      "blocked_by": "binary",
-      "error": "Data.Binary.FloatCast: cannot find `castFloatToWord32` in this scope",
+      "blocked_by": "data-default",
+      "error": "Data.Default.Internal: cannot find constructor `:+` in this scope",
       "rank": 35
     },
     {
       "package": "unix",
       "version": "2.8.8.0",
-      "result": "dependency",
-      "seconds": 5,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TQueue: cannot find `newTVar` in this scope",
+      "result": "fail",
+      "seconds": 3,
+      "error": "System.Posix.Time: code generation failed: `throwErrnoIfMinus1` is not implemented by bhc; the program cannot be compiled (pass --allow-stubs to build it anyway and abort if it is reached)",
       "rank": 36
     },
     {
@@ -425,9 +421,9 @@
       "package": "async",
       "version": "2.2.6",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TChan: cannot find `newTVar` in this scope",
+      "seconds": 4,
+      "blocked_by": "binary",
+      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
       "rank": 38
     },
     {
@@ -443,8 +439,8 @@
       "version": "0.7.19",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "binary",
-      "error": "Data.Binary.FloatCast: cannot find `castFloatToWord32` in this scope",
+      "blocked_by": "appar",
+      "error": "Text.Appar.Input: code generation failed: `Data.ByteString.Lazy.Char8.head` is not implemented by bhc",
       "rank": 40
     },
     {
@@ -453,7 +449,7 @@
       "result": "dependency",
       "seconds": 3,
       "blocked_by": "binary",
-      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
+      "error": "Data.Binary.FloatCast: cannot find `castFloatToWord32` in this scope",
       "rank": 41
     },
     {
@@ -475,7 +471,7 @@
       "package": "split",
       "version": "0.2.5.1",
       "result": "fail",
-      "seconds": 2,
+      "seconds": 3,
       "error": "Data.List.Split.Internals: code generation failed: `genericSplitAt` is not implemented by bhc; the program cannot be compiled (pass --allow-stubs to build it anyway and abort if it is reached)",
       "rank": 44
     },
@@ -483,9 +479,9 @@
       "package": "scientific",
       "version": "0.3.10.0",
       "result": "dependency",
-      "seconds": 2,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TChan: cannot find `newTVar` in this scope",
+      "seconds": 3,
+      "blocked_by": "binary",
+      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
       "rank": 45
     },
     {
@@ -500,18 +496,18 @@
       "package": "wai",
       "version": "3.2.5",
       "result": "dependency",
-      "seconds": 2,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TQueue: cannot find `newTVar` in this scope",
+      "seconds": 3,
+      "blocked_by": "os-string",
+      "error": "System.OsString.Data.ByteString.Short.Internal: cannot find constructor `SBS` in this scope",
       "rank": 47
     },
     {
       "package": "conduit",
       "version": "1.3.6.1",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
+      "seconds": 5,
+      "blocked_by": "primitive",
+      "error": "Data.Primitive.MachDeps: cannot find constructor `SIZEOF_HSCHAR` in this scope",
       "rank": 48
     },
     {
@@ -519,25 +515,25 @@
       "version": "2.0",
       "result": "dependency",
       "seconds": 4,
-      "blocked_by": "transformers-compat",
-      "error": "failed to compute parallel groups for transformers-compat: cycle detected in module dependencies: Data.Functor.Classes.Generic",
+      "blocked_by": "binary",
+      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
       "rank": 49
     },
     {
       "package": "temporary",
       "version": "1.3",
       "result": "dependency",
-      "seconds": 2,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
+      "seconds": 3,
+      "blocked_by": "splitmix",
+      "error": "System.Random.SplitMix.Init: code generation failed: `getPOSIXTime` is not implemented by bhc",
       "rank": 50
     },
     {
       "package": "utf8-string",
       "version": "1.0.2",
       "result": "fail",
-      "seconds": 3,
-      "error": "Codec.Binary.UTF8.String: unexpected `default`, expected declaration",
+      "seconds": 2,
+      "error": "Codec.Binary.UTF8.Generic: cannot find `L.splitAt` in this scope",
       "rank": 51
     },
     {
@@ -552,16 +548,16 @@
       "package": "pretty",
       "version": "1.1.3.6",
       "result": "pass",
-      "seconds": 4,
+      "seconds": 3,
       "rank": 53
     },
     {
       "package": "resourcet",
       "version": "1.3.0",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TChan: cannot find `newTVar` in this scope",
+      "seconds": 5,
+      "blocked_by": "primitive",
+      "error": "Data.Primitive.MachDeps: cannot find constructor `SIZEOF_HSCHAR` in this scope",
       "rank": 54
     },
     {
@@ -579,14 +575,14 @@
       "result": "dependency",
       "seconds": 3,
       "blocked_by": "colour",
-      "error": "Data.Colour.Matrix: unexpected `default`, expected declaration",
+      "error": "Data.Colour.Chan: cannot find `Data.List.sum` in this scope",
       "rank": 56
     },
     {
       "package": "monad-control",
       "version": "1.0.3.1",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 4,
       "blocked_by": "transformers-compat",
       "error": "failed to compute parallel groups for transformers-compat: cycle detected in module dependencies: Data.Functor.Classes",
       "rank": 57
@@ -595,9 +591,9 @@
       "package": "warp",
       "version": "3.4.22",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
+      "seconds": 4,
+      "blocked_by": "os-string",
+      "error": "System.OsString.Data.ByteString.Short.Internal: cannot find constructor `SBS` in this scope",
       "rank": 58
     },
     {
@@ -605,8 +601,8 @@
       "version": "2.6.4.2",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "binary",
-      "error": "Data.Binary.FloatCast: cannot find `castFloatToWord32` in this scope",
+      "blocked_by": "th-compat",
+      "error": "Language.Haskell.TH.Syntax.Compat: CPP error at line 167: expected RParen, got LParen",
       "rank": 59
     },
     {
@@ -638,7 +634,7 @@
       "version": "0.3.21",
       "result": "fail",
       "seconds": 2,
-      "error": "Safe.Foldable: code generation failed: `Data.Foldable.null` is not implemented by bhc; the program cannot be compiled (pass --allow-stubs to build it anyway and abort if it is reached)",
+      "error": "Safe: cannot find `foldl1'` in this scope",
       "rank": 63
     },
     {
@@ -653,9 +649,9 @@
       "package": "Cabal",
       "version": "3.18.2.0",
       "result": "dependency",
-      "seconds": 2,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
+      "seconds": 4,
+      "blocked_by": "binary",
+      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
       "rank": 65
     },
     {
@@ -663,24 +659,24 @@
       "version": "0.20.3.0",
       "result": "dependency",
       "seconds": 4,
-      "blocked_by": "dlist",
-      "error": "Data.DList.Internal: cannot find `List.foldr` in this scope",
+      "blocked_by": "binary",
+      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
       "rank": 66
     },
     {
       "package": "http-client-tls",
       "version": "0.4.0",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "ram",
-      "error": "Data.Memory.Internal.CompatPrim: cannot find `byteSwap32#` in this scope",
+      "seconds": 4,
+      "blocked_by": "binary",
+      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
       "rank": 67
     },
     {
       "package": "syb",
       "version": "0.7.4",
       "result": "fail",
-      "seconds": 2,
+      "seconds": 3,
       "error": "Data.Generics.Aliases: unexpected `` ` ``, expected `)`",
       "rank": 68
     },
@@ -689,8 +685,8 @@
       "version": "0.4",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "primitive",
-      "error": "Data.Primitive.MachDeps: cannot find constructor `SIZEOF_HSCHAR` in this scope",
+      "blocked_by": "binary",
+      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
       "rank": 69
     },
     {
@@ -706,7 +702,7 @@
       "package": "old-locale",
       "version": "1.0.0.7",
       "result": "unresolved",
-      "seconds": 2,
+      "seconds": 1,
       "error": "Error: Failed to resolve dependencies",
       "rank": 71
     },
@@ -714,7 +710,7 @@
       "package": "ghc",
       "version": "9.14.1",
       "result": "unresolved",
-      "seconds": 2,
+      "seconds": 1,
       "error": "Error: Failed to resolve dependencies",
       "rank": 72
     },
@@ -723,8 +719,8 @@
       "version": "0.11.11.2",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "binary",
-      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
+      "blocked_by": "primitive",
+      "error": "Data.Primitive.MachDeps: cannot find constructor `SIZEOF_HSCHAR` in this scope",
       "rank": 73
     },
     {
@@ -732,24 +728,24 @@
       "version": "9.8.3",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "integer-logarithms",
-      "error": "Math.NumberTheory.Logarithms: cannot find `isTrue#` in this scope",
+      "blocked_by": "os-string",
+      "error": "System.OsString.Data.ByteString.Short.Internal: cannot find constructor `SBS` in this scope",
       "rank": 74
     },
     {
       "package": "http-conduit",
       "version": "2.3.9.1",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "indexed-traversable",
-      "error": "CoerceCompat: unexpected layout `}`, expected declaration",
+      "seconds": 4,
+      "blocked_by": "os-string",
+      "error": "System.OsString.Data.ByteString.Short.Internal: cannot find constructor `SBS` in this scope",
       "rank": 75
     },
     {
       "package": "extra",
       "version": "1.8.1",
       "result": "dependency",
-      "seconds": 4,
+      "seconds": 3,
       "blocked_by": "clock",
       "error": "System.Clock.Seconds: cannot find constructor `TimeSpec` in this scope",
       "rank": 76
@@ -758,9 +754,9 @@
       "package": "ansi-terminal",
       "version": "1.1.5",
       "result": "dependency",
-      "seconds": 2,
+      "seconds": 3,
       "blocked_by": "colour",
-      "error": "Data.Colour.Chan: cannot find `Data.List.sum` in this scope",
+      "error": "Data.Colour.CIE.Chromaticity: cannot find `showsPrec` in this scope",
       "rank": 77
     },
     {
@@ -793,8 +789,8 @@
       "version": "1.3.16.1",
       "result": "dependency",
       "seconds": 4,
-      "blocked_by": "tagged",
-      "error": "Data.Tagged: unexpected `*`, expected operator",
+      "blocked_by": "splitmix",
+      "error": "System.Random.SplitMix.Init: code generation failed: `getPOSIXTime` is not implemented by bhc",
       "rank": 81
     },
     {
@@ -811,17 +807,17 @@
       "version": "5.6.3",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "tagged",
-      "error": "Data.Tagged: unexpected `*`, expected operator",
+      "blocked_by": "assoc",
+      "error": "Data.Bifunctor.Assoc: cannot find constructor `Const` in this scope",
       "rank": 83
     },
     {
       "package": "unliftio",
       "version": "0.2.25.1",
       "result": "dependency",
-      "seconds": 2,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
+      "seconds": 3,
+      "blocked_by": "binary",
+      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
       "rank": 84
     },
     {
@@ -830,14 +826,14 @@
       "result": "dependency",
       "seconds": 3,
       "blocked_by": "binary",
-      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
+      "error": "Data.Binary.FloatCast: cannot find `castFloatToWord32` in this scope",
       "rank": 85
     },
     {
       "package": "blaze-html",
       "version": "0.9.2.0",
       "result": "dependency",
-      "seconds": 4,
+      "seconds": 3,
       "blocked_by": "binary",
       "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
       "rank": 86
@@ -846,7 +842,7 @@
       "package": "memory",
       "version": "0.18.0",
       "result": "dependency",
-      "seconds": 2,
+      "seconds": 3,
       "blocked_by": "basement",
       "error": "Basement.Compat.NumLiteral: `fromInteger` in `instance Integral Natural` does not have the type the class gives it: type mismatch: expected `Integer`, found `Int`",
       "rank": 87
@@ -854,17 +850,16 @@
     {
       "package": "safe-exceptions",
       "version": "0.1.7.4",
-      "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TBQueue: cannot find `newTVar` in this scope",
+      "result": "fail",
+      "seconds": 5,
+      "error": "Control.Exception.Safe: CPP error at line 143: invalid macro name: HAS_CALL_STACK",
       "rank": 88
     },
     {
       "package": "zlib",
       "version": "0.7.1.1",
       "result": "fail",
-      "seconds": 2,
+      "seconds": 3,
       "error": "Codec.Compression.Zlib.ByteStringCompat: cannot find constructor `BS` in this scope",
       "rank": 89
     },
@@ -872,32 +867,32 @@
       "package": "cmdargs",
       "version": "0.10.22",
       "result": "dependency",
-      "seconds": 2,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TBQueue: cannot find `newTVar` in this scope",
+      "seconds": 5,
+      "blocked_by": "file-io",
+      "error": "System.File.Platform: unexpected `_`, expected type",
       "rank": 90
     },
     {
       "package": "monad-logger",
       "version": "0.3.42",
       "result": "dependency",
-      "seconds": 4,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TQueue: cannot find `newTVar` in this scope",
+      "seconds": 3,
+      "blocked_by": "primitive",
+      "error": "Data.Primitive.Internal.Read: code generation failed: `string` is not implemented by bhc",
       "rank": 91
     },
     {
       "package": "unliftio-core",
       "version": "0.2.1.0",
       "result": "pass",
-      "seconds": 4,
+      "seconds": 3,
       "rank": 92
     },
     {
       "package": "servant-server",
       "version": "0.20.3.0",
       "result": "unresolved",
-      "seconds": 4,
+      "seconds": 3,
       "error": "warning: Could not plan the dependency build: cycle detected in dependencies: wai-app-static -> wai-app-static",
       "rank": 93
     },
@@ -905,18 +900,18 @@
       "package": "semigroupoids",
       "version": "6.0.2",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TChan: cannot find `newTVar` in this scope",
+      "seconds": 2,
+      "blocked_by": "indexed-traversable",
+      "error": "CoerceCompat: unexpected layout `}`, expected declaration",
       "rank": 94
     },
     {
       "package": "bifunctors",
       "version": "5.6.3",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "th-abstraction",
-      "error": "Language.Haskell.TH.Datatype.TyVarBndr: unexpected `\\`, expected pattern",
+      "seconds": 4,
+      "blocked_by": "assoc",
+      "error": "Data.Bifunctor.Assoc: cannot find constructor `Const` in this scope",
       "rank": 95
     },
     {
@@ -924,17 +919,17 @@
       "version": "0.5.1",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
+      "blocked_by": "colour",
+      "error": "Data.Colour.Chan: cannot find `Data.List.sum` in this scope",
       "rank": 96
     },
     {
       "package": "pipes",
       "version": "4.3.16",
       "result": "dependency",
-      "seconds": 2,
+      "seconds": 4,
       "blocked_by": "transformers-compat",
-      "error": "failed to compute parallel groups for transformers-compat: cycle detected in module dependencies: Data.Functor.Classes",
+      "error": "failed to compute parallel groups for transformers-compat: cycle detected in module dependencies: Control.Applicative.Lift",
       "rank": 97
     },
     {
@@ -942,23 +937,23 @@
       "version": "0.2.3.12",
       "result": "dependency",
       "seconds": 2,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
+      "blocked_by": "base-orphans",
+      "error": "Data.Orphans.Prelude: cannot find constructor `:+` in this scope",
       "rank": 98
     },
     {
       "package": "base-compat",
       "version": "0.15.0",
       "result": "fail",
-      "seconds": 3,
-      "error": "Data.List.Compat: cannot find `build` in this scope",
+      "seconds": 4,
+      "error": "Data.Bitraversable.Compat: cannot find `bitraverse` in this scope",
       "rank": 99
     },
     {
       "package": "cryptonite",
       "version": "0.30",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 4,
       "blocked_by": "basement",
       "error": "Basement.Compat.NumLiteral: `fromInteger` in `instance Integral Natural` does not have the type the class gives it: type mismatch: expected `Integer`, found `Int`",
       "rank": 100
@@ -968,15 +963,15 @@
       "version": "0.0.16.0",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TBQueue: cannot find `newTVar` in this scope",
+      "blocked_by": "os-string",
+      "error": "System.OsString.Data.ByteString.Short.Internal: cannot find constructor `SBS` in this scope",
       "rank": 101
     },
     {
       "package": "old-time",
       "version": "1.1.1.0",
       "result": "dependency",
-      "seconds": 4,
+      "seconds": 3,
       "blocked_by": "old-locale",
       "error": "System.Locale: unexpected `,`, expected `::`",
       "rank": 102
@@ -986,8 +981,8 @@
       "version": "0.8.11",
       "result": "dependency",
       "seconds": 2,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TQueue: cannot find `newTVar` in this scope",
+      "blocked_by": "base-orphans",
+      "error": "Data.Orphans.Prelude: cannot find constructor `:+` in this scope",
       "rank": 103
     },
     {
@@ -1028,9 +1023,9 @@
       "package": "http-api-data",
       "version": "0.7",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "base-orphans",
-      "error": "Data.Orphans.Prelude: cannot find constructor `:+` in this scope",
+      "seconds": 4,
+      "blocked_by": "binary",
+      "error": "Data.Binary.FloatCast: cannot find `castFloatToWord32` in this scope",
       "rank": 108
     },
     {
@@ -1045,7 +1040,7 @@
       "package": "free",
       "version": "5.2",
       "result": "unresolved",
-      "seconds": 0,
+      "seconds": 1,
       "error": "Error: Failed to resolve dependencies",
       "rank": 110
     },
@@ -1053,16 +1048,16 @@
       "package": "tasty-golden",
       "version": "2.3.6",
       "result": "dependency",
-      "seconds": 4,
-      "blocked_by": "splitmix",
-      "error": "System.Random.SplitMix.Init: code generation failed: `getPOSIXTime` is not implemented by bhc",
+      "seconds": 3,
+      "blocked_by": "binary",
+      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
       "rank": 111
     },
     {
       "package": "parallel",
       "version": "3.3.0.0",
       "result": "fail",
-      "seconds": 3,
+      "seconds": 2,
       "error": "Control.Parallel: cannot find `GHC.Conc.par` in this scope",
       "rank": 112
     },
@@ -1070,27 +1065,27 @@
       "package": "wai-extra",
       "version": "3.1.18",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "assoc",
-      "error": "Data.Bifunctor.Assoc: cannot find constructor `Const` in this scope",
+      "seconds": 4,
+      "blocked_by": "binary",
+      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
       "rank": 113
     },
     {
       "package": "http-media",
       "version": "0.8.1.1",
       "result": "dependency",
-      "seconds": 2,
+      "seconds": 3,
       "blocked_by": "binary",
-      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
+      "error": "Data.Binary.FloatCast: cannot find `castFloatToWord32` in this scope",
       "rank": 114
     },
     {
       "package": "contravariant",
       "version": "1.5.6",
       "result": "dependency",
-      "seconds": 2,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
+      "seconds": 3,
+      "blocked_by": "StateVar",
+      "error": "Data.StateVar: code generation failed: `poke` is not implemented by bhc",
       "rank": 115
     },
     {
@@ -1106,9 +1101,9 @@
       "package": "HTTP",
       "version": "4000.5.0",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TQueue: cannot find `newTVar` in this scope",
+      "seconds": 4,
+      "blocked_by": "os-string",
+      "error": "System.OsString.Data.ByteString.Short.Internal: cannot find constructor `SBS` in this scope",
       "rank": 117
     },
     {
@@ -1116,8 +1111,8 @@
       "version": "1.23.3",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
+      "blocked_by": "assoc",
+      "error": "Data.Bifunctor.Assoc: cannot find constructor `Const` in this scope",
       "rank": 118
     },
     {
@@ -1141,15 +1136,15 @@
       "package": "utility-ht",
       "version": "0.0.17.2",
       "result": "fail",
-      "seconds": 3,
-      "error": "Text.Show.HT: cannot find `showsPrec` in this scope",
+      "seconds": 2,
+      "error": "Control.Monad.HT: cannot find `List.replicate` in this scope",
       "rank": 121
     },
     {
       "package": "haskell-src-exts",
       "version": "1.24.0",
       "result": "fail",
-      "seconds": 34,
+      "seconds": 29,
       "error": "Language.Haskell.Exts.SrcLoc: unexpected operator, expected `=`",
       "rank": 122
     },
@@ -1166,16 +1161,16 @@
       "package": "constraints",
       "version": "0.14.4",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
+      "seconds": 2,
+      "blocked_by": "os-string",
+      "error": "System.OsString.Data.ByteString.Short.Internal: cannot find constructor `SBS` in this scope",
       "rank": 124
     },
     {
       "package": "tasty-hedgehog",
       "version": "1.4.0.2",
       "result": "unresolved",
-      "seconds": 3,
+      "seconds": 4,
       "error": "warning: Could not plan the dependency build: cycle detected in dependencies: hedgehog -> pretty-show -> pretty-show",
       "rank": 125
     },
@@ -1183,16 +1178,16 @@
       "package": "Glob",
       "version": "0.10.2",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TBQueue: cannot find `newTVar` in this scope",
+      "seconds": 6,
+      "blocked_by": "transformers-compat",
+      "error": "failed to compute parallel groups for transformers-compat: cycle detected in module dependencies: Data.Functor.Classes",
       "rank": 126
     },
     {
       "package": "comonad",
       "version": "5.0.10",
       "result": "dependency",
-      "seconds": 2,
+      "seconds": 3,
       "blocked_by": "tagged",
       "error": "Data.Tagged: unexpected `*`, expected operator",
       "rank": 127
@@ -1202,8 +1197,8 @@
       "version": "0.9.6",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "indexed-traversable",
-      "error": "CoerceCompat: unexpected layout `}`, expected declaration",
+      "blocked_by": "assoc",
+      "error": "Data.Bifunctor.Assoc: cannot find constructor `Const` in this scope",
       "rank": 128
     },
     {
@@ -1211,8 +1206,8 @@
       "version": "2.18.1.0",
       "result": "dependency",
       "seconds": 4,
-      "blocked_by": "binary",
-      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
+      "blocked_by": "primitive",
+      "error": "Data.Primitive.MachDeps: cannot find constructor `SIZEOF_HSCHAR` in this scope",
       "rank": 129
     },
     {
@@ -1220,8 +1215,8 @@
       "version": "3.3.10",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "primitive",
-      "error": "Data.Primitive.MachDeps: cannot find constructor `SIZEOF_HSCHAR` in this scope",
+      "blocked_by": "vector-stream",
+      "error": "Data.Stream.Monadic: cannot find constructor `SPEC` in this scope",
       "rank": 130
     },
     {
@@ -1229,33 +1224,33 @@
       "version": "0.15.3.0",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "vector-stream",
-      "error": "Data.Stream.Monadic: cannot find constructor `SPEC` in this scope",
+      "blocked_by": "data-default",
+      "error": "Data.Default.Internal: cannot find constructor `:+` in this scope",
       "rank": 131
     },
     {
       "package": "servant-client",
       "version": "0.20.3.0",
       "result": "dependency",
-      "seconds": 4,
-      "blocked_by": "indexed-traversable",
-      "error": "CoerceCompat: unexpected layout `}`, expected declaration",
+      "seconds": 6,
+      "blocked_by": "StateVar",
+      "error": "Data.StateVar: code generation failed: `poke` is not implemented by bhc",
       "rank": 132
     },
     {
       "package": "gogol-core",
       "version": "1.0.0.0",
       "result": "dependency",
-      "seconds": 4,
-      "blocked_by": "sop-core",
-      "error": "Data.SOP.BasicFunctors: unexpected `(`, expected constructor",
+      "seconds": 3,
+      "blocked_by": "assoc",
+      "error": "Data.Bifunctor.Assoc: cannot find constructor `Const` in this scope",
       "rank": 133
     },
     {
       "package": "blaze-markup",
       "version": "0.8.3.0",
       "result": "dependency",
-      "seconds": 2,
+      "seconds": 3,
       "blocked_by": "binary",
       "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
       "rank": 134
@@ -1264,7 +1259,7 @@
       "package": "cryptohash",
       "version": "0.11.9",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 4,
       "blocked_by": "basement",
       "error": "Basement.Compat.NumLiteral: `fromInteger` in `instance Integral Natural` does not have the type the class gives it: type mismatch: expected `Integer`, found `Int`",
       "rank": 135
@@ -1274,68 +1269,68 @@
       "version": "2.11.18",
       "result": "dependency",
       "seconds": 4,
-      "blocked_by": "colour",
-      "error": "Data.Colour.Matrix: unexpected `default`, expected declaration",
+      "blocked_by": "splitmix",
+      "error": "System.Random.SplitMix.Init: code generation failed: `getPOSIXTime` is not implemented by bhc",
       "rank": 136
     },
     {
       "package": "colour",
       "version": "2.3.7",
       "result": "fail",
-      "seconds": 2,
-      "error": "Data.Colour.Chan: cannot find `Data.List.sum` in this scope",
+      "seconds": 3,
+      "error": "Data.Colour.CIE.Chromaticity: cannot find `showsPrec` in this scope",
       "rank": 137
     },
     {
       "package": "resource-pool",
       "version": "0.5.1.0",
       "result": "dependency",
-      "seconds": 2,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
+      "seconds": 3,
+      "blocked_by": "primitive",
+      "error": "Data.Primitive.MachDeps: cannot find constructor `SIZEOF_HSCHAR` in this scope",
       "rank": 138
     },
     {
       "package": "websockets",
       "version": "0.13.0.0",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "vector-stream",
-      "error": "Data.Stream.Monadic: cannot find constructor `SPEC` in this scope",
+      "seconds": 4,
+      "blocked_by": "binary",
+      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
       "rank": 139
     },
     {
       "package": "haskeline",
       "version": "0.8.5.0",
       "result": "dependency",
-      "seconds": 2,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TQueue: cannot find `newTVar` in this scope",
+      "seconds": 3,
+      "blocked_by": "file-io",
+      "error": "System.File.Platform: unexpected `_`, expected type",
       "rank": 140
     },
     {
       "package": "xml-conduit",
       "version": "1.10.1.0",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "splitmix",
-      "error": "System.Random.SplitMix.Init: code generation failed: `getPOSIXTime` is not implemented by bhc",
+      "seconds": 4,
+      "blocked_by": "binary",
+      "error": "Data.Binary.FloatCast: cannot find `castFloatToWord32` in this scope",
       "rank": 141
     },
     {
       "package": "hslogger",
       "version": "1.3.2.0",
       "result": "dependency",
-      "seconds": 4,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
+      "seconds": 3,
+      "blocked_by": "file-io",
+      "error": "System.File.Platform: unexpected `_`, expected type",
       "rank": 142
     },
     {
       "package": "transformers-compat",
       "version": "0.8",
       "result": "fail",
-      "seconds": 3,
+      "seconds": 2,
       "error": "hx exited with status 5",
       "rank": 143
     },
@@ -1344,33 +1339,33 @@
       "version": "1.6.0.3",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TBQueue: cannot find `newTVar` in this scope",
+      "blocked_by": "os-string",
+      "error": "System.OsString.Data.ByteString.Short.Internal: cannot find constructor `SBS` in this scope",
       "rank": 144
     },
     {
       "package": "crypton",
       "version": "2.3.0",
       "result": "dependency",
-      "seconds": 2,
+      "seconds": 3,
       "blocked_by": "binary",
-      "error": "Data.Binary.FloatCast: cannot find `castFloatToWord32` in this scope",
+      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
       "rank": 145
     },
     {
       "package": "gtk",
       "version": "0.15.10",
       "result": "dependency",
-      "seconds": 4,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
+      "seconds": 3,
+      "blocked_by": "file-io",
+      "error": "System.File.Platform: unexpected `_`, expected type",
       "rank": 146
     },
     {
       "package": "monad-loops",
       "version": "0.4.3",
       "result": "fail",
-      "seconds": 2,
+      "seconds": 3,
       "error": "Control.Monad.Loops: unexpected documentation comment, expected declaration",
       "rank": 147
     },
@@ -1379,8 +1374,8 @@
       "version": "0.7.0.1",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "base-orphans",
-      "error": "Data.Orphans.Prelude: cannot find constructor `:+` in this scope",
+      "blocked_by": "dlist",
+      "error": "Data.DList.Internal: cannot find `List.foldr` in this scope",
       "rank": 148
     },
     {
@@ -1396,15 +1391,15 @@
       "version": "1.10",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "binary",
-      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
+      "blocked_by": "os-string",
+      "error": "System.OsString.Data.ByteString.Short.Internal: cannot find constructor `SBS` in this scope",
       "rank": 150
     },
     {
       "package": "regex-posix",
       "version": "0.96.0.2",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 2,
       "blocked_by": "binary",
       "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
       "rank": 151
@@ -1413,16 +1408,16 @@
       "package": "errors",
       "version": "2.3.0",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 2,
       "blocked_by": "binary",
-      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
+      "error": "Data.Binary.FloatCast: cannot find `castFloatToWord32` in this scope",
       "rank": 152
     },
     {
       "package": "mmorph",
       "version": "1.2.2",
       "result": "dependency",
-      "seconds": 2,
+      "seconds": 3,
       "blocked_by": "transformers-compat",
       "error": "failed to compute parallel groups for transformers-compat: cycle detected in module dependencies: Control.Applicative.Lift",
       "rank": 153
@@ -1431,16 +1426,16 @@
       "package": "ansi-wl-pprint",
       "version": "1.1.1",
       "result": "dependency",
-      "seconds": 2,
+      "seconds": 3,
       "blocked_by": "colour",
-      "error": "Data.Colour.Matrix: unexpected `default`, expected declaration",
+      "error": "Data.Colour.Chan: cannot find `Data.List.sum` in this scope",
       "rank": 154
     },
     {
       "package": "io-streams",
       "version": "1.5.2.2",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 4,
       "blocked_by": "integer-logarithms",
       "error": "Math.NumberTheory.Logarithms: cannot find `isTrue#` in this scope",
       "rank": 155
@@ -1451,41 +1446,41 @@
       "result": "dependency",
       "seconds": 3,
       "blocked_by": "binary",
-      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
+      "error": "Data.Binary.FloatCast: cannot find `castFloatToWord32` in this scope",
       "rank": 156
     },
     {
       "package": "smallcheck",
       "version": "1.2.2",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
+      "seconds": 4,
+      "blocked_by": "logict",
+      "error": "Control.Monad.Logic.Class: unexpected `infixl`, expected identifier",
       "rank": 157
     },
     {
       "package": "lens-aeson",
       "version": "1.2.3",
       "result": "dependency",
-      "seconds": 2,
-      "blocked_by": "tagged",
-      "error": "Data.Proxy.TH: cannot find `appT` in this scope",
+      "seconds": 3,
+      "blocked_by": "splitmix",
+      "error": "System.Random.SplitMix.Init: code generation failed: `getPOSIXTime` is not implemented by bhc",
       "rank": 158
     },
     {
       "package": "wreq",
       "version": "0.5.4.5",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TChan: cannot find `newTVar` in this scope",
+      "seconds": 4,
+      "blocked_by": "base-orphans",
+      "error": "Data.Orphans.Prelude: cannot find constructor `:+` in this scope",
       "rank": 159
     },
     {
       "package": "tagsoup",
       "version": "0.14.8",
       "result": "dependency",
-      "seconds": 2,
+      "seconds": 3,
       "blocked_by": "binary",
       "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
       "rank": 160
@@ -1494,8 +1489,8 @@
       "package": "tasty-hspec",
       "version": "1.2.0.4",
       "result": "unresolved",
-      "seconds": 4,
-      "error": "warning: Could not plan the dependency build: cycle detected in dependencies: hspec-discover -> hspec-discover",
+      "seconds": 3,
+      "error": "warning: Could not plan the dependency build: cycle detected in dependencies: hspec -> hspec-discover -> hspec-discover",
       "rank": 161
     },
     {
@@ -1503,26 +1498,26 @@
       "version": "2.6.2",
       "result": "dependency",
       "seconds": 4,
-      "blocked_by": "base16-bytestring",
-      "error": "Data.ByteString.Base16.Internal: unexpected layout `;`, expected expression",
+      "blocked_by": "primitive",
+      "error": "Data.Primitive.Internal.Read: code generation failed: `string` is not implemented by bhc",
       "rank": 162
     },
     {
       "package": "foldl",
       "version": "1.4.18",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "th-abstraction",
-      "error": "Language.Haskell.TH.Datatype.Internal: unexpected `~`, expected expression",
+      "seconds": 2,
+      "blocked_by": "tagged",
+      "error": "Data.Tagged: unexpected `*`, expected operator",
       "rank": 163
     },
     {
       "package": "strict",
       "version": "0.5.1",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "binary",
-      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
+      "seconds": 2,
+      "blocked_by": "os-string",
+      "error": "System.OsString.Data.ByteString.Short.Internal: cannot find constructor `SBS` in this scope",
       "rank": 164
     },
     {
@@ -1530,8 +1525,8 @@
       "version": "0.8.2",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TQueue: cannot find `newTVar` in this scope",
+      "blocked_by": "file-io",
+      "error": "System.File.Platform: unexpected `_`, expected type",
       "rank": 165
     },
     {
@@ -1539,26 +1534,26 @@
       "version": "3.2.9",
       "result": "dependency",
       "seconds": 4,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
+      "blocked_by": "file-io",
+      "error": "System.File.Platform: unexpected `_`, expected type",
       "rank": 166
     },
     {
       "package": "hspec-discover",
       "version": "2.11.18",
       "result": "dependency",
-      "seconds": 2,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TChan: cannot find `newTVar` in this scope",
+      "seconds": 3,
+      "blocked_by": "os-string",
+      "error": "System.OsString.Data.ByteString.Short.Internal: cannot find constructor `SBS` in this scope",
       "rank": 167
     },
     {
       "package": "generic-lens",
       "version": "2.3.0.0",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "base-orphans",
-      "error": "Data.Orphans.Prelude: cannot find constructor `:+` in this scope",
+      "seconds": 2,
+      "blocked_by": "StateVar",
+      "error": "Data.StateVar: code generation failed: `poke` is not implemented by bhc",
       "rank": 168
     },
     {
@@ -1574,8 +1569,8 @@
       "version": "3.0.3.0",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "binary",
-      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
+      "blocked_by": "fixed",
+      "error": "Numeric.Fixed: unexpected pragma, expected constructor",
       "rank": 170
     },
     {
@@ -1583,15 +1578,15 @@
       "version": "0.20.2",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "splitmix",
-      "error": "System.Random.SplitMix.Init: code generation failed: `getPOSIXTime` is not implemented by bhc",
+      "blocked_by": "base-orphans",
+      "error": "Data.Orphans.Prelude: cannot find constructor `:+` in this scope",
       "rank": 171
     },
     {
       "package": "yesod-core",
       "version": "1.7.0.0",
       "result": "unresolved",
-      "seconds": 4,
+      "seconds": 3,
       "error": "warning: Could not plan the dependency build: cycle detected in dependencies: clientsession -> clientsession",
       "rank": 172
     },
@@ -1599,16 +1594,16 @@
       "package": "haskell-src-meta",
       "version": "0.8.16",
       "result": "dependency",
-      "seconds": 25,
-      "blocked_by": "haskell-src-exts",
-      "error": "Language.Haskell.Exts.SrcLoc: unexpected operator, expected `=`",
+      "seconds": 2,
+      "blocked_by": "th-abstraction",
+      "error": "Language.Haskell.TH.Datatype.Internal: unexpected `~`, expected expression",
       "rank": 173
     },
     {
       "package": "distributive",
       "version": "0.6.3",
       "result": "dependency",
-      "seconds": 2,
+      "seconds": 3,
       "blocked_by": "tagged",
       "error": "Data.Tagged: unexpected `*`, expected operator",
       "rank": 174
@@ -1617,24 +1612,23 @@
       "package": "th-abstraction",
       "version": "0.7.2.0",
       "result": "fail",
-      "seconds": 2,
+      "seconds": 3,
       "error": "Language.Haskell.TH.Datatype.TyVarBndr: unexpected `\\`, expected pattern",
       "rank": 175
     },
     {
       "package": "unix-compat",
       "version": "0.7.4.1",
-      "result": "dependency",
-      "seconds": 4,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
+      "result": "fail",
+      "seconds": 3,
+      "error": "System.PosixCompat.Internal.Time: code generation failed: `getPOSIXTime` is not implemented by bhc; the program cannot be compiled (pass --allow-stubs to build it anyway and abort if it is reached)",
       "rank": 176
     },
     {
       "package": "xml",
       "version": "1.3.14",
       "result": "dependency",
-      "seconds": 2,
+      "seconds": 3,
       "blocked_by": "binary",
       "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
       "rank": 177
@@ -1651,14 +1645,14 @@
       "version": "5.8.3.1",
       "result": "fail",
       "seconds": 3,
-      "error": "Data.Graph.Inductive.Internal.Heap: cannot find `shows` in this scope",
+      "error": "Data.Graph.Inductive.Graph: cannot find `shows` in this scope",
       "rank": 179
     },
     {
       "package": "regex-compat",
       "version": "0.95.2.2",
       "result": "dependency",
-      "seconds": 2,
+      "seconds": 3,
       "blocked_by": "binary",
       "error": "Data.Binary.FloatCast: cannot find `castFloatToWord32` in this scope",
       "rank": 180
@@ -1667,7 +1661,7 @@
       "package": "void",
       "version": "0.7.4",
       "result": "fail",
-      "seconds": 3,
+      "seconds": 2,
       "error": "Data.Void.Unsafe: code generation failed: `unsafeCoerce` is not implemented by bhc; the program cannot be compiled (pass --allow-stubs to build it anyway and abort if it is reached)",
       "rank": 181
     },
@@ -1675,9 +1669,9 @@
       "package": "hlint",
       "version": "3.10",
       "result": "dependency",
-      "seconds": 4,
-      "blocked_by": "binary",
-      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
+      "seconds": 3,
+      "blocked_by": "primitive",
+      "error": "Data.Primitive.MachDeps: cannot find constructor `SIZEOF_HSCHAR` in this scope",
       "rank": 182
     },
     {
@@ -1694,15 +1688,15 @@
       "version": "0.1.7",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "binary",
-      "error": "Data.Binary.FloatCast: cannot find `castFloatToWord32` in this scope",
+      "blocked_by": "file-io",
+      "error": "System.File.Platform: unexpected `_`, expected type",
       "rank": 184
     },
     {
       "package": "hspec-expectations",
       "version": "0.8.4",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 4,
       "blocked_by": "HUnit",
       "error": "Test.HUnit.Lang: cannot find `E.catches` in this scope",
       "rank": 185
@@ -1720,8 +1714,8 @@
       "version": "1.2.2.2",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TQueue: cannot find `newTVar` in this scope",
+      "blocked_by": "os-string",
+      "error": "System.OsString.Data.ByteString.Short.Internal: cannot find constructor `SBS` in this scope",
       "rank": 187
     },
     {
@@ -1736,7 +1730,7 @@
       "package": "singletons",
       "version": "3.0.4",
       "result": "fail",
-      "seconds": 3,
+      "seconds": 4,
       "error": "Data.Singletons: unexpected `::`, expected `=`",
       "rank": 189
     },
@@ -1745,15 +1739,15 @@
       "version": "0.2.13.0",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TBQueue: cannot find `newTVar` in this scope",
+      "blocked_by": "binary",
+      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
       "rank": 190
     },
     {
       "package": "diagrams-lib",
       "version": "1.6",
       "result": "unresolved",
-      "seconds": 4,
+      "seconds": 3,
       "error": "warning: Could not plan the dependency build: cycle detected in dependencies: JuicyPixels -> JuicyPixels",
       "rank": 191
     },
@@ -1762,8 +1756,8 @@
       "version": "9.3.1.22",
       "result": "dependency",
       "seconds": 4,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TBQueue: cannot find `newTVar` in this scope",
+      "blocked_by": "os-string",
+      "error": "System.OsString.Internal.Exception: cannot find constructor `SomeAsyncException` in this scope",
       "rank": 192
     },
     {
@@ -1772,7 +1766,7 @@
       "result": "dependency",
       "seconds": 2,
       "blocked_by": "binary",
-      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
+      "error": "Data.Binary.FloatCast: cannot find `castFloatToWord32` in this scope",
       "rank": 193
     },
     {
@@ -1787,16 +1781,16 @@
       "package": "system-filepath",
       "version": "0.4.14.1",
       "result": "dependency",
-      "seconds": 2,
+      "seconds": 3,
       "blocked_by": "binary",
-      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
+      "error": "Data.Binary.FloatCast: cannot find `castFloatToWord32` in this scope",
       "rank": 195
     },
     {
       "package": "cairo",
       "version": "0.13.12.0",
       "result": "dependency",
-      "seconds": 4,
+      "seconds": 3,
       "blocked_by": "binary",
       "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
       "rank": 196
@@ -1805,7 +1799,7 @@
       "package": "ghc-paths",
       "version": "0.1.0.12",
       "result": "fail",
-      "seconds": 2,
+      "seconds": 3,
       "error": "GHC.Paths: cannot find constructor `GHC_PATHS_LIBDIR` in this scope",
       "rank": 197
     },
@@ -1814,8 +1808,8 @@
       "version": "1.23.1.2",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "binary",
-      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
+      "blocked_by": "os-string",
+      "error": "System.OsString.Data.ByteString.Short.Internal: cannot find constructor `SBS` in this scope",
       "rank": 198
     },
     {
@@ -1840,8 +1834,8 @@
       "version": "0.16.5.0",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
+      "blocked_by": "primitive",
+      "error": "Data.Primitive.MachDeps: cannot find constructor `SIZEOF_HSCHAR` in this scope",
       "rank": 201
     },
     {
@@ -1856,9 +1850,9 @@
       "package": "gauge",
       "version": "0.2.5",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
+      "seconds": 2,
+      "blocked_by": "os-string",
+      "error": "System.OsString.Data.ByteString.Short.Internal: cannot find constructor `SBS` in this scope",
       "rank": 203
     },
     {
@@ -1866,15 +1860,15 @@
       "version": "1.0.5.1",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "zlib-bindings",
-      "error": "Codec.Zlib.Lowlevel: cannot find constructor `WindowBits` in this scope",
+      "blocked_by": "HUnit",
+      "error": "Test.HUnit.Lang: cannot find `E.catches` in this scope",
       "rank": 204
     },
     {
       "package": "Diff",
       "version": "2.0.1",
       "result": "fail",
-      "seconds": 3,
+      "seconds": 4,
       "error": "Data.Algorithm.Diff: code generation failed: `listArray` is not implemented by bhc; the program cannot be compiled (pass --allow-stubs to build it anyway and abort if it is reached)",
       "rank": 205
     },
@@ -1891,7 +1885,7 @@
       "package": "optics-core",
       "version": "0.4.2",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 4,
       "blocked_by": "indexed-profunctors",
       "error": "Data.Profunctor.Indexed: unexpected layout `}`, expected identifier",
       "rank": 207
@@ -1900,9 +1894,9 @@
       "package": "dhall",
       "version": "1.42.3",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "data-default",
-      "error": "Data.Default.Internal: cannot find constructor `:+` in this scope",
+      "seconds": 4,
+      "blocked_by": "binary",
+      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
       "rank": 208
     },
     {
@@ -1910,8 +1904,8 @@
       "version": "2.0.1.0",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TChan: cannot find `newTVar` in this scope",
+      "blocked_by": "transformers-compat",
+      "error": "failed to compute parallel groups for transformers-compat: cycle detected in module dependencies: Data.Functor.Classes.Generic",
       "rank": 209
     },
     {
@@ -1919,35 +1913,35 @@
       "version": "0.2.4.0",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
+      "blocked_by": "transformers-compat",
+      "error": "failed to compute parallel groups for transformers-compat: cycle detected in module dependencies: Data.Functor.Classes.Generic",
       "rank": 210
     },
     {
       "package": "iproute",
       "version": "1.8.0",
       "result": "dependency",
-      "seconds": 4,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TQueue: cannot find `newTVar` in this scope",
+      "seconds": 2,
+      "blocked_by": "os-string",
+      "error": "System.OsString.Data.ByteString.Short.Internal: cannot find constructor `SBS` in this scope",
       "rank": 211
     },
     {
       "package": "vector-space",
       "version": "0.19",
       "result": "dependency",
-      "seconds": 4,
-      "blocked_by": "NumInstances",
-      "error": "Data.NumInstances.Tuple: unexpected `-`, expected `=`",
+      "seconds": 3,
+      "blocked_by": "newtype-generics",
+      "error": "Control.Newtype.Generics: cannot find constructor `WrapMonad` in this scope",
       "rank": 212
     },
     {
       "package": "these",
       "version": "1.2.1",
       "result": "dependency",
-      "seconds": 2,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
+      "seconds": 3,
+      "blocked_by": "assoc",
+      "error": "Data.Bifunctor.Assoc: cannot find constructor `Const` in this scope",
       "rank": 213
     },
     {
@@ -1955,17 +1949,17 @@
       "version": "6.7",
       "result": "dependency",
       "seconds": 2,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
+      "blocked_by": "utf8-string",
+      "error": "Codec.Binary.UTF8.String: unexpected `default`, expected declaration",
       "rank": 214
     },
     {
       "package": "shakespeare",
       "version": "2.2.0",
       "result": "dependency",
-      "seconds": 2,
-      "blocked_by": "splitmix",
-      "error": "System.Random.SplitMix.Init: code generation failed: `getPOSIXTime` is not implemented by bhc",
+      "seconds": 4,
+      "blocked_by": "os-string",
+      "error": "System.OsString.Data.ByteString.Short.Internal: cannot find constructor `SBS` in this scope",
       "rank": 215
     },
     {
@@ -1973,15 +1967,15 @@
       "version": "0.12.3",
       "result": "dependency",
       "seconds": 4,
-      "blocked_by": "unbounded-delays",
-      "error": "Control.Concurrent.Timeout: cannot find `forkIOWithUnmask` in this scope",
+      "blocked_by": "tagged",
+      "error": "Data.Tagged: unexpected `*`, expected operator",
       "rank": 216
     },
     {
       "package": "generics-sop",
       "version": "0.5.1.4",
       "result": "unresolved",
-      "seconds": 1,
+      "seconds": 2,
       "error": "Error: Failed to resolve dependencies",
       "rank": 217
     },
@@ -1997,7 +1991,7 @@
       "package": "microlens-th",
       "version": "0.4.3.18",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 4,
       "blocked_by": "th-abstraction",
       "error": "Language.Haskell.TH.Datatype.TyVarBndr: unexpected `\\`, expected pattern",
       "rank": 219
@@ -2006,9 +2000,9 @@
       "package": "vault",
       "version": "0.3.2.0",
       "result": "dependency",
-      "seconds": 2,
+      "seconds": 3,
       "blocked_by": "binary",
-      "error": "Data.Binary.FloatCast: cannot find `castFloatToWord32` in this scope",
+      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
       "rank": 220
     },
     {
@@ -2025,14 +2019,14 @@
       "version": "0.2.4.2",
       "result": "fail",
       "seconds": 3,
-      "error": "Data.List.Unicode: unexpected error, expected operator",
+      "error": "Data.Eq.Unicode: unexpected error, expected operator",
       "rank": 222
     },
     {
       "package": "cryptohash-sha256",
       "version": "0.11.102.1",
       "result": "fail",
-      "seconds": 3,
+      "seconds": 2,
       "error": "Compat: cannot find constructor `BS` in this scope",
       "rank": 223
     },
@@ -2042,34 +2036,34 @@
       "result": "dependency",
       "seconds": 3,
       "blocked_by": "binary",
-      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
+      "error": "Data.Binary.FloatCast: cannot find `castFloatToWord32` in this scope",
       "rank": 224
     },
     {
       "package": "hashtables",
       "version": "1.4.2",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "primitive",
-      "error": "Data.Primitive.MachDeps: cannot find constructor `SIZEOF_HSCHAR` in this scope",
+      "seconds": 4,
+      "blocked_by": "vector-stream",
+      "error": "Data.Stream.Monadic: cannot find constructor `SPEC` in this scope",
       "rank": 225
     },
     {
       "package": "glib",
       "version": "0.13.12.0",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "utf8-string",
-      "error": "Codec.Binary.UTF8.Generic: cannot find `L.splitAt` in this scope",
+      "seconds": 4,
+      "blocked_by": "binary",
+      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
       "rank": 226
     },
     {
       "package": "uuid-types",
       "version": "1.0.6.1",
       "result": "dependency",
-      "seconds": 2,
-      "blocked_by": "splitmix",
-      "error": "System.Random.SplitMix.Init: code generation failed: `getPOSIXTime` is not implemented by bhc",
+      "seconds": 3,
+      "blocked_by": "binary",
+      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
       "rank": 227
     },
     {
@@ -2093,25 +2087,25 @@
       "package": "lucid",
       "version": "2.11.20260427",
       "result": "dependency",
-      "seconds": 2,
-      "blocked_by": "binary",
-      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
+      "seconds": 3,
+      "blocked_by": "transformers-compat",
+      "error": "failed to compute parallel groups for transformers-compat: cycle detected in module dependencies: Data.Functor.Classes.Generic",
       "rank": 230
     },
     {
       "package": "scotty",
       "version": "0.30",
       "result": "dependency",
-      "seconds": 4,
-      "blocked_by": "binary",
-      "error": "Data.Binary.FloatCast: cannot find `castFloatToWord32` in this scope",
+      "seconds": 3,
+      "blocked_by": "time-manager",
+      "error": "System.TimeManager.Windows: cannot find `getMonotonicTimeNSec` in this scope",
       "rank": 231
     },
     {
       "package": "streaming-commons",
       "version": "0.2.3.1",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 2,
       "blocked_by": "binary",
       "error": "Data.Binary.FloatCast: cannot find `castFloatToWord32` in this scope",
       "rank": 232
@@ -2121,8 +2115,8 @@
       "version": "4.4.4",
       "result": "dependency",
       "seconds": 2,
-      "blocked_by": "transformers-compat",
-      "error": "failed to compute parallel groups for transformers-compat: cycle detected in module dependencies: Data.Functor.Classes.Generic",
+      "blocked_by": "th-abstraction",
+      "error": "Language.Haskell.TH.Datatype.Internal: unexpected `~`, expected expression",
       "rank": 233
     },
     {
@@ -2130,15 +2124,15 @@
       "version": "1.1.4",
       "result": "dependency",
       "seconds": 2,
-      "blocked_by": "binary",
-      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
+      "blocked_by": "colour",
+      "error": "Data.Colour.Chan: cannot find `Data.List.sum` in this scope",
       "rank": 234
     },
     {
       "package": "retry",
       "version": "0.9.3.1",
       "result": "dependency",
-      "seconds": 2,
+      "seconds": 3,
       "blocked_by": "splitmix",
       "error": "System.Random.SplitMix.Init: code generation failed: `getPOSIXTime` is not implemented by bhc",
       "rank": 235
@@ -2147,7 +2141,7 @@
       "package": "vinyl",
       "version": "0.14.3",
       "result": "fail",
-      "seconds": 4,
+      "seconds": 3,
       "error": "Data.Vinyl.TypeLevel: unexpected `'` (name quote), expected type",
       "rank": 236
     },
@@ -2155,18 +2149,18 @@
       "package": "configurator",
       "version": "0.3.0.0",
       "result": "dependency",
-      "seconds": 2,
-      "blocked_by": "binary",
-      "error": "Data.Binary.FloatCast: cannot find `castFloatToWord32` in this scope",
+      "seconds": 3,
+      "blocked_by": "os-string",
+      "error": "System.OsString.Data.ByteString.Short.Internal: cannot find constructor `SBS` in this scope",
       "rank": 237
     },
     {
       "package": "cookie",
       "version": "0.5.1",
       "result": "dependency",
-      "seconds": 2,
-      "blocked_by": "data-default",
-      "error": "Data.Default.Internal: cannot find constructor `:+` in this scope",
+      "seconds": 3,
+      "blocked_by": "binary",
+      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
       "rank": 238
     },
     {
@@ -2191,8 +2185,8 @@
       "version": "0.4.4.0",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
+      "blocked_by": "splitmix",
+      "error": "System.Random.SplitMix.Init: code generation failed: `getPOSIXTime` is not implemented by bhc",
       "rank": 241
     },
     {
@@ -2217,15 +2211,15 @@
       "version": "0.0.4",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "splitmix",
-      "error": "System.Random.SplitMix.Init: code generation failed: `getPOSIXTime` is not implemented by bhc",
+      "blocked_by": "primitive",
+      "error": "Data.Primitive.MachDeps: cannot find constructor `SIZEOF_HSCHAR` in this scope",
       "rank": 244
     },
     {
       "package": "tasty-discover",
       "version": "5.2.0",
       "result": "fail",
-      "seconds": 3,
+      "seconds": 4,
       "error": "error: failed to read source file: Main.hs",
       "rank": 245
     },
@@ -2233,7 +2227,7 @@
       "package": "xml-types",
       "version": "0.3.8",
       "result": "dependency",
-      "seconds": 3,
+      "seconds": 4,
       "blocked_by": "binary",
       "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
       "rank": 246
@@ -2242,27 +2236,27 @@
       "package": "entropy",
       "version": "0.4.1.11",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "stm",
-      "error": "Control.Concurrent.STM.TMVar: cannot find `newTVar` in this scope",
+      "seconds": 4,
+      "blocked_by": "assoc",
+      "error": "Data.Bifunctor.Assoc: cannot find constructor `Const` in this scope",
       "rank": 247
     },
     {
       "package": "servant-client-core",
       "version": "0.20.3.0",
       "result": "dependency",
-      "seconds": 4,
-      "blocked_by": "th-abstraction",
-      "error": "Language.Haskell.TH.Datatype.Internal: unexpected `~`, expected expression",
+      "seconds": 3,
+      "blocked_by": "primitive",
+      "error": "Data.Primitive.MachDeps: cannot find constructor `SIZEOF_HSCHAR` in this scope",
       "rank": 248
     },
     {
       "package": "non-empty",
       "version": "0.3.6.1",
       "result": "dependency",
-      "seconds": 3,
-      "blocked_by": "semigroups",
-      "error": "Data.Semigroup.Generic: `gmappend'` in `instance GSemigroup U1` does not have the type the class gives it: type mismatch: expected `U1 a`, found `U1`",
+      "seconds": 4,
+      "blocked_by": "utility-ht",
+      "error": "Text.Read.HT: cannot find `readsPrec` in this scope",
       "rank": 249
     },
     {
@@ -2270,8 +2264,8 @@
       "version": "1.0.21.0",
       "result": "dependency",
       "seconds": 3,
-      "blocked_by": "binary",
-      "error": "Data.Binary.Builder: cannot find `Prim.primFixed` in this scope",
+      "blocked_by": "primitive",
+      "error": "Data.Primitive.MachDeps: cannot find constructor `SIZEOF_HSCHAR` in this scope",
       "rank": 250
     }
   ]
