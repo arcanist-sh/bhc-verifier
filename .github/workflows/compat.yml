@@ -108,17 +108,13 @@ jobs:
         with:
           ghc-version: "9.10.3"
       - name: Install bhc ${{ needs.setup.outputs.bhc_version }}
-        env:
-          GH_TOKEN: ${{ github.token }}
-          VERSION: ${{ needs.setup.outputs.bhc_version }}
+        uses: arcanist-sh/setup-bhc@v1
+        with:
+          version: ${{ needs.setup.outputs.bhc_version }}
+      - name: Put the hx build on PATH
         run: |
-          set -euo pipefail
-          mkdir -p bhc-dist && cd bhc-dist
-          gh release download "v$VERSION" -R arcanist-sh/bhc -p bhc-x86_64-linux.tar.gz -p SHA256SUMS.txt
-          grep ' bhc-x86_64-linux.tar.gz$' SHA256SUMS.txt | sha256sum -c -
-          mkdir -p bhc && tar -xzf bhc-x86_64-linux.tar.gz -C bhc
           chmod +x "$GITHUB_WORKSPACE/tools/hx"
-          { echo "$GITHUB_WORKSPACE/tools"; echo "$PWD/bhc"; } >> "$GITHUB_PATH"
+          echo "$GITHUB_WORKSPACE/tools" >> "$GITHUB_PATH"
       - name: Check this shard's packages
         run: |
           set -uo pipefail
