@@ -28,7 +28,7 @@ start=$(date +%s)
 
 # Packages bhc implements itself (hx's builtin list): building them from
 # Hackage would not test anything.
-BUILTINS=" base ghc-prim integer-gmp text bytestring containers transformers mtl array deepseq directory filepath "
+BUILTINS=" base ghc-prim integer-gmp text bytestring containers transformers mtl array deepseq directory filepath stm "
 
 emit() { # result version blocked_by error
   jq -cn --arg package "$pkg" --arg version "$2" --arg result "$1" \
